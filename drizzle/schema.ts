@@ -1,22 +1,25 @@
-import { int, mysqlEnum, mysqlTable, text, timestamp, varchar } from "drizzle-orm/mysql-core";
+import {
+  int,
+  mysqlEnum,
+  mysqlTable,
+  text,
+  timestamp,
+  varchar,
+  double,
+  boolean,
+  json,
+} from "drizzle-orm/mysql-core";
 
-/**
- * Core user table backing auth flow.
- * Extend this file with additional tables as your product grows.
- * Columns use camelCase to match both database fields and generated types.
- */
+// ============================================================
+// Users table (Manus OAuth + QC roles)
+// ============================================================
 export const users = mysqlTable("users", {
-  /**
-   * Surrogate primary key. Auto-incremented numeric value managed by the database.
-   * Use this for relations between tables.
-   */
   id: int("id").autoincrement().primaryKey(),
-  /** Manus OAuth identifier (openId) returned from the OAuth callback. Unique per user. */
   openId: varchar("openId", { length: 64 }).notNull().unique(),
   name: text("name"),
   email: varchar("email", { length: 320 }),
   loginMethod: varchar("loginMethod", { length: 64 }),
-  role: mysqlEnum("role", ["user", "admin"]).default("user").notNull(),
+  role: mysqlEnum("role", ["user", "admin", "doctor", "qc_staff"]).default("user").notNull(),
   createdAt: timestamp("createdAt").defaultNow().notNull(),
   updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),
   lastSignedIn: timestamp("lastSignedIn").defaultNow().notNull(),
@@ -25,4 +28,190 @@ export const users = mysqlTable("users", {
 export type User = typeof users.$inferSelect;
 export type InsertUser = typeof users.$inferInsert;
 
-// TODO: Add your tables here
+// ============================================================
+// Medical Records
+// ============================================================
+export const medicalRecords = mysqlTable("medical_records", {
+  id: int("id").autoincrement().primaryKey(),
+  patientName: varchar("patientName", { length: 255 }).notNull(),
+  recordType: varchar("recordType", { length: 64 }).notNull(),
+  content: text("content").notNull(),
+  parsedContent: text("parsedContent"),
+  fileName: varchar("fileName", { length: 512 }),
+  doctorId: int("doctorId").references(() => users.id),
+  departmentId: int("departmentId"),
+  admissionDate: timestamp("admissionDate"),
+  dischargeDate: timestamp("dischargeDate"),
+  createdAt: timestamp("createdAt").defaultNow().notNull(),
+  updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),
+});
+
+export type MedicalRecord = typeof medicalRecords.$inferSelect;
+export type InsertMedicalRecord = typeof medicalRecords.$inferInsert;
+
+// ============================================================
+// QC Results
+// ============================================================
+export const qcResults = mysqlTable("qc_results", {
+  id: int("id").autoincrement().primaryKey(),
+  medicalRecordId: int("medicalRecordId").references(() => medicalRecords.id),
+  qcStaffId: int("qcStaffId").references(() => users.id),
+  qcMode: varchar("qcMode", { length: 32 }).notNull(),
+  totalScore: varchar("totalScore", { length: 32 }),
+  isQualified: boolean("isQualified").default(false),
+  createdAt: timestamp("createdAt").defaultNow().notNull(),
+  updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),
+});
+
+export type QcResult = typeof qcResults.$inferSelect;
+export type InsertQcResult = typeof qcResults.$inferInsert;
+
+// ============================================================
+// QC Issues
+// ============================================================
+export const qcIssues = mysqlTable("qc_issues", {
+  id: int("id").autoincrement().primaryKey(),
+  qcResultId: int("qcResultId").references(() => qcResults.id),
+  type: varchar("type", { length: 64 }).notNull(),
+  severity: varchar("severity", { length: 32 }).notNull(),
+  message: text("message").notNull(),
+  suggestion: text("suggestion"),
+  ruleId: varchar("ruleId", { length: 64 }),
+  createdAt: timestamp("createdAt").defaultNow().notNull(),
+});
+
+export type QcIssue = typeof qcIssues.$inferSelect;
+export type InsertQcIssue = typeof qcIssues.$inferInsert;
+
+// ============================================================
+// Spot Check Records
+// ============================================================
+export const spotCheckRecords = mysqlTable("spot_check_records", {
+  id: int("id").autoincrement().primaryKey(),
+  medicalRecordId: int("medicalRecordId").references(() => medicalRecords.id),
+  qcStaffId: int("qcStaffId").references(() => users.id),
+  qcMode: varchar("qcMode", { length: 32 }).notNull(),
+  totalScore: varchar("totalScore", { length: 32 }),
+  isQualified: boolean("isQualified").default(false),
+  createdAt: timestamp("createdAt").defaultNow().notNull(),
+});
+
+export type SpotCheckRecord = typeof spotCheckRecords.$inferSelect;
+export type InsertSpotCheckRecord = typeof spotCheckRecords.$inferInsert;
+
+// ============================================================
+// QC Rules
+// ============================================================
+export const qcRules = mysqlTable("qc_rules", {
+  id: int("id").autoincrement().primaryKey(),
+  ruleId: varchar("ruleId", { length: 64 }).unique().notNull(),
+  name: varchar("name", { length: 255 }).notNull(),
+  description: text("description"),
+  category: varchar("category", { length: 64 }).notNull(),
+  severity: varchar("severity", { length: 32 }).notNull(),
+  condition: text("condition").notNull(),
+  status: varchar("status", { length: 32 }).default("active"),
+  createdAt: timestamp("createdAt").defaultNow().notNull(),
+  updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),
+});
+
+export type QcRuleRow = typeof qcRules.$inferSelect;
+export type InsertQcRule = typeof qcRules.$inferInsert;
+
+// ============================================================
+// Terminology Mappings
+// ============================================================
+export const terminologyMappings = mysqlTable("terminology_mappings", {
+  id: int("id").autoincrement().primaryKey(),
+  abbreviation: varchar("abbreviation", { length: 255 }).notNull(),
+  fullName: varchar("fullName", { length: 512 }).notNull(),
+  category: varchar("category", { length: 64 }).notNull(),
+  createdAt: timestamp("createdAt").defaultNow().notNull(),
+});
+
+export type TerminologyMappingRow = typeof terminologyMappings.$inferSelect;
+export type InsertTerminologyMapping = typeof terminologyMappings.$inferInsert;
+
+// ============================================================
+// QC Configs
+// ============================================================
+export const qcConfigs = mysqlTable("qc_configs", {
+  id: int("id").autoincrement().primaryKey(),
+  configType: varchar("configType", { length: 64 }).notNull(),
+  configKey: varchar("configKey", { length: 128 }).notNull(),
+  configValue: text("configValue").notNull(),
+  description: text("description"),
+  status: varchar("status", { length: 32 }).default("active"),
+  createdAt: timestamp("createdAt").defaultNow().notNull(),
+  updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),
+});
+
+export type QcConfigRow = typeof qcConfigs.$inferSelect;
+export type InsertQcConfig = typeof qcConfigs.$inferInsert;
+
+// ============================================================
+// Medical Terminology
+// ============================================================
+export const medicalTerminology = mysqlTable("medical_terminology", {
+  id: int("id").autoincrement().primaryKey(),
+  term: varchar("term", { length: 255 }).unique().notNull(),
+  standardName: varchar("standardName", { length: 255 }).notNull(),
+  category: varchar("category", { length: 64 }).notNull(),
+  description: text("description"),
+  synonyms: json("synonyms"),
+  createdAt: timestamp("createdAt").defaultNow().notNull(),
+});
+
+export type MedicalTerminologyRow = typeof medicalTerminology.$inferSelect;
+export type InsertMedicalTerminology = typeof medicalTerminology.$inferInsert;
+
+// ============================================================
+// Drug Knowledge Base
+// ============================================================
+export const drugKnowledgeBase = mysqlTable("drug_knowledge_base", {
+  id: int("id").autoincrement().primaryKey(),
+  drugName: varchar("drugName", { length: 255 }).unique().notNull(),
+  genericName: varchar("genericName", { length: 255 }),
+  category: varchar("category", { length: 128 }),
+  maxDailyDose: varchar("maxDailyDose", { length: 64 }),
+  unit: varchar("unit", { length: 32 }),
+  contraindications: json("contraindications"),
+  interactions: json("interactions"),
+  sideEffects: json("sideEffects"),
+  createdAt: timestamp("createdAt").defaultNow().notNull(),
+});
+
+export type DrugKnowledgeRow = typeof drugKnowledgeBase.$inferSelect;
+export type InsertDrugKnowledge = typeof drugKnowledgeBase.$inferInsert;
+
+// ============================================================
+// Audit Logs
+// ============================================================
+export const auditLogs = mysqlTable("audit_logs", {
+  id: int("id").autoincrement().primaryKey(),
+  userId: int("userId").references(() => users.id),
+  action: varchar("action", { length: 64 }).notNull(),
+  entityType: varchar("entityType", { length: 64 }).notNull(),
+  entityId: int("entityId"),
+  changes: json("changes"),
+  createdAt: timestamp("createdAt").defaultNow().notNull(),
+});
+
+export type AuditLogRow = typeof auditLogs.$inferSelect;
+export type InsertAuditLog = typeof auditLogs.$inferInsert;
+
+// ============================================================
+// Statistics
+// ============================================================
+export const statistics = mysqlTable("statistics", {
+  id: int("id").autoincrement().primaryKey(),
+  date: timestamp("date"),
+  totalRecords: int("totalRecords").default(0),
+  qualifiedRecords: int("qualifiedRecords").default(0),
+  averageScore: double("averageScore").default(0),
+  departmentId: int("departmentId"),
+  createdAt: timestamp("createdAt").defaultNow().notNull(),
+});
+
+export type StatisticsRow = typeof statistics.$inferSelect;
+export type InsertStatistics = typeof statistics.$inferInsert;
