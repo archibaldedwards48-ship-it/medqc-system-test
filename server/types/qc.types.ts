@@ -4,6 +4,7 @@
 
 import { NlpResult } from './nlp.types';
 import type { QcRule } from './rule.types';
+export type { QcRule };
 
 // ============ 基础类型 ============
 
@@ -29,6 +30,8 @@ export type MedicalRecord = {
   recordType?: string;
   admissionDate?: Date;
   dischargeDate?: Date;
+  createdAt?: Date;
+  updatedAt?: Date;
   type?: 'outpatient' | 'inpatient' | 'admission' | 'discharge' | 'consultation' | 'operation';
 };
 
@@ -50,9 +53,13 @@ export type QcIssue = {
 // ============ 质控结果 ============
 
 export type QcResult = {
+  recordId?: number;
   totalScore: number;
+  overallScore?: number;
+  status?: 'pass' | 'pass_with_warning' | 'fail';
+  scores?: Record<string, number>;
   issues: QcIssue[];
-  mode: QcMode;
+  mode?: QcMode;
   timestamp: Date;
   details?: {
     completenessScore?: number;

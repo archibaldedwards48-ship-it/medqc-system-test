@@ -94,6 +94,7 @@ export type ZeroAnchorProcessingResult = {
  */
 export type MedicalValidationResult = {
   indicators: Indicator[];
+  totalIndicators: number;
   validationErrors: Array<{
     indicator: Indicator;
     error: string;
