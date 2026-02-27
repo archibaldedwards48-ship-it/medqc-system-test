@@ -252,5 +252,199 @@
     },
     "errorMessage": "既往史必须明确记录艾滋病、梅毒等传染病史",
     "severity": "major"
+  },
+  {
+    "documentType": "admission_record",
+    "section": "physical_examination",
+    "checkType": "must_contain_neurological_signs",
+    "condition": {
+      "type": "must_contain_all",
+      "keywords": [
+        "意识",
+        "瞳孔",
+        "肌力"
+      ]
+    },
+    "errorMessage": "体格检查必须包含神经系统核心指标（意识状态、瞳孔对光反射、肢体肌力）",
+    "severity": "major"
+  },
+  {
+    "documentType": "admission_record",
+    "section": "physical_examination",
+    "checkType": "must_contain_abdominal_signs",
+    "condition": {
+      "type": "must_contain_all",
+      "keywords": [
+        "压痛",
+        "反跳痛",
+        "肠鸣音"
+      ]
+    },
+    "errorMessage": "体格检查必须包含腹部核心指标（压痛、反跳痛、肠鸣音）",
+    "severity": "major"
+  },
+  {
+    "documentType": "admission_record",
+    "section": "physical_examination",
+    "checkType": "must_contain_cardiopulmonary_auscultation",
+    "condition": {
+      "type": "must_contain_all",
+      "keywords": [
+        "心率",
+        "节律",
+        "啰音"
+      ]
+    },
+    "errorMessage": "体格检查必须包含心肺听诊核心指标（心率、节律、肺部啰音）",
+    "severity": "major"
+  },
+  {
+    "documentType": "admission_record",
+    "section": "present_illness",
+    "checkType": "must_contain_aggravating_factors",
+    "condition": {
+      "type": "must_contain_any",
+      "keywords": [
+        "加重",
+        "缓解",
+        "诱因"
+      ]
+    },
+    "errorMessage": "现病史必须包含症状加重或缓解因素的描述",
+    "severity": "major"
+  },
+  {
+    "documentType": "admission_record",
+    "section": "present_illness",
+    "checkType": "must_contain_treatment_effect",
+    "condition": {
+      "type": "must_contain_keywords",
+      "keywords": [
+        "效果",
+        "反应",
+        "好转",
+        "无效"
+      ]
+    },
+    "errorMessage": "现病史必须包含院外治疗效果的记录",
+    "severity": "major"
+  },
+  {
+    "documentType": "admission_record",
+    "section": "auxiliary_examination",
+    "checkType": "must_contain_imaging_conclusion",
+    "condition": {
+      "type": "must_contain_keywords",
+      "keywords": [
+        "结论",
+        "提示",
+        "诊断"
+      ]
+    },
+    "errorMessage": "影像学检查（CT/MRI/超声）描述必须包含明确的结论",
+    "severity": "major"
+  },
+  {
+    "documentType": "admission_record",
+    "section": "auxiliary_examination",
+    "checkType": "must_contain_ecg_description",
+    "condition": {
+      "type": "must_contain_keywords",
+      "keywords": [
+        "心律",
+        "波形",
+        "ST段",
+        "T波"
+      ]
+    },
+    "errorMessage": "心电图检查描述不规范，需包含心律、波形及关键段位描述",
+    "severity": "minor"
+  },
+  {
+    "documentType": "admission_record",
+    "section": "chief_complaint",
+    "checkType": "length_max_20",
+    "condition": {
+      "type": "length_max",
+      "value": 20
+    },
+    "errorMessage": "主诉字数不得超过 20 字",
+    "severity": "minor"
+  },
+  {
+    "documentType": "admission_record",
+    "section": "chief_complaint",
+    "checkType": "no_diagnosis_name",
+    "condition": {
+      "type": "must_not_contain_diagnosis"
+    },
+    "errorMessage": "主诉不得包含明确的西医诊断名称",
+    "severity": "major"
+  },
+  {
+    "documentType": "admission_record",
+    "section": "allergy_history",
+    "checkType": "format_standard",
+    "condition": {
+      "type": "regex_match",
+      "pattern": ".+过敏表现为.+"
+    },
+    "errorMessage": "过敏史格式不规范，需采用“药物名+过敏表现为+表现”格式（无则写“否认”）",
+    "severity": "minor"
+  },
+  {
+    "documentType": "discharge_record",
+    "section": "discharge_advice",
+    "checkType": "must_contain_medication",
+    "condition": {
+      "type": "must_contain_keywords",
+      "keywords": [
+        "药",
+        "服",
+        "用量"
+      ]
+    },
+    "errorMessage": "出院记录出院医嘱中必须包含具体的用药指导",
+    "severity": "major"
+  },
+  {
+    "documentType": "first_progress_note",
+    "section": "treatment_plan",
+    "checkType": "must_contain_level_of_care",
+    "condition": {
+      "type": "must_contain_keywords",
+      "keywords": [
+        "护理",
+        "级"
+      ]
+    },
+    "errorMessage": "首次病程记录诊疗计划中必须包含护理级别",
+    "severity": "major"
+  },
+  {
+    "documentType": "operation_record",
+    "section": "postoperative_diagnosis",
+    "checkType": "must_be_recorded",
+    "condition": {
+      "type": "not_empty"
+    },
+    "errorMessage": "手术记录中术后诊断缺失",
+    "severity": "critical"
+  },
+  {
+    "documentType": "daily_progress_note",
+    "section": "doctor_visit",
+    "checkType": "must_contain_superior_doctor",
+    "condition": {
+      "type": "must_contain_keywords",
+      "keywords": [
+        "主任",
+        "副主任",
+        "主治",
+        "查房"
+      ]
+    },
+    "errorMessage": "日常病程记录中缺少上级医师查房记录",
+    "severity": "major"
   }
 ]
