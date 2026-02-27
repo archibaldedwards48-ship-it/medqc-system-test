@@ -1,0 +1,1419 @@
+[
+  {
+    "templateName": "入院记录评分标准",
+    "documentType": "admission_record",
+    "totalScore": 100,
+    "sections": [
+      {
+        "name": "主诉",
+        "maxScore": 10,
+        "criteria": [
+          {
+            "item": "主要症状描述完整",
+            "score": 3,
+            "deductReason": "缺少主要症状"
+          },
+          {
+            "item": "持续时间明确",
+            "score": 3,
+            "deductReason": "缺少持续时间"
+          },
+          {
+            "item": "诱因描述",
+            "score": 2,
+            "deductReason": "缺少诱因"
+          },
+          {
+            "item": "字数≤20字",
+            "score": 2,
+            "deductReason": "主诉过长"
+          }
+        ]
+      },
+      {
+        "name": "现病史",
+        "maxScore": 20,
+        "criteria": [
+          {
+            "item": "起病时间及诱因",
+            "score": 4,
+            "deductReason": "缺少起病时间或诱因"
+          },
+          {
+            "item": "主要症状的发生发展",
+            "score": 6,
+            "deductReason": "主要症状描述不详"
+          },
+          {
+            "item": "伴随症状及鉴别诊断",
+            "score": 5,
+            "deductReason": "缺少伴随症状或鉴别诊断"
+          },
+          {
+            "item": "诊疗经过",
+            "score": 5,
+            "deductReason": "缺少诊疗经过"
+          }
+        ]
+      },
+      {
+        "name": "既往史",
+        "maxScore": 10,
+        "criteria": [
+          {
+            "item": "有无传染病史",
+            "score": 2,
+            "deductReason": "缺少传染病史"
+          },
+          {
+            "item": "有无手术外伤史",
+            "score": 2,
+            "deductReason": "缺少手术外伤史"
+          },
+          {
+            "item": "有无输血史",
+            "score": 2,
+            "deductReason": "缺少输血史"
+          },
+          {
+            "item": "有无药物过敏史",
+            "score": 4,
+            "deductReason": "缺少药物过敏史"
+          }
+        ]
+      },
+      {
+        "name": "体格检查",
+        "maxScore": 20,
+        "criteria": [
+          {
+            "item": "一般情况",
+            "score": 4,
+            "deductReason": "一般情况描述不详"
+          },
+          {
+            "item": "生命体征",
+            "score": 4,
+            "deductReason": "缺少生命体征"
+          },
+          {
+            "item": "专科检查",
+            "score": 8,
+            "deductReason": "专科检查不完整"
+          },
+          {
+            "item": "阳性体征描述准确",
+            "score": 4,
+            "deductReason": "阳性体征描述不准确"
+          }
+        ]
+      },
+      {
+        "name": "辅助检查",
+        "maxScore": 10,
+        "criteria": [
+          {
+            "item": "重要辅助检查结果记录",
+            "score": 5,
+            "deductReason": "缺少重要辅助检查结果"
+          },
+          {
+            "item": "结果判读",
+            "score": 5,
+            "deductReason": "结果判读不准确"
+          }
+        ]
+      },
+      {
+        "name": "初步诊断",
+        "maxScore": 10,
+        "criteria": [
+          {
+            "item": "诊断明确",
+            "score": 5,
+            "deductReason": "诊断不明确"
+          },
+          {
+            "item": "诊断依据充分",
+            "score": 5,
+            "deductReason": "诊断依据不足"
+          }
+        ]
+      },
+      {
+        "name": "鉴别诊断",
+        "maxScore": 10,
+        "criteria": [
+          {
+            "item": "鉴别诊断合理",
+            "score": 5,
+            "deductReason": "鉴别诊断不合理"
+          },
+          {
+            "item": "鉴别要点明确",
+            "score": 5,
+            "deductReason": "鉴别要点不明确"
+          }
+        ]
+      },
+      {
+        "name": "诊疗计划",
+        "maxScore": 10,
+        "criteria": [
+          {
+            "item": "诊疗计划完整",
+            "score": 5,
+            "deductReason": "诊疗计划不完整"
+          },
+          {
+            "item": "治疗措施合理",
+            "score": 5,
+            "deductReason": "治疗措施不合理"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "templateName": "出院记录评分标准",
+    "documentType": "discharge_record",
+    "totalScore": 100,
+    "sections": [
+      {
+        "name": "入院情况",
+        "maxScore": 20,
+        "criteria": [
+          {
+            "item": "入院诊断明确",
+            "score": 5,
+            "deductReason": "入院诊断不明确"
+          },
+          {
+            "item": "入院时主要症状体征",
+            "score": 10,
+            "deductReason": "入院时主要症状体征描述不详"
+          },
+          {
+            "item": "重要辅助检查结果",
+            "score": 5,
+            "deductReason": "缺少重要辅助检查结果"
+          }
+        ]
+      },
+      {
+        "name": "住院经过",
+        "maxScore": 30,
+        "criteria": [
+          {
+            "item": "诊疗过程记录完整",
+            "score": 10,
+            "deductReason": "诊疗过程记录不完整"
+          },
+          {
+            "item": "病情变化及处理",
+            "score": 10,
+            "deductReason": "病情变化及处理描述不详"
+          },
+          {
+            "item": "特殊检查及治疗",
+            "score": 10,
+            "deductReason": "缺少特殊检查及治疗记录"
+          }
+        ]
+      },
+      {
+        "name": "出院情况",
+        "maxScore": 20,
+        "criteria": [
+          {
+            "item": "出院诊断明确",
+            "score": 5,
+            "deductReason": "出院诊断不明确"
+          },
+          {
+            "item": "出院时主要症状体征",
+            "score": 10,
+            "deductReason": "出院时主要症状体征描述不详"
+          },
+          {
+            "item": "出院时辅助检查结果",
+            "score": 5,
+            "deductReason": "缺少出院时辅助检查结果"
+          }
+        ]
+      },
+      {
+        "name": "出院医嘱",
+        "maxScore": 30,
+        "criteria": [
+          {
+            "item": "出院带药明确",
+            "score": 10,
+            "deductReason": "出院带药不明确"
+          },
+          {
+            "item": "复诊时间及注意事项",
+            "score": 10,
+            "deductReason": "缺少复诊时间或注意事项"
+          },
+          {
+            "item": "健康教育",
+            "score": 10,
+            "deductReason": "缺少健康教育"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "templateName": "首次病程记录评分标准",
+    "documentType": "first_progress_note",
+    "totalScore": 100,
+    "sections": [
+      {
+        "name": "病程记录",
+        "maxScore": 100,
+        "criteria": [
+          {
+            "item": "记录时间准确",
+            "score": 10,
+            "deductReason": "记录时间不准确"
+          },
+          {
+            "item": "主诉、现病史补充完整",
+            "score": 20,
+            "deductReason": "主诉、现病史补充不完整"
+          },
+          {
+            "item": "体格检查、辅助检查补充完整",
+            "score": 20,
+            "deductReason": "体格检查、辅助检查补充不完整"
+          },
+          {
+            "item": "诊断及鉴别诊断",
+            "score": 20,
+            "deductReason": "诊断及鉴别诊断不明确"
+          },
+          {
+            "item": "诊疗计划",
+            "score": 30,
+            "deductReason": "诊疗计划不完整"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "templateName": "日常病程记录评分标准",
+    "documentType": "daily_progress_note",
+    "totalScore": 100,
+    "sections": [
+      {
+        "name": "病程记录",
+        "maxScore": 100,
+        "criteria": [
+          {
+            "item": "记录时间准确",
+            "score": 10,
+            "deductReason": "记录时间不准确"
+          },
+          {
+            "item": "病情变化及分析",
+            "score": 30,
+            "deductReason": "病情变化及分析不详"
+          },
+          {
+            "item": "辅助检查结果及判读",
+            "score": 20,
+            "deductReason": "辅助检查结果及判读不完整"
+          },
+          {
+            "item": "诊疗措施调整及依据",
+            "score": 20,
+            "deductReason": "诊疗措施调整及依据不明确"
+          },
+          {
+            "item": "下一步诊疗计划",
+            "score": 20,
+            "deductReason": "下一步诊疗计划不明确"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "templateName": "手术记录评分标准",
+    "documentType": "surgery_record",
+    "totalScore": 100,
+    "sections": [
+      {
+        "name": "术前诊断",
+        "maxScore": 10,
+        "criteria": [
+          {
+            "item": "术前诊断明确",
+            "score": 10,
+            "deductReason": "术前诊断不明确"
+          }
+        ]
+      },
+      {
+        "name": "手术名称",
+        "maxScore": 10,
+        "criteria": [
+          {
+            "item": "手术名称规范",
+            "score": 10,
+            "deductReason": "手术名称不规范"
+          }
+        ]
+      },
+      {
+        "name": "手术日期及术者",
+        "maxScore": 10,
+        "criteria": [
+          {
+            "item": "手术日期及术者记录完整",
+            "score": 10,
+            "deductReason": "手术日期及术者记录不完整"
+          }
+        ]
+      },
+      {
+        "name": "麻醉方式",
+        "maxScore": 5,
+        "criteria": [
+          {
+            "item": "麻醉方式记录准确",
+            "score": 5,
+            "deductReason": "麻醉方式记录不准确"
+          }
+        ]
+      },
+      {
+        "name": "手术经过",
+        "maxScore": 40,
+        "criteria": [
+          {
+            "item": "手术步骤描述清晰",
+            "score": 20,
+            "deductReason": "手术步骤描述不清晰"
+          },
+          {
+            "item": "术中发现及处理",
+            "score": 10,
+            "deductReason": "术中发现及处理描述不详"
+          },
+          {
+            "item": "出血量、输血量",
+            "score": 10,
+            "deductReason": "缺少出血量、输血量记录"
+          }
+        ]
+      },
+      {
+        "name": "术后诊断",
+        "maxScore": 10,
+        "criteria": [
+          {
+            "item": "术后诊断明确",
+            "score": 10,
+            "deductReason": "术后诊断不明确"
+          }
+        ]
+      },
+      {
+        "name": "术后处理",
+        "maxScore": 15,
+        "criteria": [
+          {
+            "item": "术后处理措施合理",
+            "score": 15,
+            "deductReason": "术后处理措施不合理"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "templateName": "手术同意书评分标准",
+    "documentType": "surgery_consent",
+    "totalScore": 100,
+    "sections": [
+      {
+        "name": "患者信息",
+        "maxScore": 10,
+        "criteria": [
+          {
+            "item": "患者姓名、住院号准确",
+            "score": 10,
+            "deductReason": "患者信息不准确"
+          }
+        ]
+      },
+      {
+        "name": "手术名称",
+        "maxScore": 10,
+        "criteria": [
+          {
+            "item": "手术名称与手术记录一致",
+            "score": 10,
+            "deductReason": "手术名称不一致"
+          }
+        ]
+      },
+      {
+        "name": "手术目的及风险",
+        "maxScore": 30,
+        "criteria": [
+          {
+            "item": "手术目的描述清晰",
+            "score": 15,
+            "deductReason": "手术目的描述不清晰"
+          },
+          {
+            "item": "手术风险告知完整",
+            "score": 15,
+            "deductReason": "手术风险告知不完整"
+          }
+        ]
+      },
+      {
+        "name": "替代方案",
+        "maxScore": 10,
+        "criteria": [
+          {
+            "item": "替代方案告知完整",
+            "score": 10,
+            "deductReason": "替代方案告知不完整"
+          }
+        ]
+      },
+      {
+        "name": "患者或家属签字",
+        "maxScore": 40,
+        "criteria": [
+          {
+            "item": "患者或家属签字完整",
+            "score": 20,
+            "deductReason": "患者或家属签字不完整"
+          },
+          {
+            "item": "签字日期准确",
+            "score": 20,
+            "deductReason": "签字日期不准确"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "templateName": "麻醉记录评分标准",
+    "documentType": "anesthesia_record",
+    "totalScore": 100,
+    "sections": [
+      {
+        "name": "麻醉前评估",
+        "maxScore": 20,
+        "criteria": [
+          {
+            "item": "麻醉前访视记录完整",
+            "score": 10,
+            "deductReason": "麻醉前访视记录不完整"
+          },
+          {
+            "item": "麻醉风险评估准确",
+            "score": 10,
+            "deductReason": "麻醉风险评估不准确"
+          }
+        ]
+      },
+      {
+        "name": "麻醉过程",
+        "maxScore": 40,
+        "criteria": [
+          {
+            "item": "麻醉方式及用药记录",
+            "score": 15,
+            "deductReason": "麻醉方式及用药记录不完整"
+          },
+          {
+            "item": "生命体征监测记录",
+            "score": 15,
+            "deductReason": "生命体征监测记录不完整"
+          },
+          {
+            "item": "术中事件及处理",
+            "score": 10,
+            "deductReason": "术中事件及处理描述不详"
+          }
+        ]
+      },
+      {
+        "name": "麻醉恢复期",
+        "maxScore": 20,
+        "criteria": [
+          {
+            "item": "麻醉恢复期监测记录",
+            "score": 10,
+            "deductReason": "麻醉恢复期监测记录不完整"
+          },
+          {
+            "item": "恢复情况评估",
+            "score": 10,
+            "deductReason": "恢复情况评估不准确"
+          }
+        ]
+      },
+      {
+        "name": "麻醉后医嘱",
+        "maxScore": 20,
+        "criteria": [
+          {
+            "item": "麻醉后医嘱完整",
+            "score": 10,
+            "deductReason": "麻醉后医嘱不完整"
+          },
+          {
+            "item": "镇痛方案合理",
+            "score": 10,
+            "deductReason": "镇痛方案不合理"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "templateName": "护理记录评分标准",
+    "documentType": "nursing_record",
+    "totalScore": 100,
+    "sections": [
+      {
+        "name": "病情观察",
+        "maxScore": 30,
+        "criteria": [
+          {
+            "item": "生命体征监测及时准确",
+            "score": 10,
+            "deductReason": "生命体征监测不及时或不准确"
+          },
+          {
+            "item": "病情变化观察记录完整",
+            "score": 20,
+            "deductReason": "病情变化观察记录不完整"
+          }
+        ]
+      },
+      {
+        "name": "护理措施",
+        "maxScore": 40,
+        "criteria": [
+          {
+            "item": "医嘱执行准确及时",
+            "score": 15,
+            "deductReason": "医嘱执行不准确或不及时"
+          },
+          {
+            "item": "护理操作规范",
+            "score": 15,
+            "deductReason": "护理操作不规范"
+          },
+          {
+            "item": "特殊护理记录完整",
+            "score": 10,
+            "deductReason": "缺少特殊护理记录"
+          }
+        ]
+      },
+      {
+        "name": "健康教育",
+        "maxScore": 15,
+        "criteria": [
+          {
+            "item": "健康教育内容完整",
+            "score": 15,
+            "deductReason": "健康教育内容不完整"
+          }
+        ]
+      },
+      {
+        "name": "交接班记录",
+        "maxScore": 15,
+        "criteria": [
+          {
+            "item": "交接班记录清晰完整",
+            "score": 15,
+            "deductReason": "交接班记录不清晰或不完整"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "templateName": "会诊记录评分标准",
+    "documentType": "consultation_record",
+    "totalScore": 100,
+    "sections": [
+      {
+        "name": "会诊目的",
+        "maxScore": 10,
+        "criteria": [
+          {
+            "item": "会诊目的明确",
+            "score": 10,
+            "deductReason": "会诊目的不明确"
+          }
+        ]
+      },
+      {
+        "name": "会诊意见",
+        "maxScore": 50,
+        "criteria": [
+          {
+            "item": "会诊意见具体明确",
+            "score": 25,
+            "deductReason": "会诊意见不具体或不明确"
+          },
+          {
+            "item": "会诊意见合理",
+            "score": 25,
+            "deductReason": "会诊意见不合理"
+          }
+        ]
+      },
+      {
+        "name": "会诊医师签字",
+        "maxScore": 20,
+        "criteria": [
+          {
+            "item": "会诊医师签字完整",
+            "score": 20,
+            "deductReason": "会诊医师签字不完整"
+          }
+        ]
+      },
+      {
+        "name": "会诊日期",
+        "maxScore": 20,
+        "criteria": [
+          {
+            "item": "会诊日期准确",
+            "score": 20,
+            "deductReason": "会诊日期不准确"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "templateName": "转科记录评分标准",
+    "documentType": "transfer_record",
+    "totalScore": 100,
+    "sections": [
+      {
+        "name": "转出科室诊断",
+        "maxScore": 20,
+        "criteria": [
+          {
+            "item": "转出科室诊断明确",
+            "score": 20,
+            "deductReason": "转出科室诊断不明确"
+          }
+        ]
+      },
+      {
+        "name": "转科原因",
+        "maxScore": 20,
+        "criteria": [
+          {
+            "item": "转科原因明确",
+            "score": 20,
+            "deductReason": "转科原因不明确"
+          }
+        ]
+      },
+      {
+        "name": "转科时病情",
+        "maxScore": 30,
+        "criteria": [
+          {
+            "item": "转科时病情描述完整",
+            "score": 30,
+            "deductReason": "转科时病情描述不完整"
+          }
+        ]
+      },
+      {
+        "name": "转入科室意见",
+        "maxScore": 30,
+        "criteria": [
+          {
+            "item": "转入科室意见明确",
+            "score": 30,
+            "deductReason": "转入科室意见不明确"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "templateName": "死亡记录评分标准",
+    "documentType": "death_record",
+    "totalScore": 100,
+    "sections": [
+      {
+        "name": "入院情况",
+        "maxScore": 10,
+        "criteria": [
+          {
+            "item": "入院诊断明确",
+            "score": 10,
+            "deductReason": "入院诊断不明确"
+          }
+        ]
+      },
+      {
+        "name": "诊疗经过",
+        "maxScore": 30,
+        "criteria": [
+          {
+            "item": "诊疗过程记录完整",
+            "score": 15,
+            "deductReason": "诊疗过程记录不完整"
+          },
+          {
+            "item": "死亡前抢救经过",
+            "score": 15,
+            "deductReason": "死亡前抢救经过描述不详"
+          }
+        ]
+      },
+      {
+        "name": "死亡原因",
+        "maxScore": 30,
+        "criteria": [
+          {
+            "item": "死亡原因明确",
+            "score": 15,
+            "deductReason": "死亡原因不明确"
+          },
+          {
+            "item": "死亡诊断依据充分",
+            "score": 15,
+            "deductReason": "死亡诊断依据不足"
+          }
+        ]
+      },
+      {
+        "name": "尸检情况",
+        "maxScore": 10,
+        "criteria": [
+          {
+            "item": "有无尸检记录",
+            "score": 10,
+            "deductReason": "缺少尸检记录"
+          }
+        ]
+      },
+      {
+        "name": "死亡时间",
+        "maxScore": 20,
+        "criteria": [
+          {
+            "item": "死亡时间准确",
+            "score": 20,
+            "deductReason": "死亡时间不准确"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "templateName": "病危通知书评分标准",
+    "documentType": "critical_illness_notice",
+    "totalScore": 100,
+    "sections": [
+      {
+        "name": "患者信息",
+        "maxScore": 10,
+        "criteria": [
+          {
+            "item": "患者姓名、住院号准确",
+            "score": 10,
+            "deductReason": "患者信息不准确"
+          }
+        ]
+      },
+      {
+        "name": "病情危重程度",
+        "maxScore": 30,
+        "criteria": [
+          {
+            "item": "病情危重程度描述准确",
+            "score": 30,
+            "deductReason": "病情危重程度描述不准确"
+          }
+        ]
+      },
+      {
+        "name": "可能发生的危险",
+        "maxScore": 30,
+        "criteria": [
+          {
+            "item": "可能发生的危险告知完整",
+            "score": 30,
+            "deductReason": "可能发生的危险告知不完整"
+          }
+        ]
+      },
+      {
+        "name": "家属签字",
+        "maxScore": 30,
+        "criteria": [
+          {
+            "item": "家属签字完整",
+            "score": 15,
+            "deductReason": "家属签字不完整"
+          },
+          {
+            "item": "签字日期准确",
+            "score": 15,
+            "deductReason": "签字日期不准确"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "templateName": "知情同意书评分标准",
+    "documentType": "informed_consent",
+    "totalScore": 100,
+    "sections": [
+      {
+        "name": "患者信息",
+        "maxScore": 10,
+        "criteria": [
+          {
+            "item": "患者姓名、住院号准确",
+            "score": 10,
+            "deductReason": "患者信息不准确"
+          }
+        ]
+      },
+      {
+        "name": "告知内容",
+        "maxScore": 50,
+        "criteria": [
+          {
+            "item": "告知内容完整",
+            "score": 25,
+            "deductReason": "告知内容不完整"
+          },
+          {
+            "item": "告知内容清晰",
+            "score": 25,
+            "deductReason": "告知内容不清晰"
+          }
+        ]
+      },
+      {
+        "name": "患者或家属签字",
+        "maxScore": 40,
+        "criteria": [
+          {
+            "item": "患者或家属签字完整",
+            "score": 20,
+            "deductReason": "患者或家属签字不完整"
+          },
+          {
+            "item": "签字日期准确",
+            "score": 20,
+            "deductReason": "签字日期不准确"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "templateName": "出院小结评分标准",
+    "documentType": "discharge_summary",
+    "totalScore": 100,
+    "sections": [
+      {
+        "name": "入院情况",
+        "maxScore": 20,
+        "criteria": [
+          {
+            "item": "入院诊断明确",
+            "score": 5,
+            "deductReason": "入院诊断不明确"
+          },
+          {
+            "item": "入院时主要症状体征",
+            "score": 10,
+            "deductReason": "入院时主要症状体征描述不详"
+          },
+          {
+            "item": "重要辅助检查结果",
+            "score": 5,
+            "deductReason": "缺少重要辅助检查结果"
+          }
+        ]
+      },
+      {
+        "name": "住院经过",
+        "maxScore": 30,
+        "criteria": [
+          {
+            "item": "诊疗过程记录完整",
+            "score": 10,
+            "deductReason": "诊疗过程记录不完整"
+          },
+          {
+            "item": "病情变化及处理",
+            "score": 10,
+            "deductReason": "病情变化及处理描述不详"
+          },
+          {
+            "item": "特殊检查及治疗",
+            "score": 10,
+            "deductReason": "缺少特殊检查及治疗记录"
+          }
+        ]
+      },
+      {
+        "name": "出院情况",
+        "maxScore": 20,
+        "criteria": [
+          {
+            "item": "出院诊断明确",
+            "score": 5,
+            "deductReason": "出院诊断不明确"
+          },
+          {
+            "item": "出院时主要症状体征",
+            "score": 10,
+            "deductReason": "出院时主要症状体征描述不详"
+          },
+          {
+            "item": "出院时辅助检查结果",
+            "score": 5,
+            "deductReason": "缺少出院时辅助检查结果"
+          }
+        ]
+      },
+      {
+        "name": "出院医嘱",
+        "maxScore": 30,
+        "criteria": [
+          {
+            "item": "出院带药明确",
+            "score": 10,
+            "deductReason": "出院带药不明确"
+          },
+          {
+            "item": "复诊时间及注意事项",
+            "score": 10,
+            "deductReason": "缺少复诊时间或注意事项"
+          },
+          {
+            "item": "健康教育",
+            "score": 10,
+            "deductReason": "缺少健康教育"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "templateName": "病历首页评分标准",
+    "documentType": "medical_record_cover",
+    "totalScore": 100,
+    "sections": [
+      {
+        "name": "患者基本信息",
+        "maxScore": 20,
+        "criteria": [
+          {
+            "item": "姓名、性别、年龄、住院号准确",
+            "score": 10,
+            "deductReason": "患者基本信息不准确"
+          },
+          {
+            "item": "入院日期、出院日期准确",
+            "score": 10,
+            "deductReason": "入院出院日期不准确"
+          }
+        ]
+      },
+      {
+        "name": "诊断信息",
+        "maxScore": 40,
+        "criteria": [
+          {
+            "item": "主要诊断明确",
+            "score": 20,
+            "deductReason": "主要诊断不明确"
+          },
+          {
+            "item": "次要诊断完整",
+            "score": 10,
+            "deductReason": "次要诊断不完整"
+          },
+          {
+            "item": "ICD编码准确",
+            "score": 10,
+            "deductReason": "ICD编码不准确"
+          }
+        ]
+      },
+      {
+        "name": "手术信息",
+        "maxScore": 20,
+        "criteria": [
+          {
+            "item": "手术名称准确",
+            "score": 10,
+            "deductReason": "手术名称不准确"
+          },
+          {
+            "item": "手术日期准确",
+            "score": 10,
+            "deductReason": "手术日期不准确"
+          }
+        ]
+      },
+      {
+        "name": "费用信息",
+        "maxScore": 20,
+        "criteria": [
+          {
+            "item": "总费用、自付费用准确",
+            "score": 20,
+            "deductReason": "费用信息不准确"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "templateName": "护理评估单评分标准",
+    "documentType": "nursing_assessment",
+    "totalScore": 100,
+    "sections": [
+      {
+        "name": "入院评估",
+        "maxScore": 30,
+        "criteria": [
+          {
+            "item": "入院评估项目完整",
+            "score": 15,
+            "deductReason": "入院评估项目不完整"
+          },
+          {
+            "item": "评估结果准确",
+            "score": 15,
+            "deductReason": "评估结果不准确"
+          }
+        ]
+      },
+      {
+        "name": "专科评估",
+        "maxScore": 30,
+        "criteria": [
+          {
+            "item": "专科评估项目完整",
+            "score": 15,
+            "deductReason": "专科评估项目不完整"
+          },
+          {
+            "item": "评估结果准确",
+            "score": 15,
+            "deductReason": "评估结果不准确"
+          }
+        ]
+      },
+      {
+        "name": "护理诊断",
+        "maxScore": 20,
+        "criteria": [
+          {
+            "item": "护理诊断明确",
+            "score": 10,
+            "deductReason": "护理诊断不明确"
+          },
+          {
+            "item": "护理诊断依据充分",
+            "score": 10,
+            "deductReason": "护理诊断依据不足"
+          }
+        ]
+      },
+      {
+        "name": "护理计划",
+        "maxScore": 20,
+        "criteria": [
+          {
+            "item": "护理计划完整",
+            "score": 10,
+            "deductReason": "护理计划不完整"
+          },
+          {
+            "item": "护理措施合理",
+            "score": 10,
+            "deductReason": "护理措施不合理"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "templateName": "医嘱单评分标准",
+    "documentType": "doctor_order",
+    "totalScore": 100,
+    "sections": [
+      {
+        "name": "医嘱内容",
+        "maxScore": 40,
+        "criteria": [
+          {
+            "item": "医嘱内容清晰明确",
+            "score": 20,
+            "deductReason": "医嘱内容不清晰或不明确"
+          },
+          {
+            "item": "医嘱符合诊疗规范",
+            "score": 20,
+            "deductReason": "医嘱不符合诊疗规范"
+          }
+        ]
+      },
+      {
+        "name": "医嘱执行",
+        "maxScore": 30,
+        "criteria": [
+          {
+            "item": "医嘱执行及时准确",
+            "score": 15,
+            "deductReason": "医嘱执行不及时或不准确"
+          },
+          {
+            "item": "医嘱停止记录完整",
+            "score": 15,
+            "deductReason": "医嘱停止记录不完整"
+          }
+        ]
+      },
+      {
+        "name": "医师签字",
+        "maxScore": 30,
+        "criteria": [
+          {
+            "item": "医师签字完整",
+            "score": 15,
+            "deductReason": "医师签字不完整"
+          },
+          {
+            "item": "签字日期准确",
+            "score": 15,
+            "deductReason": "签字日期不准确"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "templateName": "会诊申请单评分标准",
+    "documentType": "consultation_request",
+    "totalScore": 100,
+    "sections": [
+      {
+        "name": "患者信息",
+        "maxScore": 10,
+        "criteria": [
+          {
+            "item": "患者姓名、住院号准确",
+            "score": 10,
+            "deductReason": "患者信息不准确"
+          }
+        ]
+      },
+      {
+        "name": "申请科室及医师",
+        "maxScore": 10,
+        "criteria": [
+          {
+            "item": "申请科室及医师记录完整",
+            "score": 10,
+            "deductReason": "申请科室及医师记录不完整"
+          }
+        ]
+      },
+      {
+        "name": "会诊目的",
+        "maxScore": 30,
+        "criteria": [
+          {
+            "item": "会诊目的明确",
+            "score": 30,
+            "deductReason": "会诊目的不明确"
+          }
+        ]
+      },
+      {
+        "name": "病情摘要",
+        "maxScore": 30,
+        "criteria": [
+          {
+            "item": "病情摘要完整",
+            "score": 30,
+            "deductReason": "病情摘要不完整"
+          }
+        ]
+      },
+      {
+        "name": "会诊时间",
+        "maxScore": 20,
+        "criteria": [
+          {
+            "item": "会诊时间明确",
+            "score": 20,
+            "deductReason": "会诊时间不明确"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "templateName": "病理报告评分标准",
+    "documentType": "pathology_report",
+    "totalScore": 100,
+    "sections": [
+      {
+        "name": "患者信息",
+        "maxScore": 10,
+        "criteria": [
+          {
+            "item": "患者姓名、住院号准确",
+            "score": 10,
+            "deductReason": "患者信息不准确"
+          }
+        ]
+      },
+      {
+        "name": "送检信息",
+        "maxScore": 20,
+        "criteria": [
+          {
+            "item": "送检部位、送检日期准确",
+            "score": 10,
+            "deductReason": "送检信息不准确"
+          },
+          {
+            "item": "临床诊断明确",
+            "score": 10,
+            "deductReason": "临床诊断不明确"
+          }
+        ]
+      },
+      {
+        "name": "病理诊断",
+        "maxScore": 50,
+        "criteria": [
+          {
+            "item": "病理诊断明确",
+            "score": 25,
+            "deductReason": "病理诊断不明确"
+          },
+          {
+            "item": "病理描述与诊断一致",
+            "score": 25,
+            "deductReason": "病理描述与诊断不一致"
+          }
+        ]
+      },
+      {
+        "name": "报告医师签字",
+        "maxScore": 20,
+        "criteria": [
+          {
+            "item": "报告医师签字完整",
+            "score": 10,
+            "deductReason": "报告医师签字不完整"
+          },
+          {
+            "item": "报告日期准确",
+            "score": 10,
+            "deductReason": "报告日期不准确"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "templateName": "影像报告评分标准",
+    "documentType": "imaging_report",
+    "totalScore": 100,
+    "sections": [
+      {
+        "name": "患者信息",
+        "maxScore": 10,
+        "criteria": [
+          {
+            "item": "患者姓名、住院号准确",
+            "score": 10,
+            "deductReason": "患者信息不准确"
+          }
+        ]
+      },
+      {
+        "name": "检查信息",
+        "maxScore": 20,
+        "criteria": [
+          {
+            "item": "检查部位、检查日期准确",
+            "score": 10,
+            "deductReason": "检查信息不准确"
+          },
+          {
+            "item": "临床诊断明确",
+            "score": 10,
+            "deductReason": "临床诊断不明确"
+          }
+        ]
+      },
+      {
+        "name": "影像描述",
+        "maxScore": 40,
+        "criteria": [
+          {
+            "item": "影像描述完整",
+            "score": 20,
+            "deductReason": "影像描述不完整"
+          },
+          {
+            "item": "影像描述准确",
+            "score": 20,
+            "deductReason": "影像描述不准确"
+          }
+        ]
+      },
+      {
+        "name": "影像诊断",
+        "maxScore": 30,
+        "criteria": [
+          {
+            "item": "影像诊断明确",
+            "score": 15,
+            "deductReason": "影像诊断不明确"
+          },
+          {
+            "item": "影像诊断与描述一致",
+            "score": 15,
+            "deductReason": "影像诊断与描述不一致"
+          }
+        ]
+      }
+    ]
+  }
+]
