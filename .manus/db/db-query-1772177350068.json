@@ -1,0 +1,50 @@
+{
+  "query": "SELECT 'content_rules' as tbl, COUNT(*) as cnt FROM content_rules UNION ALL SELECT 'symptom_terms', COUNT(*) FROM symptom_terms UNION ALL SELECT 'medical_terminology', COUNT(*) FROM medical_terminology UNION ALL SELECT 'drug_knowledge_base', COUNT(*) FROM drug_knowledge_base UNION ALL SELECT 'qc_rules', COUNT(*) FROM qc_rules UNION ALL SELECT 'qc_configs', COUNT(*) FROM qc_configs UNION ALL SELECT 'terminology_mappings', COUNT(*) FROM terminology_mappings UNION ALL SELECT 'medical_records', COUNT(*) FROM medical_records UNION ALL SELECT 'qc_results', COUNT(*) FROM qc_results UNION ALL SELECT 'qc_issues', COUNT(*) FROM qc_issues",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3evEXeQR2ZV2n9M.12b1529855c9 --database abpwBixLt4VY47oKNmgDNS --execute SELECT 'content_rules' as tbl, COUNT(*) as cnt FROM content_rules UNION ALL SELECT 'symptom_terms', COUNT(*) FROM symptom_terms UNION ALL SELECT 'medical_terminology', COUNT(*) FROM medical_terminology UNION ALL SELECT 'drug_knowledge_base', COUNT(*) FROM drug_knowledge_base UNION ALL SELECT 'qc_rules', COUNT(*) FROM qc_rules UNION ALL SELECT 'qc_configs', COUNT(*) FROM qc_configs UNION ALL SELECT 'terminology_mappings', COUNT(*) FROM terminology_mappings UNION ALL SELECT 'medical_records', COUNT(*) FROM medical_records UNION ALL SELECT 'qc_results', COUNT(*) FROM qc_results UNION ALL SELECT 'qc_issues', COUNT(*) FROM qc_issues",
+  "rows": [
+    {
+      "tbl": "drug_knowledge_base",
+      "cnt": "0"
+    },
+    {
+      "tbl": "symptom_terms",
+      "cnt": "50"
+    },
+    {
+      "tbl": "content_rules",
+      "cnt": "35"
+    },
+    {
+      "tbl": "medical_terminology",
+      "cnt": "0"
+    },
+    {
+      "tbl": "qc_rules",
+      "cnt": "19"
+    },
+    {
+      "tbl": "qc_configs",
+      "cnt": "19"
+    },
+    {
+      "tbl": "medical_records",
+      "cnt": "19"
+    },
+    {
+      "tbl": "terminology_mappings",
+      "cnt": "0"
+    },
+    {
+      "tbl": "qc_results",
+      "cnt": "1"
+    },
+    {
+      "tbl": "qc_issues",
+      "cnt": "9"
+    }
+  ],
+  "messages": [],
+  "stdout": "tbl\tcnt\ndrug_knowledge_base\t0\nsymptom_terms\t50\ncontent_rules\t35\nmedical_terminology\t0\nqc_rules\t19\nqc_configs\t19\nmedical_records\t19\nterminology_mappings\t0\nqc_results\t1\nqc_issues\t9\n",
+  "stderr": "",
+  "execution_time_ms": 116
+}
