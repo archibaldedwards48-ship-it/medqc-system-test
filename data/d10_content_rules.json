@@ -1,0 +1,42 @@
+[
+  {
+    "documentType": "admission_record",
+    "section": "chief_complaint",
+    "checkType": "must_contain_duration",
+    "condition": {"type": "must_contain_duration"},
+    "errorMessage": "主诉缺少持续时间描述（如：X天/X月/X年）",
+    "severity": "major"
+  },
+  {
+    "documentType": "admission_record",
+    "section": "chief_complaint",
+    "checkType": "must_contain_main_symptom",
+    "condition": {"type": "must_contain_main_symptom"},
+    "errorMessage": "主诉缺少主要症状描述",
+    "severity": "major"
+  },
+  {
+    "documentType": "admission_record",
+    "section": "history_of_present_illness",
+    "checkType": "must_be_detailed",
+    "condition": {"type": "length_min", "value": 100},
+    "errorMessage": "现病史描述过于简略，需包含起病、演变、诊疗经过等",
+    "severity": "major"
+  },
+  {
+    "documentType": "admission_record",
+    "section": "past_medical_history",
+    "checkType": "must_be_complete",
+    "condition": {"type": "keywords_present", "keywords": ["高血压", "糖尿病", "冠心病", "手术史", "过敏史"]},
+    "errorMessage": "既往史不完整，需包含常见慢性病、手术史、过敏史等",
+    "severity": "minor"
+  },
+  {
+    "documentType": "admission_record",
+    "section": "physical_examination",
+    "checkType": "must_be_recorded",
+    "condition": {"type": "not_empty"},
+    "errorMessage": "体格检查未记录",
+    "severity": "critical"
+  }
+]
