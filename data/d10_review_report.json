@@ -1,0 +1,47 @@
+[
+  {
+    "ruleId": "admission_record-past_medical_history-must_be_complete",
+    "issue": "Severity too low for a potentially critical omission.",
+    "suggestion": "Change severity from 'minor' to 'major' as incomplete past medical history can significantly impact diagnosis and treatment decisions."
+  },
+  {
+    "ruleId": "admission_record-physical_examination-must_be_recorded",
+    "issue": "Severity is 'critical' but the errorMessage is generic.",
+    "suggestion": "Keep severity as 'critical' but refine errorMessage to '体格检查记录缺失，可能导致诊疗风险' to emphasize the critical impact."
+  },
+  {
+    "ruleId": "discharge_record-discharge_summary-must_contain_treatment_result",
+    "issue": "errorMessage could be more precise.",
+    "suggestion": "Refine errorMessage to '出院小结缺少治疗结果（如：治愈、好转、未愈、死亡等）描述' to provide more specific examples."
+  },
+  {
+    "ruleId": "first_progress_note-differential_diagnosis-must_contain_key_diseases",
+    "issue": "errorMessage is slightly vague.",
+    "suggestion": "Refine errorMessage to '鉴别诊断缺少必要病种对比描述，可能影响诊断准确性' to highlight the consequence."
+  },
+  {
+    "ruleId": "admission_record-auxiliary_examination-must_contain_numerical_values",
+    "issue": "The condition type 'regex_match' with pattern '\\d+(\\.\\d+)?' is too broad and might flag normal text as numerical.",
+    "suggestion": "Consider a more sophisticated NLP-based condition or a 'must_contain_structured_numerical_result' type that checks for key-value pairs or specific result formats, as simple regex might lead to false positives."
+  },
+  {
+    "ruleId": "admission_record-auxiliary_examination-must_contain_exam_date",
+    "issue": "Severity is 'minor' for a potentially important missing piece of information.",
+    "suggestion": "Change severity from 'minor' to 'major' as missing exam dates can lead to misinterpretation of results over time."
+  },
+  {
+    "ruleId": "admission_record-chief_complaint-length_max_20",
+    "issue": "Severity is 'minor' for a stylistic rule that might be important for clarity.",
+    "suggestion": "Consider changing severity to 'major' if strict adherence to chief complaint length is a critical quality metric for the system."
+  },
+  {
+    "ruleId": "admission_record-allergy_history-format_standard",
+    "issue": "Severity is 'minor' for a formatting rule that could impact data parsing.",
+    "suggestion": "Change severity from 'minor' to 'major' if standardized allergy history format is crucial for downstream data processing or clinical decision support."
+  },
+  {
+    "ruleId": "first_progress_note-treatment_plan-must_contain_level_of_care",
+    "issue": "errorMessage could be more specific about the missing information.",
+    "suggestion": "Refine errorMessage to '首次病程记录诊疗计划中必须包含护理级别（如：一级护理、二级护理、三级护理）' to provide examples."
+  }
+]
