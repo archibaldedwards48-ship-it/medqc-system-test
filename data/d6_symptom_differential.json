@@ -1,0 +1,2422 @@
+[
+  {
+    "symptom": "胸痛",
+    "category": "循环系统",
+    "differentialDiagnosis": [
+      {
+        "disease": "急性冠脉综合征",
+        "features": "压榨性胸痛，放射至左肩，含服硝酸甘油缓解",
+        "urgency": "急诊"
+      },
+      {
+        "disease": "肺栓塞",
+        "features": "突发胸痛伴呼吸困难，D-二聚体升高",
+        "urgency": "急诊"
+      },
+      {
+        "disease": "气胸",
+        "features": "突发一侧胸痛，呼吸音减弱",
+        "urgency": "急诊"
+      },
+      {
+        "disease": "肋间神经痛",
+        "features": "沿肋间分布的刺痛，体位改变加重",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "反流性食管炎",
+        "features": "烧灼样胸痛，餐后加重，伴反酸",
+        "urgency": "门诊"
+      }
+    ],
+    "keyQuestions": [
+      "疼痛性质？",
+      "持续时间？",
+      "诱因？",
+      "伴随症状？"
+    ]
+  },
+  {
+    "symptom": "腹痛",
+    "category": "消化系统",
+    "differentialDiagnosis": [
+      {
+        "disease": "急性阑尾炎",
+        "features": "转移性右下腹痛，伴恶心呕吐",
+        "urgency": "急诊"
+      },
+      {
+        "disease": "急性胃肠炎",
+        "features": "脐周或上腹痛，伴腹泻、呕吐",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "消化性溃疡穿孔",
+        "features": "突发刀割样腹痛，板状腹",
+        "urgency": "急诊"
+      },
+      {
+        "disease": "急性胰腺炎",
+        "features": "左上腹或上腹部剧痛，放射至背部",
+        "urgency": "急诊"
+      },
+      {
+        "disease": "胆囊炎",
+        "features": "右上腹绞痛，放射至右肩背",
+        "urgency": "急诊"
+      }
+    ],
+    "keyQuestions": [
+      "疼痛部位？",
+      "性质？",
+      "与饮食关系？",
+      "伴随症状？"
+    ]
+  },
+  {
+    "symptom": "头痛",
+    "category": "神经系统",
+    "differentialDiagnosis": [
+      {
+        "disease": "偏头痛",
+        "features": "搏动性头痛，常为单侧，伴恶心、畏光",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "紧张性头痛",
+        "features": "头部紧绷感，常为双侧，无搏动性",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "脑出血",
+        "features": "突发剧烈头痛，伴呕吐、意识障碍",
+        "urgency": "急诊"
+      },
+      {
+        "disease": "脑膜炎",
+        "features": "剧烈头痛，伴发热、颈项强直",
+        "urgency": "急诊"
+      },
+      {
+        "disease": "青光眼急性发作",
+        "features": "眼胀痛，视力下降，伴头痛",
+        "urgency": "急诊"
+      }
+    ],
+    "keyQuestions": [
+      "疼痛部位？",
+      "性质？",
+      "伴随症状？",
+      "有无视力改变？"
+    ]
+  },
+  {
+    "symptom": "发热",
+    "category": "全身症状",
+    "differentialDiagnosis": [
+      {
+        "disease": "普通感冒",
+        "features": "低热，伴鼻塞、流涕、咽痛",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "流感",
+        "features": "高热，伴全身肌肉酸痛、乏力",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "肺炎",
+        "features": "高热，伴咳嗽、咳痰、胸痛",
+        "urgency": "急诊"
+      },
+      {
+        "disease": "泌尿系感染",
+        "features": "发热，伴尿频、尿急、尿痛",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "败血症",
+        "features": "寒战、高热，伴意识障碍、休克",
+        "urgency": "急诊"
+      }
+    ],
+    "keyQuestions": [
+      "体温最高？",
+      "持续时间？",
+      "伴随症状？",
+      "有无寒战？"
+    ]
+  },
+  {
+    "symptom": "呼吸困难",
+    "category": "呼吸系统",
+    "differentialDiagnosis": [
+      {
+        "disease": "哮喘急性发作",
+        "features": "呼气性呼吸困难，伴喘息",
+        "urgency": "急诊"
+      },
+      {
+        "disease": "心力衰竭",
+        "features": "劳力性呼吸困难，夜间阵发性呼吸困难",
+        "urgency": "急诊"
+      },
+      {
+        "disease": "气胸",
+        "features": "突发呼吸困难，伴胸痛",
+        "urgency": "急诊"
+      },
+      {
+        "disease": "肺炎",
+        "features": "呼吸困难，伴发热、咳嗽",
+        "urgency": "急诊"
+      },
+      {
+        "disease": "过敏性休克",
+        "features": "突发呼吸困难，伴皮疹、血压下降",
+        "urgency": "急诊"
+      }
+    ],
+    "keyQuestions": [
+      "发作诱因？",
+      "持续时间？",
+      "伴随症状？",
+      "体位有无影响？"
+    ]
+  },
+  {
+    "symptom": "咳嗽",
+    "category": "呼吸系统",
+    "differentialDiagnosis": [
+      {
+        "disease": "急性支气管炎",
+        "features": "初期干咳，后有痰，常伴咽痛",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "肺炎",
+        "features": "咳嗽，咳痰，伴发热、胸痛",
+        "urgency": "急诊"
+      },
+      {
+        "disease": "哮喘",
+        "features": "阵发性咳嗽，夜间或晨起加重，伴喘息",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "慢性咽炎",
+        "features": "咽部不适，异物感，刺激性干咳",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "胃食管反流病",
+        "features": "慢性咳嗽，夜间或餐后加重，伴反酸",
+        "urgency": "门诊"
+      }
+    ],
+    "keyQuestions": [
+      "咳嗽性质？",
+      "有无痰？",
+      "持续时间？",
+      "伴随症状？"
+    ]
+  },
+  {
+    "symptom": "水肿",
+    "category": "全身症状",
+    "differentialDiagnosis": [
+      {
+        "disease": "心力衰竭",
+        "features": "双下肢凹陷性水肿，夜间加重，伴呼吸困难",
+        "urgency": "急诊"
+      },
+      {
+        "disease": "肾病综合征",
+        "features": "全身水肿，眼睑水肿明显，伴尿少",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "肝硬化",
+        "features": "双下肢水肿，伴腹水、黄疸",
+        "urgency": "急诊"
+      },
+      {
+        "disease": "甲状腺功能减退",
+        "features": "非凹陷性水肿，伴乏力、畏寒",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "深静脉血栓",
+        "features": "单侧肢体肿胀、疼痛",
+        "urgency": "急诊"
+      }
+    ],
+    "keyQuestions": [
+      "水肿部位？",
+      "性质？",
+      "伴随症状？",
+      "有无尿量改变？"
+    ]
+  },
+  {
+    "symptom": "黄疸",
+    "category": "消化系统",
+    "differentialDiagnosis": [
+      {
+        "disease": "急性肝炎",
+        "features": "皮肤巩膜黄染，伴乏力、纳差",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "胆道梗阻",
+        "features": "皮肤巩膜黄染，伴皮肤瘙痒、陶土色便",
+        "urgency": "急诊"
+      },
+      {
+        "disease": "溶血性贫血",
+        "features": "皮肤巩膜黄染，伴贫血、脾大",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "肝硬化",
+        "features": "皮肤巩膜黄染，伴腹水、蜘蛛痣",
+        "urgency": "急诊"
+      }
+    ],
+    "keyQuestions": [
+      "黄疸出现时间？",
+      "伴随症状？",
+      "有无皮肤瘙痒？",
+      "大便颜色？"
+    ]
+  },
+  {
+    "symptom": "血尿",
+    "category": "泌尿系统",
+    "differentialDiagnosis": [
+      {
+        "disease": "泌尿系感染",
+        "features": "血尿，伴尿频、尿急、尿痛",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "泌尿系结石",
+        "features": "血尿，伴肾绞痛",
+        "urgency": "急诊"
+      },
+      {
+        "disease": "肾小球肾炎",
+        "features": "血尿，伴水肿、高血压",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "泌尿系肿瘤",
+        "features": "无痛性肉眼血尿",
+        "urgency": "门诊"
+      }
+    ],
+    "keyQuestions": [
+      "血尿性质？",
+      "伴随症状？",
+      "有无疼痛？",
+      "有无排尿异常？"
+    ]
+  },
+  {
+    "symptom": "便血",
+    "category": "消化系统",
+    "differentialDiagnosis": [
+      {
+        "disease": "痔疮",
+        "features": "便后滴血，鲜红色，无痛",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "结直肠癌",
+        "features": "便血，暗红色，伴大便习惯改变",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "消化道出血",
+        "features": "黑便或柏油样便，伴头晕、乏力",
+        "urgency": "急诊"
+      },
+      {
+        "disease": "溃疡性结肠炎",
+        "features": "黏液脓血便，伴腹痛、腹泻",
+        "urgency": "门诊"
+      }
+    ],
+    "keyQuestions": [
+      "便血颜色？",
+      "与排便关系？",
+      "伴随症状？",
+      "有无腹痛？"
+    ]
+  },
+  {
+    "symptom": "眩晕",
+    "category": "神经系统",
+    "differentialDiagnosis": [
+      {
+        "disease": "梅尼埃病",
+        "features": "发作性眩晕，伴耳鸣、听力下降",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "良性阵发性位置性眩晕",
+        "features": "头部位置改变时诱发眩晕，持续时间短",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "脑供血不足",
+        "features": "持续性眩晕，伴头晕、步态不稳",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "脑梗死",
+        "features": "突发眩晕，伴肢体无力、言语不清",
+        "urgency": "急诊"
+      }
+    ],
+    "keyQuestions": [
+      "眩晕性质？",
+      "持续时间？",
+      "诱因？",
+      "伴随症状？"
+    ]
+  },
+  {
+    "symptom": "晕厥",
+    "category": "神经系统",
+    "differentialDiagnosis": [
+      {
+        "disease": "血管迷走性晕厥",
+        "features": "情绪紧张或站立过久后发生，伴恶心、出汗",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "心源性晕厥",
+        "features": "活动时突发晕厥，无先兆，伴心悸",
+        "urgency": "急诊"
+      },
+      {
+        "disease": "直立性低血压",
+        "features": "体位改变时发生，伴头晕、眼前发黑",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "癫痫",
+        "features": "突发意识丧失，伴肢体抽搐、口吐白沫",
+        "urgency": "急诊"
+      }
+    ],
+    "keyQuestions": [
+      "发作诱因？",
+      "有无先兆？",
+      "持续时间？",
+      "伴随症状？"
+    ]
+  },
+  {
+    "symptom": "抽搐",
+    "category": "神经系统",
+    "differentialDiagnosis": [
+      {
+        "disease": "癫痫",
+        "features": "反复发作性肢体抽搐，伴意识丧失",
+        "urgency": "急诊"
+      },
+      {
+        "disease": "高热惊厥",
+        "features": "儿童高热时发生，全身性抽搐",
+        "urgency": "急诊"
+      },
+      {
+        "disease": "破伤风",
+        "features": "全身肌肉强直性抽搐，伴角弓反张",
+        "urgency": "急诊"
+      },
+      {
+        "disease": "低钙血症",
+        "features": "手足搐搦，面部肌肉抽搐",
+        "urgency": "急诊"
+      }
+    ],
+    "keyQuestions": [
+      "发作形式？",
+      "持续时间？",
+      "伴随症状？",
+      "有无意识丧失？"
+    ]
+  },
+  {
+    "symptom": "腰痛",
+    "category": "运动系统",
+    "differentialDiagnosis": [
+      {
+        "disease": "腰椎间盘突出",
+        "features": "腰痛伴下肢放射痛，咳嗽加重",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "腰肌劳损",
+        "features": "慢性腰部酸痛，劳累后加重",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "肾结石",
+        "features": "突发腰部绞痛，放射至腹股沟",
+        "urgency": "急诊"
+      },
+      {
+        "disease": "脊柱肿瘤",
+        "features": "持续性腰痛，夜间加重，伴体重下降",
+        "urgency": "急诊"
+      }
+    ],
+    "keyQuestions": [
+      "疼痛部位？",
+      "性质？",
+      "伴随症状？",
+      "有无下肢放射痛？"
+    ]
+  },
+  {
+    "symptom": "关节痛",
+    "category": "运动系统",
+    "differentialDiagnosis": [
+      {
+        "disease": "骨关节炎",
+        "features": "晨僵，活动后缓解，负重关节疼痛",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "类风湿关节炎",
+        "features": "多关节对称性疼痛，晨僵明显，伴关节肿胀",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "痛风",
+        "features": "急性单关节剧痛，常累及大脚趾，伴红肿热痛",
+        "urgency": "急诊"
+      },
+      {
+        "disease": "化脓性关节炎",
+        "features": "单关节红肿热痛，伴发热",
+        "urgency": "急诊"
+      }
+    ],
+    "keyQuestions": [
+      "疼痛部位？",
+      "性质？",
+      "伴随症状？",
+      "有无红肿？"
+    ]
+  },
+  {
+    "symptom": "乏力",
+    "category": "全身症状",
+    "differentialDiagnosis": [
+      {
+        "disease": "贫血",
+        "features": "乏力，伴面色苍白、头晕",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "甲状腺功能减退",
+        "features": "乏力，伴畏寒、水肿、嗜睡",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "慢性疲劳综合征",
+        "features": "持续性乏力，休息不能缓解",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "心力衰竭",
+        "features": "乏力，伴呼吸困难、水肿",
+        "urgency": "急诊"
+      }
+    ],
+    "keyQuestions": [
+      "持续时间？",
+      "伴随症状？",
+      "有无体重改变？"
+    ]
+  },
+  {
+    "symptom": "恶心",
+    "category": "消化系统",
+    "differentialDiagnosis": [
+      {
+        "disease": "急性胃肠炎",
+        "features": "恶心，伴呕吐、腹泻",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "妊娠反应",
+        "features": "早晨恶心，伴呕吐、月经推迟",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "药物副作用",
+        "features": "服药后出现恶心",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "脑部疾病",
+        "features": "恶心，伴头痛、呕吐、意识障碍",
+        "urgency": "急诊"
+      }
+    ],
+    "keyQuestions": [
+      "与饮食关系？",
+      "伴随症状？",
+      "有无头痛？"
+    ]
+  },
+  {
+    "symptom": "呕吐",
+    "category": "消化系统",
+    "differentialDiagnosis": [
+      {
+        "disease": "急性胃肠炎",
+        "features": "呕吐，伴恶心、腹泻",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "胃肠道梗阻",
+        "features": "频繁呕吐，呕吐物含胆汁或粪样物",
+        "urgency": "急诊"
+      },
+      {
+        "disease": "脑部疾病",
+        "features": "喷射性呕吐，伴头痛、意识障碍",
+        "urgency": "急诊"
+      },
+      {
+        "disease": "药物副作用",
+        "features": "服药后出现呕吐",
+        "urgency": "门诊"
+      }
+    ],
+    "keyQuestions": [
+      "呕吐物性质？",
+      "与饮食关系？",
+      "伴随症状？"
+    ]
+  },
+  {
+    "symptom": "腹泻",
+    "category": "消化系统",
+    "differentialDiagnosis": [
+      {
+        "disease": "急性胃肠炎",
+        "features": "腹泻，伴腹痛、恶心、呕吐",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "食物中毒",
+        "features": "进食不洁食物后突发腹泻，伴呕吐",
+        "urgency": "急诊"
+      },
+      {
+        "disease": "溃疡性结肠炎",
+        "features": "慢性腹泻，伴黏液脓血便、腹痛",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "肠易激综合征",
+        "features": "反复腹泻或便秘，与情绪有关",
+        "urgency": "门诊"
+      }
+    ],
+    "keyQuestions": [
+      "大便性状？",
+      "次数？",
+      "伴随症状？",
+      "持续时间？"
+    ]
+  },
+  {
+    "symptom": "便秘",
+    "category": "消化系统",
+    "differentialDiagnosis": [
+      {
+        "disease": "功能性便秘",
+        "features": "排便困难，粪便干结，无器质性病变",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "肠梗阻",
+        "features": "腹胀、腹痛，停止排气排便",
+        "urgency": "急诊"
+      },
+      {
+        "disease": "结直肠癌",
+        "features": "大便习惯改变，便秘与腹泻交替",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "药物性便秘",
+        "features": "服药后出现便秘",
+        "urgency": "门诊"
+      }
+    ],
+    "keyQuestions": [
+      "持续时间？",
+      "大便性状？",
+      "伴随症状？",
+      "有无腹胀？"
+    ]
+  },
+  {
+    "symptom": "尿频",
+    "category": "泌尿系统",
+    "differentialDiagnosis": [
+      {
+        "disease": "泌尿系感染",
+        "features": "尿频，伴尿急、尿痛、血尿",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "糖尿病",
+        "features": "尿频，伴多饮、多食、消瘦",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "前列腺增生",
+        "features": "老年男性尿频，夜尿增多，排尿困难",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "膀胱过度活动症",
+        "features": "尿频、尿急，伴急迫性尿失禁",
+        "urgency": "门诊"
+      }
+    ],
+    "keyQuestions": [
+      "伴随症状？",
+      "持续时间？",
+      "有无排尿疼痛？"
+    ]
+  },
+  {
+    "symptom": "尿急",
+    "category": "泌尿系统",
+    "differentialDiagnosis": [
+      {
+        "disease": "泌尿系感染",
+        "features": "尿急，伴尿频、尿痛、血尿",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "膀胱过度活动症",
+        "features": "尿急，伴尿频、急迫性尿失禁",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "前列腺炎",
+        "features": "尿急，伴会阴部胀痛，排尿不适",
+        "urgency": "门诊"
+      }
+    ],
+    "keyQuestions": [
+      "伴随症状？",
+      "持续时间？",
+      "有无排尿疼痛？"
+    ]
+  },
+  {
+    "symptom": "尿痛",
+    "category": "泌尿系统",
+    "differentialDiagnosis": [
+      {
+        "disease": "泌尿系感染",
+        "features": "尿痛，伴尿频、尿急、血尿",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "尿道炎",
+        "features": "排尿时尿道烧灼样疼痛",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "膀胱炎",
+        "features": "排尿终末疼痛，伴耻骨上区疼痛",
+        "urgency": "门诊"
+      }
+    ],
+    "keyQuestions": [
+      "疼痛部位？",
+      "性质？",
+      "伴随症状？"
+    ]
+  },
+  {
+    "symptom": "视物模糊",
+    "category": "五官科",
+    "differentialDiagnosis": [
+      {
+        "disease": "近视/远视",
+        "features": "看远/看近模糊，可矫正",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "白内障",
+        "features": "进行性视物模糊，看东西有雾感",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "青光眼",
+        "features": "突发视物模糊，伴眼胀痛、头痛",
+        "urgency": "急诊"
+      },
+      {
+        "disease": "糖尿病视网膜病变",
+        "features": "视物模糊，视力下降，伴糖尿病史",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "脑梗死",
+        "features": "突发单眼或双眼视物模糊，伴肢体无力",
+        "urgency": "急诊"
+      }
+    ],
+    "keyQuestions": [
+      "单眼还是双眼？",
+      "持续时间？",
+      "伴随症状？",
+      "有无眼痛？"
+    ]
+  },
+  {
+    "symptom": "耳鸣",
+    "category": "五官科",
+    "differentialDiagnosis": [
+      {
+        "disease": "噪声性耳聋",
+        "features": "长期接触噪声后出现耳鸣、听力下降",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "梅尼埃病",
+        "features": "发作性耳鸣，伴眩晕、听力下降",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "突发性耳聋",
+        "features": "突发单侧耳鸣、听力下降",
+        "urgency": "急诊"
+      },
+      {
+        "disease": "血管性耳鸣",
+        "features": "搏动性耳鸣，与心跳同步",
+        "urgency": "门诊"
+      }
+    ],
+    "keyQuestions": [
+      "单侧还是双侧？",
+      "持续时间？",
+      "伴随症状？",
+      "有无听力下降？"
+    ]
+  },
+  {
+    "symptom": "鼻塞",
+    "category": "五官科",
+    "differentialDiagnosis": [
+      {
+        "disease": "急性鼻炎",
+        "features": "鼻塞，伴流涕、打喷嚏、咽痛",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "过敏性鼻炎",
+        "features": "阵发性鼻塞，伴流涕、打喷嚏、鼻痒",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "鼻窦炎",
+        "features": "鼻塞，伴脓涕、头痛、面部胀痛",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "鼻息肉",
+        "features": "持续性鼻塞，嗅觉减退",
+        "urgency": "门诊"
+      }
+    ],
+    "keyQuestions": [
+      "持续时间？",
+      "伴随症状？",
+      "有无鼻涕？"
+    ]
+  },
+  {
+    "symptom": "咽痛",
+    "category": "五官科",
+    "differentialDiagnosis": [
+      {
+        "disease": "急性咽炎",
+        "features": "咽部疼痛，伴咽干、异物感",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "急性扁桃体炎",
+        "features": "剧烈咽痛，伴发热、扁桃体肿大",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "感冒",
+        "features": "咽痛，伴鼻塞、流涕、咳嗽",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "会厌炎",
+        "features": "剧烈咽痛，吞咽困难，呼吸困难",
+        "urgency": "急诊"
+      }
+    ],
+    "keyQuestions": [
+      "疼痛性质？",
+      "伴随症状？",
+      "有无吞咽困难？"
+    ]
+  },
+  {
+    "symptom": "皮疹",
+    "category": "皮肤科",
+    "differentialDiagnosis": [
+      {
+        "disease": "荨麻疹",
+        "features": "风团样皮疹，伴剧烈瘙痒，来去迅速",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "湿疹",
+        "features": "多形性皮疹，伴剧烈瘙痒，慢性病程",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "药疹",
+        "features": "服药后出现皮疹，形态多样",
+        "urgency": "急诊"
+      },
+      {
+        "disease": "麻疹",
+        "features": "发热后出现斑丘疹，从耳后开始蔓延全身",
+        "urgency": "门诊"
+      }
+    ],
+    "keyQuestions": [
+      "皮疹形态？",
+      "伴随症状？",
+      "有无瘙痒？",
+      "有无服药史？"
+    ]
+  },
+  {
+    "symptom": "瘙痒",
+    "category": "皮肤科",
+    "differentialDiagnosis": [
+      {
+        "disease": "湿疹",
+        "features": "皮肤瘙痒，伴皮疹",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "荨麻疹",
+        "features": "皮肤瘙痒，伴风团",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "皮肤干燥症",
+        "features": "冬季皮肤瘙痒，无明显皮疹",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "糖尿病",
+        "features": "全身皮肤瘙痒，无明显皮疹，伴多饮多尿",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "肝胆疾病",
+        "features": "全身皮肤瘙痒，伴黄疸",
+        "urgency": "门诊"
+      }
+    ],
+    "keyQuestions": [
+      "瘙痒部位？",
+      "持续时间？",
+      "伴随症状？",
+      "有无皮疹？"
+    ]
+  },
+  {
+    "symptom": "失眠",
+    "category": "精神科",
+    "differentialDiagnosis": [
+      {
+        "disease": "原发性失眠",
+        "features": "入睡困难，睡眠维持困难，早醒，无明显诱因",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "抑郁症",
+        "features": "早醒，伴情绪低落、兴趣减退",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "焦虑症",
+        "features": "入睡困难，伴紧张、担忧",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "甲状腺功能亢进",
+        "features": "失眠，伴心悸、多汗、易激动",
+        "urgency": "门诊"
+      }
+    ],
+    "keyQuestions": [
+      "入睡困难还是早醒？",
+      "持续时间？",
+      "伴随症状？",
+      "有无情绪问题？"
+    ]
+  },
+  {
+    "symptom": "焦虑",
+    "category": "精神科",
+    "differentialDiagnosis": [
+      {
+        "disease": "广泛性焦虑症",
+        "features": "持续性担忧，伴坐立不安、心悸、出汗",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "惊恐障碍",
+        "features": "突发强烈恐惧，伴心悸、胸闷、窒息感",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "甲状腺功能亢进",
+        "features": "焦虑，伴心悸、多汗、易激动",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "药物副作用",
+        "features": "服药后出现焦虑",
+        "urgency": "门诊"
+      }
+    ],
+    "keyQuestions": [
+      "持续时间？",
+      "伴随症状？",
+      "有无特定诱因？"
+    ]
+  },
+  {
+    "symptom": "出血倾向",
+    "category": "血液系统",
+    "differentialDiagnosis": [
+      {
+        "disease": "血小板减少症",
+        "features": "皮肤瘀点、紫癜，牙龈出血，鼻出血",
+        "urgency": "急诊"
+      },
+      {
+        "disease": "血友病",
+        "features": "关节腔出血，深部组织出血，凝血时间延长",
+        "urgency": "急诊"
+      },
+      {
+        "disease": "肝硬化",
+        "features": "皮肤瘀点、紫癜，牙龈出血，伴黄疸、腹水",
+        "urgency": "急诊"
+      },
+      {
+        "disease": "白血病",
+        "features": "皮肤瘀点、紫癜，伴贫血、发热",
+        "urgency": "急诊"
+      }
+    ],
+    "keyQuestions": [
+      "出血部位？",
+      "性质？",
+      "伴随症状？",
+      "有无外伤史？"
+    ]
+  },
+  {
+    "symptom": "淋巴结肿大",
+    "category": "血液系统",
+    "differentialDiagnosis": [
+      {
+        "disease": "感染",
+        "features": "局部淋巴结肿大，伴疼痛、发热",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "淋巴瘤",
+        "features": "全身淋巴结肿大，无痛，进行性增大",
+        "urgency": "急诊"
+      },
+      {
+        "disease": "转移癌",
+        "features": "局部淋巴结肿大，质硬，无痛，伴原发肿瘤病史",
+        "urgency": "急诊"
+      },
+      {
+        "disease": "结核",
+        "features": "淋巴结肿大，伴低热、盗汗、消瘦",
+        "urgency": "门诊"
+      }
+    ],
+    "keyQuestions": [
+      "肿大部位？",
+      "大小？",
+      "质地？",
+      "伴随症状？"
+    ]
+  },
+  {
+    "symptom": "惊厥",
+    "category": "儿科常见",
+    "differentialDiagnosis": [
+      {
+        "disease": "高热惊厥",
+        "features": "儿童高热时发生，全身性抽搐，意识丧失",
+        "urgency": "急诊"
+      },
+      {
+        "disease": "癫痫",
+        "features": "反复发作性惊厥，伴意识丧失",
+        "urgency": "急诊"
+      },
+      {
+        "disease": "中枢神经系统感染",
+        "features": "惊厥，伴发热、呕吐、意识障碍",
+        "urgency": "急诊"
+      },
+      {
+        "disease": "低血糖",
+        "features": "惊厥，伴出汗、面色苍白、意识障碍",
+        "urgency": "急诊"
+      }
+    ],
+    "keyQuestions": [
+      "发作诱因？",
+      "持续时间？",
+      "伴随症状？",
+      "有无意识丧失？"
+    ]
+  },
+  {
+    "symptom": "喂养困难",
+    "category": "儿科常见",
+    "differentialDiagnosis": [
+      {
+        "disease": "胃食管反流",
+        "features": "喂养后溢奶、呕吐，体重增长缓慢",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "先天性心脏病",
+        "features": "喂养困难，伴呼吸急促、口唇发绀",
+        "urgency": "急诊"
+      },
+      {
+        "disease": "神经系统疾病",
+        "features": "吸吮无力，吞咽困难，伴肌张力异常",
+        "urgency": "急诊"
+      },
+      {
+        "disease": "口腔疾病",
+        "features": "口腔溃疡、鹅口疮导致喂养疼痛",
+        "urgency": "门诊"
+      }
+    ],
+    "keyQuestions": [
+      "出生后多久出现？",
+      "伴随症状？",
+      "体重增长情况？"
+    ]
+  },
+  {
+    "symptom": "发育迟缓",
+    "category": "儿科常见",
+    "differentialDiagnosis": [
+      {
+        "disease": "营养不良",
+        "features": "体重、身高低于同龄儿，伴食欲不振",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "甲状腺功能减退",
+        "features": "发育迟缓，伴智力低下、嗜睡",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "染色体异常",
+        "features": "特殊面容，多系统发育迟缓",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "脑瘫",
+        "features": "运动发育迟缓，伴肌张力异常",
+        "urgency": "门诊"
+      }
+    ],
+    "keyQuestions": [
+      "运动、语言、认知哪个方面迟缓？",
+      "出生史？",
+      "家族史？"
+    ]
+  },
+  {
+    "symptom": "腹胀",
+    "category": "消化系统",
+    "differentialDiagnosis": [
+      {
+        "disease": "功能性消化不良",
+        "features": "餐后腹胀，伴早饱、嗳气",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "肠梗阻",
+        "features": "持续性腹胀，伴腹痛、停止排气排便",
+        "urgency": "急诊"
+      },
+      {
+        "disease": "肝硬化",
+        "features": "腹胀，伴腹水、双下肢水肿",
+        "urgency": "急诊"
+      },
+      {
+        "disease": "卵巢肿瘤",
+        "features": "女性腹胀，伴腹部包块",
+        "urgency": "门诊"
+      }
+    ],
+    "keyQuestions": [
+      "与饮食关系？",
+      "伴随症状？",
+      "有无排气排便？"
+    ]
+  },
+  {
+    "symptom": "乏力",
+    "category": "全身症状",
+    "differentialDiagnosis": [
+      {
+        "disease": "贫血",
+        "features": "乏力，伴面色苍白、头晕",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "甲状腺功能减退",
+        "features": "乏力，伴畏寒、水肿、嗜睡",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "慢性疲劳综合征",
+        "features": "持续性乏力，休息不能缓解",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "心力衰竭",
+        "features": "乏力，伴呼吸困难、水肿",
+        "urgency": "急诊"
+      }
+    ],
+    "keyQuestions": [
+      "持续时间？",
+      "伴随症状？",
+      "有无体重改变？"
+    ]
+  },
+  {
+    "symptom": "胸闷",
+    "category": "呼吸系统",
+    "differentialDiagnosis": [
+      {
+        "disease": "冠心病",
+        "features": "活动后胸闷，休息缓解，伴心绞痛",
+        "urgency": "急诊"
+      },
+      {
+        "disease": "焦虑症",
+        "features": "情绪紧张时胸闷，伴心悸、呼吸急促",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "哮喘",
+        "features": "胸闷，伴喘息、呼吸困难",
+        "urgency": "急诊"
+      },
+      {
+        "disease": "心肌炎",
+        "features": "胸闷，伴心悸、乏力，常有病毒感染前驱史",
+        "urgency": "急诊"
+      }
+    ],
+    "keyQuestions": [
+      "发作诱因？",
+      "持续时间？",
+      "伴随症状？"
+    ]
+  },
+  {
+    "symptom": "心悸",
+    "category": "循环系统",
+    "differentialDiagnosis": [
+      {
+        "disease": "心律失常",
+        "features": "心跳不规则，伴胸闷、头晕",
+        "urgency": "急诊"
+      },
+      {
+        "disease": "甲状腺功能亢进",
+        "features": "心悸，伴多汗、易激动、体重下降",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "贫血",
+        "features": "心悸，伴面色苍白、乏力",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "焦虑症",
+        "features": "心悸，伴紧张、担忧、胸闷",
+        "urgency": "门诊"
+      }
+    ],
+    "keyQuestions": [
+      "心跳快慢？",
+      "规律性？",
+      "伴随症状？"
+    ]
+  },
+  {
+    "symptom": "腹泻",
+    "category": "消化系统",
+    "differentialDiagnosis": [
+      {
+        "disease": "急性胃肠炎",
+        "features": "腹泻，伴腹痛、恶心、呕吐",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "食物中毒",
+        "features": "进食不洁食物后突发腹泻，伴呕吐",
+        "urgency": "急诊"
+      },
+      {
+        "disease": "溃疡性结肠炎",
+        "features": "黏液脓血便，伴腹痛、腹泻",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "肠易激综合征",
+        "features": "反复腹泻或便秘，与情绪有关",
+        "urgency": "门诊"
+      }
+    ],
+    "keyQuestions": [
+      "大便性状？",
+      "次数？",
+      "伴随症状？",
+      "持续时间？"
+    ]
+  },
+  {
+    "symptom": "便秘",
+    "category": "消化系统",
+    "differentialDiagnosis": [
+      {
+        "disease": "功能性便秘",
+        "features": "排便困难，粪便干结，无器质性病变",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "肠梗阻",
+        "features": "腹胀、腹痛，停止排气排便",
+        "urgency": "急诊"
+      },
+      {
+        "disease": "结直肠癌",
+        "features": "大便习惯改变，便秘与腹泻交替",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "药物性便秘",
+        "features": "服药后出现便秘",
+        "urgency": "门诊"
+      }
+    ],
+    "keyQuestions": [
+      "持续时间？",
+      "大便性状？",
+      "伴随症状？",
+      "有无腹胀？"
+    ]
+  },
+  {
+    "symptom": "关节肿胀",
+    "category": "运动系统",
+    "differentialDiagnosis": [
+      {
+        "disease": "类风湿关节炎",
+        "features": "多关节对称性肿胀，晨僵明显",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "痛风",
+        "features": "急性单关节红肿热痛，伴剧痛",
+        "urgency": "急诊"
+      },
+      {
+        "disease": "化脓性关节炎",
+        "features": "单关节红肿热痛，伴发热",
+        "urgency": "急诊"
+      },
+      {
+        "disease": "创伤性关节炎",
+        "features": "外伤后关节肿胀、疼痛",
+        "urgency": "门诊"
+      }
+    ],
+    "keyQuestions": [
+      "肿胀部位？",
+      "伴随症状？",
+      "有无疼痛？"
+    ]
+  },
+  {
+    "symptom": "肌肉萎缩",
+    "category": "运动系统",
+    "differentialDiagnosis": [
+      {
+        "disease": "废用性肌萎缩",
+        "features": "长期制动后肌肉萎缩",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "脊髓灰质炎",
+        "features": "不对称性肌肉萎缩，伴肌力下降",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "肌营养不良",
+        "features": "进行性对称性肌肉萎缩，伴肌力下降",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "运动神经元病",
+        "features": "进行性肌肉萎缩，伴肌束震颤",
+        "urgency": "急诊"
+      }
+    ],
+    "keyQuestions": [
+      "萎缩部位？",
+      "对称性？",
+      "伴随症状？"
+    ]
+  },
+  {
+    "symptom": "骨折疼痛",
+    "category": "运动系统",
+    "differentialDiagnosis": [
+      {
+        "disease": "骨折",
+        "features": "外伤后局部剧痛，伴肿胀、畸形、功能障碍",
+        "urgency": "急诊"
+      },
+      {
+        "disease": "骨肿瘤",
+        "features": "持续性疼痛，夜间加重，伴体重下降",
+        "urgency": "急诊"
+      },
+      {
+        "disease": "骨质疏松性骨折",
+        "features": "轻微外伤或无外伤后骨折，老年人多见",
+        "urgency": "门诊"
+      }
+    ],
+    "keyQuestions": [
+      "有无外伤史？",
+      "疼痛部位？",
+      "伴随症状？"
+    ]
+  },
+  {
+    "symptom": "活动受限",
+    "category": "运动系统",
+    "differentialDiagnosis": [
+      {
+        "disease": "关节炎",
+        "features": "关节疼痛、肿胀导致活动受限",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "骨折",
+        "features": "骨折后局部疼痛、畸形导致活动受限",
+        "urgency": "急诊"
+      },
+      {
+        "disease": "脑卒中",
+        "features": "突发肢体活动受限，伴言语不清、口角歪斜",
+        "urgency": "急诊"
+      },
+      {
+        "disease": "帕金森病",
+        "features": "进行性活动迟缓，伴震颤、肌强直",
+        "urgency": "门诊"
+      }
+    ],
+    "keyQuestions": [
+      "受限部位？",
+      "持续时间？",
+      "伴随症状？"
+    ]
+  },
+  {
+    "symptom": "腰背痛",
+    "category": "运动系统",
+    "differentialDiagnosis": [
+      {
+        "disease": "腰椎间盘突出",
+        "features": "腰痛伴下肢放射痛，咳嗽加重",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "腰肌劳损",
+        "features": "慢性腰部酸痛，劳累后加重",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "肾结石",
+        "features": "突发腰部绞痛，放射至腹股沟",
+        "urgency": "急诊"
+      },
+      {
+        "disease": "脊柱肿瘤",
+        "features": "持续性腰痛，夜间加重，伴体重下降",
+        "urgency": "急诊"
+      }
+    ],
+    "keyQuestions": [
+      "疼痛部位？",
+      "性质？",
+      "伴随症状？",
+      "有无下肢放射痛？"
+    ]
+  },
+  {
+    "symptom": "颈项强直",
+    "category": "运动系统",
+    "differentialDiagnosis": [
+      {
+        "disease": "颈椎病",
+        "features": "颈项部疼痛、僵硬，伴上肢麻木",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "脑膜炎",
+        "features": "颈项强直，伴发热、头痛、呕吐",
+        "urgency": "急诊"
+      },
+      {
+        "disease": "落枕",
+        "features": "晨起突发颈项部疼痛、活动受限",
+        "urgency": "门诊"
+      }
+    ],
+    "keyQuestions": [
+      "持续时间？",
+      "伴随症状？",
+      "有无发热？"
+    ]
+  },
+  {
+    "symptom": "低热",
+    "category": "全身症状",
+    "differentialDiagnosis": [
+      {
+        "disease": "结核病",
+        "features": "长期低热，伴盗汗、消瘦、乏力",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "慢性感染",
+        "features": "长期低热，伴局部感染症状",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "肿瘤",
+        "features": "长期低热，伴体重下降、乏力",
+        "urgency": "急诊"
+      },
+      {
+        "disease": "风湿热",
+        "features": "低热，伴关节游走性疼痛",
+        "urgency": "门诊"
+      }
+    ],
+    "keyQuestions": [
+      "体温范围？",
+      "持续时间？",
+      "伴随症状？"
+    ]
+  },
+  {
+    "symptom": "中热",
+    "category": "全身症状",
+    "differentialDiagnosis": [
+      {
+        "disease": "普通感冒",
+        "features": "中热，伴鼻塞、流涕、咽痛",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "急性支气管炎",
+        "features": "中热，伴咳嗽、咳痰",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "泌尿系感染",
+        "features": "中热，伴尿频、尿急、尿痛",
+        "urgency": "门诊"
+      }
+    ],
+    "keyQuestions": [
+      "体温范围？",
+      "持续时间？",
+      "伴随症状？"
+    ]
+  },
+  {
+    "symptom": "高热",
+    "category": "全身症状",
+    "differentialDiagnosis": [
+      {
+        "disease": "流感",
+        "features": "高热，伴全身肌肉酸痛、乏力",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "肺炎",
+        "features": "高热，伴咳嗽、咳痰、胸痛",
+        "urgency": "急诊"
+      },
+      {
+        "disease": "败血症",
+        "features": "寒战、高热，伴意识障碍、休克",
+        "urgency": "急诊"
+      },
+      {
+        "disease": "脑膜炎",
+        "features": "高热，伴头痛、呕吐、颈项强直",
+        "urgency": "急诊"
+      }
+    ],
+    "keyQuestions": [
+      "体温最高？",
+      "持续时间？",
+      "伴随症状？",
+      "有无寒战？"
+    ]
+  },
+  {
+    "symptom": "消瘦",
+    "category": "全身症状",
+    "differentialDiagnosis": [
+      {
+        "disease": "甲状腺功能亢进",
+        "features": "消瘦，伴多食、心悸、多汗",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "糖尿病",
+        "features": "消瘦，伴多饮、多食、多尿",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "恶性肿瘤",
+        "features": "进行性消瘦，伴乏力、食欲不振",
+        "urgency": "急诊"
+      },
+      {
+        "disease": "结核病",
+        "features": "消瘦，伴低热、盗汗、咳嗽",
+        "urgency": "门诊"
+      }
+    ],
+    "keyQuestions": [
+      "体重下降速度？",
+      "伴随症状？",
+      "有无食欲改变？"
+    ]
+  },
+  {
+    "symptom": "腹水",
+    "category": "消化系统",
+    "differentialDiagnosis": [
+      {
+        "disease": "肝硬化",
+        "features": "腹水，伴黄疸、双下肢水肿、蜘蛛痣",
+        "urgency": "急诊"
+      },
+      {
+        "disease": "心力衰竭",
+        "features": "腹水，伴双下肢水肿、呼吸困难",
+        "urgency": "急诊"
+      },
+      {
+        "disease": "肾病综合征",
+        "features": "腹水，伴全身水肿、尿少",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "腹腔肿瘤",
+        "features": "腹水，伴腹部包块、体重下降",
+        "urgency": "急诊"
+      }
+    ],
+    "keyQuestions": [
+      "出现时间？",
+      "伴随症状？",
+      "有无肝病史？"
+    ]
+  },
+  {
+    "symptom": "吞咽困难",
+    "category": "消化系统",
+    "differentialDiagnosis": [
+      {
+        "disease": "食管癌",
+        "features": "进行性吞咽困难，伴消瘦",
+        "urgency": "急诊"
+      },
+      {
+        "disease": "食管炎",
+        "features": "吞咽疼痛，伴胸骨后烧灼感",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "脑卒中",
+        "features": "突发吞咽困难，伴言语不清、肢体无力",
+        "urgency": "急诊"
+      },
+      {
+        "disease": "重症肌无力",
+        "features": "劳累后吞咽困难，休息缓解",
+        "urgency": "门诊"
+      }
+    ],
+    "keyQuestions": [
+      "吞咽固体还是液体困难？",
+      "持续时间？",
+      "伴随症状？"
+    ]
+  },
+  {
+    "symptom": "咯血",
+    "category": "呼吸系统",
+    "differentialDiagnosis": [
+      {
+        "disease": "支气管扩张",
+        "features": "反复咯血，伴慢性咳嗽、咳脓痰",
+        "urgency": "急诊"
+      },
+      {
+        "disease": "肺结核",
+        "features": "咯血，伴低热、盗汗、消瘦",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "肺癌",
+        "features": "间断咯血，伴咳嗽、胸痛、体重下降",
+        "urgency": "急诊"
+      },
+      {
+        "disease": "肺炎",
+        "features": "咯血，伴发热、咳嗽、胸痛",
+        "urgency": "急诊"
+      }
+    ],
+    "keyQuestions": [
+      "咯血量？",
+      "颜色？",
+      "伴随症状？"
+    ]
+  },
+  {
+    "symptom": "胸腔积液",
+    "category": "呼吸系统",
+    "differentialDiagnosis": [
+      {
+        "disease": "结核性胸膜炎",
+        "features": "胸腔积液，伴低热、盗汗、胸痛",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "恶性胸腔积液",
+        "features": "胸腔积液，伴胸闷、呼吸困难、体重下降",
+        "urgency": "急诊"
+      },
+      {
+        "disease": "心力衰竭",
+        "features": "双侧胸腔积液，伴呼吸困难、水肿",
+        "urgency": "急诊"
+      },
+      {
+        "disease": "肺炎",
+        "features": "胸腔积液，伴发热、咳嗽、胸痛",
+        "urgency": "急诊"
+      }
+    ],
+    "keyQuestions": [
+      "出现时间？",
+      "伴随症状？",
+      "有无呼吸困难？"
+    ]
+  },
+  {
+    "symptom": "失语",
+    "category": "神经系统",
+    "differentialDiagnosis": [
+      {
+        "disease": "脑卒中",
+        "features": "突发失语，伴肢体无力、口角歪斜",
+        "urgency": "急诊"
+      },
+      {
+        "disease": "脑肿瘤",
+        "features": "进行性失语，伴头痛、呕吐",
+        "urgency": "急诊"
+      },
+      {
+        "disease": "痴呆",
+        "features": "进行性失语，伴记忆力下降",
+        "urgency": "门诊"
+      }
+    ],
+    "keyQuestions": [
+      "发作形式？",
+      "持续时间？",
+      "伴随症状？"
+    ]
+  },
+  {
+    "symptom": "共济失调",
+    "category": "神经系统",
+    "differentialDiagnosis": [
+      {
+        "disease": "小脑病变",
+        "features": "步态不稳，眼球震颤，言语不清",
+        "urgency": "急诊"
+      },
+      {
+        "disease": "脊髓病变",
+        "features": "感觉性共济失调，闭眼时加重",
+        "urgency": "急诊"
+      },
+      {
+        "disease": "药物性共济失调",
+        "features": "服药后出现共济失调",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "脑卒中",
+        "features": "突发共济失调，伴肢体无力",
+        "urgency": "急诊"
+      }
+    ],
+    "keyQuestions": [
+      "发作形式？",
+      "持续时间？",
+      "伴随症状？"
+    ]
+  },
+  {
+    "symptom": "皮疹",
+    "category": "皮肤科",
+    "differentialDiagnosis": [
+      {
+        "disease": "荨麻疹",
+        "features": "风团样皮疹，伴剧烈瘙痒，来去迅速",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "湿疹",
+        "features": "多形性皮疹，伴剧烈瘙痒，慢性病程",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "药疹",
+        "features": "服药后出现皮疹，形态多样",
+        "urgency": "急诊"
+      },
+      {
+        "disease": "麻疹",
+        "features": "发热后出现斑丘疹，从耳后开始蔓延全身",
+        "urgency": "门诊"
+      }
+    ],
+    "keyQuestions": [
+      "皮疹形态？",
+      "伴随症状？",
+      "有无瘙痒？",
+      "有无服药史？"
+    ]
+  },
+  {
+    "symptom": "瘙痒",
+    "category": "皮肤科",
+    "differentialDiagnosis": [
+      {
+        "disease": "湿疹",
+        "features": "皮肤瘙痒，伴皮疹",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "荨麻疹",
+        "features": "皮肤瘙痒，伴风团",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "皮肤干燥症",
+        "features": "冬季皮肤瘙痒，无明显皮疹",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "糖尿病",
+        "features": "全身皮肤瘙痒，无明显皮疹，伴多饮多尿",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "肝胆疾病",
+        "features": "全身皮肤瘙痒，伴黄疸",
+        "urgency": "门诊"
+      }
+    ],
+    "keyQuestions": [
+      "瘙痒部位？",
+      "持续时间？",
+      "伴随症状？",
+      "有无皮疹？"
+    ]
+  },
+  {
+    "symptom": "水疱",
+    "category": "皮肤科",
+    "differentialDiagnosis": [
+      {
+        "disease": "带状疱疹",
+        "features": "沿神经分布的簇集性水疱，伴疼痛",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "湿疹",
+        "features": "红斑、丘疹、水疱、糜烂",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "天疱疮",
+        "features": "松弛性大疱，尼氏征阳性",
+        "urgency": "急诊"
+      },
+      {
+        "disease": "接触性皮炎",
+        "features": "接触过敏原后出现红斑、水肿、水疱",
+        "urgency": "门诊"
+      }
+    ],
+    "keyQuestions": [
+      "水疱部位？",
+      "大小？",
+      "伴随症状？",
+      "有无疼痛？"
+    ]
+  },
+  {
+    "symptom": "脱屑",
+    "category": "皮肤科",
+    "differentialDiagnosis": [
+      {
+        "disease": "银屑病",
+        "features": "红斑上覆多层银白色鳞屑，刮除后有点状出血",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "脂溢性皮炎",
+        "features": "头皮、面部油腻性鳞屑，伴瘙痒",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "手足癣",
+        "features": "手足部脱屑、瘙痒，伴水疱",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "鱼鳞病",
+        "features": "全身皮肤干燥、粗糙、脱屑，冬季加重",
+        "urgency": "门诊"
+      }
+    ],
+    "keyQuestions": [
+      "脱屑部位？",
+      "伴随症状？",
+      "有无瘙痒？"
+    ]
+  },
+  {
+    "symptom": "耳鸣",
+    "category": "五官科",
+    "differentialDiagnosis": [
+      {
+        "disease": "噪声性耳聋",
+        "features": "长期接触噪声后出现耳鸣、听力下降",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "梅尼埃病",
+        "features": "发作性耳鸣，伴眩晕、听力下降",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "突发性耳聋",
+        "features": "突发单侧耳鸣、听力下降",
+        "urgency": "急诊"
+      },
+      {
+        "disease": "血管性耳鸣",
+        "features": "搏动性耳鸣，与心跳同步",
+        "urgency": "门诊"
+      }
+    ],
+    "keyQuestions": [
+      "单侧还是双侧？",
+      "持续时间？",
+      "伴随症状？",
+      "有无听力下降？"
+    ]
+  },
+  {
+    "symptom": "视物模糊",
+    "category": "五官科",
+    "differentialDiagnosis": [
+      {
+        "disease": "近视/远视",
+        "features": "看远/看近模糊，可矫正",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "白内障",
+        "features": "进行性视物模糊，看东西有雾感",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "青光眼",
+        "features": "突发视物模糊，伴眼胀痛、头痛",
+        "urgency": "急诊"
+      },
+      {
+        "disease": "糖尿病视网膜病变",
+        "features": "视物模糊，视力下降，伴糖尿病史",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "脑梗死",
+        "features": "突发单眼或双眼视物模糊，伴肢体无力",
+        "urgency": "急诊"
+      }
+    ],
+    "keyQuestions": [
+      "单眼还是双眼？",
+      "持续时间？",
+      "伴随症状？",
+      "有无眼痛？"
+    ]
+  },
+  {
+    "symptom": "鼻塞",
+    "category": "五官科",
+    "differentialDiagnosis": [
+      {
+        "disease": "急性鼻炎",
+        "features": "鼻塞，伴流涕、打喷嚏、咽痛",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "过敏性鼻炎",
+        "features": "阵发性鼻塞，伴流涕、打喷嚏、鼻痒",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "鼻窦炎",
+        "features": "鼻塞，伴脓涕、头痛、面部胀痛",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "鼻息肉",
+        "features": "持续性鼻塞，嗅觉减退",
+        "urgency": "门诊"
+      }
+    ],
+    "keyQuestions": [
+      "持续时间？",
+      "伴随症状？",
+      "有无鼻涕？"
+    ]
+  },
+  {
+    "symptom": "咽痛",
+    "category": "五官科",
+    "differentialDiagnosis": [
+      {
+        "disease": "急性咽炎",
+        "features": "咽部疼痛，伴咽干、异物感",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "急性扁桃体炎",
+        "features": "剧烈咽痛，伴发热、扁桃体肿大",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "感冒",
+        "features": "咽痛，伴鼻塞、流涕、咳嗽",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "会厌炎",
+        "features": "剧烈咽痛，吞咽困难，呼吸困难",
+        "urgency": "急诊"
+      }
+    ],
+    "keyQuestions": [
+      "疼痛性质？",
+      "伴随症状？",
+      "有无吞咽困难？"
+    ]
+  },
+  {
+    "symptom": "失眠",
+    "category": "精神科",
+    "differentialDiagnosis": [
+      {
+        "disease": "原发性失眠",
+        "features": "入睡困难，睡眠维持困难，早醒，无明显诱因",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "抑郁症",
+        "features": "早醒，伴情绪低落、兴趣减退",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "焦虑症",
+        "features": "入睡困难，伴紧张、担忧",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "甲状腺功能亢进",
+        "features": "失眠，伴心悸、多汗、易激动",
+        "urgency": "门诊"
+      }
+    ],
+    "keyQuestions": [
+      "入睡困难还是早醒？",
+      "持续时间？",
+      "伴随症状？",
+      "有无情绪问题？"
+    ]
+  },
+  {
+    "symptom": "焦虑",
+    "category": "精神科",
+    "differentialDiagnosis": [
+      {
+        "disease": "广泛性焦虑症",
+        "features": "持续性担忧，伴坐立不安、心悸、出汗",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "惊恐障碍",
+        "features": "突发强烈恐惧，伴心悸、胸闷、窒息感",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "甲状腺功能亢进",
+        "features": "焦虑，伴心悸、多汗、易激动",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "药物副作用",
+        "features": "服药后出现焦虑",
+        "urgency": "门诊"
+      }
+    ],
+    "keyQuestions": [
+      "持续时间？",
+      "伴随症状？",
+      "有无特定诱因？"
+    ]
+  },
+  {
+    "symptom": "幻觉",
+    "category": "精神科",
+    "differentialDiagnosis": [
+      {
+        "disease": "精神分裂症",
+        "features": "幻听、幻视，伴妄想、思维障碍",
+        "urgency": "急诊"
+      },
+      {
+        "disease": "谵妄",
+        "features": "急性起病，意识障碍，伴幻觉、错觉",
+        "urgency": "急诊"
+      },
+      {
+        "disease": "药物中毒",
+        "features": "服药后出现幻觉、意识障碍",
+        "urgency": "急诊"
+      },
+      {
+        "disease": "脑部疾病",
+        "features": "幻觉，伴头痛、呕吐、意识障碍",
+        "urgency": "急诊"
+      }
+    ],
+    "keyQuestions": [
+      "幻觉内容？",
+      "持续时间？",
+      "伴随症状？"
+    ]
+  },
+  {
+    "symptom": "谵妄",
+    "category": "精神科",
+    "differentialDiagnosis": [
+      {
+        "disease": "感染",
+        "features": "急性起病，意识障碍，伴幻觉、错觉，常有感染诱因",
+        "urgency": "急诊"
+      },
+      {
+        "disease": "药物中毒",
+        "features": "服药后出现谵妄、意识障碍",
+        "urgency": "急诊"
+      },
+      {
+        "disease": "酒精戒断",
+        "features": "戒酒后出现谵妄、震颤、幻觉",
+        "urgency": "急诊"
+      },
+      {
+        "disease": "脑部疾病",
+        "features": "谵妄，伴头痛、呕吐、意识障碍",
+        "urgency": "急诊"
+      }
+    ],
+    "keyQuestions": [
+      "起病急缓？",
+      "伴随症状？",
+      "有无药物/酒精史？"
+    ]
+  },
+  {
+    "symptom": "出血倾向",
+    "category": "血液系统",
+    "differentialDiagnosis": [
+      {
+        "disease": "血小板减少症",
+        "features": "皮肤瘀点、紫癜，牙龈出血，鼻出血",
+        "urgency": "急诊"
+      },
+      {
+        "disease": "血友病",
+        "features": "关节腔出血，深部组织出血，凝血时间延长",
+        "urgency": "急诊"
+      },
+      {
+        "disease": "肝硬化",
+        "features": "皮肤瘀点、紫癜，牙龈出血，伴黄疸、腹水",
+        "urgency": "急诊"
+      },
+      {
+        "disease": "白血病",
+        "features": "皮肤瘀点、紫癜，伴贫血、发热",
+        "urgency": "急诊"
+      }
+    ],
+    "keyQuestions": [
+      "出血部位？",
+      "性质？",
+      "伴随症状？",
+      "有无外伤史？"
+    ]
+  },
+  {
+    "symptom": "瘀斑",
+    "category": "血液系统",
+    "differentialDiagnosis": [
+      {
+        "disease": "血小板减少症",
+        "features": "皮肤瘀点、紫癜，牙龈出血，鼻出血",
+        "urgency": "急诊"
+      },
+      {
+        "disease": "血管性紫癜",
+        "features": "皮肤瘀斑，不伴血小板异常",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "肝硬化",
+        "features": "皮肤瘀斑，伴黄疸、腹水",
+        "urgency": "急诊"
+      },
+      {
+        "disease": "白血病",
+        "features": "皮肤瘀斑，伴贫血、发热",
+        "urgency": "急诊"
+      }
+    ],
+    "keyQuestions": [
+      "瘀斑部位？",
+      "大小？",
+      "伴随症状？",
+      "有无外伤史？"
+    ]
+  },
+  {
+    "symptom": "淋巴结肿大",
+    "category": "血液系统",
+    "differentialDiagnosis": [
+      {
+        "disease": "感染",
+        "features": "局部淋巴结肿大，伴疼痛、发热",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "淋巴瘤",
+        "features": "全身淋巴结肿大，无痛，进行性增大",
+        "urgency": "急诊"
+      },
+      {
+        "disease": "转移癌",
+        "features": "局部淋巴结肿大，质硬，无痛，伴原发肿瘤病史",
+        "urgency": "急诊"
+      },
+      {
+        "disease": "结核",
+        "features": "淋巴结肿大，伴低热、盗汗、消瘦",
+        "urgency": "门诊"
+      }
+    ],
+    "keyQuestions": [
+      "肿大部位？",
+      "大小？",
+      "质地？",
+      "伴随症状？"
+    ]
+  },
+  {
+    "symptom": "惊厥",
+    "category": "儿科常见",
+    "differentialDiagnosis": [
+      {
+        "disease": "高热惊厥",
+        "features": "儿童高热时发生，全身性抽搐，意识丧失",
+        "urgency": "急诊"
+      },
+      {
+        "disease": "癫痫",
+        "features": "反复发作性惊厥，伴意识丧失",
+        "urgency": "急诊"
+      },
+      {
+        "disease": "中枢神经系统感染",
+        "features": "惊厥，伴发热、呕吐、意识障碍",
+        "urgency": "急诊"
+      },
+      {
+        "disease": "低血糖",
+        "features": "惊厥，伴出汗、面色苍白、意识障碍",
+        "urgency": "急诊"
+      }
+    ],
+    "keyQuestions": [
+      "发作诱因？",
+      "持续时间？",
+      "伴随症状？",
+      "有无意识丧失？"
+    ]
+  },
+  {
+    "symptom": "喂养困难",
+    "category": "儿科常见",
+    "differentialDiagnosis": [
+      {
+        "disease": "胃食管反流",
+        "features": "喂养后溢奶、呕吐，体重增长缓慢",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "先天性心脏病",
+        "features": "喂养困难，伴呼吸急促、口唇发绀",
+        "urgency": "急诊"
+      },
+      {
+        "disease": "神经系统疾病",
+        "features": "吸吮无力，吞咽困难，伴肌张力异常",
+        "urgency": "急诊"
+      },
+      {
+        "disease": "口腔疾病",
+        "features": "口腔溃疡、鹅口疮导致喂养疼痛",
+        "urgency": "门诊"
+      }
+    ],
+    "keyQuestions": [
+      "出生后多久出现？",
+      "伴随症状？",
+      "体重增长情况？"
+    ]
+  },
+  {
+    "symptom": "发育迟缓",
+    "category": "儿科常见",
+    "differentialDiagnosis": [
+      {
+        "disease": "营养不良",
+        "features": "体重、身高低于同龄儿，伴食欲不振",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "甲状腺功能减退",
+        "features": "发育迟缓，伴智力低下、嗜睡",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "染色体异常",
+        "features": "特殊面容，多系统发育迟缓",
+        "urgency": "门诊"
+      },
+      {
+        "disease": "脑瘫",
+        "features": "运动发育迟缓，伴肌张力异常",
+        "urgency": "门诊"
+      }
+    ],
+    "keyQuestions": [
+      "运动、语言、认知哪个方面迟缓？",
+      "出生史？",
+      "家族史？"
+    ]
+  }
+]
