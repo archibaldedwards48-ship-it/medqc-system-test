@@ -1,0 +1,365 @@
+[
+  {
+    "name": "血红蛋白",
+    "aliases": ["Hb", "HGB"],
+    "unit": "g/L",
+    "normalRange": { "male": "130-175", "female": "115-150" },
+    "clinicalSignificance": {
+      "increased": "真性红细胞增多症、脱水、慢性肺病、高原适应",
+      "decreased": "各类贫血、失血、骨髓抑制、营养不良"
+    },
+    "category": "血常规"
+  },
+  {
+    "name": "白细胞",
+    "aliases": ["WBC"],
+    "unit": "x10^9/L",
+    "normalRange": { "all": "3.5-9.5" },
+    "clinicalSignificance": {
+      "increased": "感染、炎症、白血病、组织损伤",
+      "decreased": "病毒感染、骨髓抑制、自身免疫病"
+    },
+    "category": "血常规"
+  },
+  {
+    "name": "血小板",
+    "aliases": ["PLT"],
+    "unit": "x10^9/L",
+    "normalRange": { "all": "125-350" },
+    "clinicalSignificance": {
+      "increased": "感染、炎症、肿瘤、脾切除",
+      "decreased": "ITP、DIC、肝硬化、骨髓抑制"
+    },
+    "category": "血常规"
+  },
+  {
+    "name": "尿蛋白",
+    "aliases": ["PRO"],
+    "unit": "定性",
+    "normalRange": { "all": "阴性" },
+    "clinicalSignificance": {
+      "increased": "肾脏疾病（肾炎、肾病综合征）、高血压、糖尿病肾病",
+      "decreased": "无特殊临床意义"
+    },
+    "category": "尿常规"
+  },
+  {
+    "name": "尿糖",
+    "aliases": ["GLU"],
+    "unit": "定性",
+    "normalRange": { "all": "阴性" },
+    "clinicalSignificance": {
+      "increased": "糖尿病、肾性糖尿、妊娠期糖尿病",
+      "decreased": "无特殊临床意义"
+    },
+    "category": "尿常规"
+  },
+  {
+    "name": "丙氨酸氨基转移酶",
+    "aliases": ["ALT", "GPT"],
+    "unit": "U/L",
+    "normalRange": { "all": "0-40" },
+    "clinicalSignificance": {
+      "increased": "肝细胞损伤（肝炎、脂肪肝、肝硬化）、心肌梗死、骨骼肌损伤",
+      "decreased": "无特殊临床意义"
+    },
+    "category": "肝功能"
+  },
+  {
+    "name": "天冬氨酸氨基转移酶",
+    "aliases": ["AST", "GOT"],
+    "unit": "U/L",
+    "normalRange": { "all": "0-40" },
+    "clinicalSignificance": {
+      "increased": "肝细胞损伤、心肌梗死、骨骼肌损伤",
+      "decreased": "无特殊临床意义"
+    },
+    "category": "肝功能"
+  },
+  {
+    "name": "总胆红素",
+    "aliases": ["TBIL"],
+    "unit": "μmol/L",
+    "normalRange": { "all": "1.7-17.1" },
+    "clinicalSignificance": {
+      "increased": "溶血性黄疸、肝细胞性黄疸、阻塞性黄疸",
+      "decreased": "无特殊临床意义"
+    },
+    "category": "肝功能"
+  },
+  {
+    "name": "尿素氮",
+    "aliases": ["BUN"],
+    "unit": "mmol/L",
+    "normalRange": { "all": "2.86-7.14" },
+    "clinicalSignificance": {
+      "increased": "肾功能不全、脱水、高蛋白饮食、消化道出血",
+      "decreased": "肝功能衰竭、低蛋白饮食、妊娠"
+    },
+    "category": "肾功能"
+  },
+  {
+    "name": "肌酐",
+    "aliases": ["Cr"],
+    "unit": "μmol/L",
+    "normalRange": { "male": "57-111", "female": "41-81" },
+    "clinicalSignificance": {
+      "increased": "肾功能不全、肌肉损伤、甲状腺功能亢进",
+      "decreased": "肌肉萎缩、肝功能衰竭"
+    },
+    "category": "肾功能"
+  },
+  {
+    "name": "尿酸",
+    "aliases": ["UA"],
+    "unit": "μmol/L",
+    "normalRange": { "male": "208-428", "female": "155-357" },
+    "clinicalSignificance": {
+      "increased": "痛风、肾功能不全、白血病、肿瘤溶解综合征",
+      "decreased": "范可尼综合征、肝豆状核变性"
+    },
+    "category": "肾功能"
+  },
+  {
+    "name": "总胆固醇",
+    "aliases": ["TC"],
+    "unit": "mmol/L",
+    "normalRange": { "all": "<5.2" },
+    "clinicalSignificance": {
+      "increased": "高胆固醇血症、动脉粥样硬化、甲状腺功能减退",
+      "decreased": "肝功能不全、营养不良、甲状腺功能亢进"
+    },
+    "category": "血脂"
+  },
+  {
+    "name": "甘油三酯",
+    "aliases": ["TG"],
+    "unit": "mmol/L",
+    "normalRange": { "all": "<1.7" },
+    "clinicalSignificance": {
+      "increased": "高甘油三酯血症、胰腺炎、糖尿病、甲状腺功能减退",
+      "decreased": "营养不良、甲状腺功能亢进"
+    },
+    "category": "血脂"
+  },
+  {
+    "name": "空腹血糖",
+    "aliases": ["FPG"],
+    "unit": "mmol/L",
+    "normalRange": { "all": "3.9-6.1" },
+    "clinicalSignificance": {
+      "increased": "糖尿病、应激性高血糖、胰腺疾病",
+      "decreased": "胰岛素瘤、肝功能衰竭、药物性低血糖"
+    },
+    "category": "血糖"
+  },
+  {
+    "name": "糖化血红蛋白",
+    "aliases": ["HbA1c"],
+    "unit": "%",
+    "normalRange": { "all": "<6.5" },
+    "clinicalSignificance": {
+      "increased": "糖尿病、血糖控制不佳",
+      "decreased": "溶血性贫血、失血"
+    },
+    "category": "血糖"
+  },
+  {
+    "name": "血钾",
+    "aliases": ["K+"],
+    "unit": "mmol/L",
+    "normalRange": { "all": "3.5-5.5" },
+    "clinicalSignificance": {
+      "increased": "肾功能衰竭、酸中毒、药物性高钾血症",
+      "decreased": "呕吐、腹泻、利尿剂使用、碱中毒"
+    },
+    "category": "电解质"
+  },
+  {
+    "name": "血钠",
+    "aliases": ["Na+"],
+    "unit": "mmol/L",
+    "normalRange": { "all": "135-145" },
+    "clinicalSignificance": {
+      "increased": "脱水、高渗性脱水、尿崩症",
+      "decreased": "稀释性低钠血症、ADH分泌异常、肾上腺皮质功能减退"
+    },
+    "category": "电解质"
+  },
+  {
+    "name": "凝血酶原时间",
+    "aliases": ["PT"],
+    "unit": "s",
+    "normalRange": { "all": "11-15" },
+    "clinicalSignificance": {
+      "increased": "肝功能损害、维生素K缺乏、DIC、口服抗凝剂",
+      "decreased": "高凝状态、血栓前状态"
+    },
+    "category": "凝血功能"
+  },
+  {
+    "name": "活化部分凝血活酶时间",
+    "aliases": ["APTT"],
+    "unit": "s",
+    "normalRange": { "all": "25-35" },
+    "clinicalSignificance": {
+      "increased": "血友病、肝素治疗、DIC、肝功能损害",
+      "decreased": "高凝状态、血栓前状态"
+    },
+    "category": "凝血功能"
+  },
+  {
+    "name": "肌钙蛋白I",
+    "aliases": ["cTnI"],
+    "unit": "ng/mL",
+    "normalRange": { "all": "<0.04" },
+    "clinicalSignificance": {
+      "increased": "急性心肌梗死、心肌炎、心力衰竭、肺栓塞",
+      "decreased": "无特殊临床意义"
+    },
+    "category": "心肌标志物"
+  },
+  {
+    "name": "脑钠肽前体",
+    "aliases": ["NT-proBNP"],
+    "unit": "pg/mL",
+    "normalRange": { "all": "<125" },
+    "clinicalSignificance": {
+      "increased": "心力衰竭、急性冠脉综合征、肺栓塞",
+      "decreased": "无特殊临床意义"
+    },
+    "category": "心肌标志物"
+  },
+  {
+    "name": "促甲状腺激素",
+    "aliases": ["TSH"],
+    "unit": "mIU/L",
+    "normalRange": { "all": "0.27-4.2" },
+    "clinicalSignificance": {
+      "increased": "甲状腺功能减退症、原发性甲状腺功能减退",
+      "decreased": "甲状腺功能亢进症、继发性甲状腺功能减退"
+    },
+    "category": "甲状腺功能"
+  },
+  {
+    "name": "游离三碘甲状腺原氨酸",
+    "aliases": ["FT3"],
+    "unit": "pmol/L",
+    "normalRange": { "all": "3.1-6.8" },
+    "clinicalSignificance": {
+      "increased": "甲状腺功能亢进症",
+      "decreased": "甲状腺功能减退症"
+    },
+    "category": "甲状腺功能"
+  },
+  {
+    "name": "甲胎蛋白",
+    "aliases": ["AFP"],
+    "unit": "ng/mL",
+    "normalRange": { "all": "<20" },
+    "clinicalSignificance": {
+      "increased": "原发性肝癌、生殖细胞肿瘤、妊娠",
+      "decreased": "无特殊临床意义"
+    },
+    "category": "肿瘤标志物"
+  },
+  {
+    "name": "癌胚抗原",
+    "aliases": ["CEA"],
+    "unit": "ng/mL",
+    "normalRange": { "all": "<5" },
+    "clinicalSignificance": {
+      "increased": "结直肠癌、肺癌、乳腺癌、胃癌",
+      "decreased": "无特殊临床意义"
+    },
+    "category": "肿瘤标志物"
+  },
+  {
+    "name": "C反应蛋白",
+    "aliases": ["CRP"],
+    "unit": "mg/L",
+    "normalRange": { "all": "<5" },
+    "clinicalSignificance": {
+      "increased": "细菌感染、炎症、组织损伤、肿瘤",
+      "decreased": "无特殊临床意义"
+    },
+    "category": "炎症指标"
+  },
+  {
+    "name": "降钙素原",
+    "aliases": ["PCT"],
+    "unit": "ng/mL",
+    "normalRange": { "all": "<0.05" },
+    "clinicalSignificance": {
+      "increased": "细菌感染、脓毒症、多器官功能障碍综合征",
+      "decreased": "无特殊临床意义"
+    },
+    "category": "炎症指标"
+  },
+  {
+    "name": "pH值",
+    "aliases": ["pH"],
+    "unit": "",
+    "normalRange": { "all": "7.35-7.45" },
+    "clinicalSignificance": {
+      "increased": "碱中毒",
+      "decreased": "酸中毒"
+    },
+    "category": "血气分析"
+  },
+  {
+    "name": "动脉血氧分压",
+    "aliases": ["PaO2"],
+    "unit": "mmHg",
+    "normalRange": { "all": "80-100" },
+    "clinicalSignificance": {
+      "increased": "氧疗过度",
+      "decreased": "呼吸衰竭、肺部疾病"
+    },
+    "category": "血气分析"
+  },
+  {
+    "name": "免疫球蛋白G",
+    "aliases": ["IgG"],
+    "unit": "g/L",
+    "normalRange": { "all": "7.0-16.0" },
+    "clinicalSignificance": {
+      "increased": "慢性感染、自身免疫病、肝硬化",
+      "decreased": "免疫缺陷病、肾病综合征、蛋白丢失性肠病"
+    },
+    "category": "免疫指标"
+  },
+  {
+    "name": "免疫球蛋白M",
+    "aliases": ["IgM"],
+    "unit": "g/L",
+    "normalRange": { "all": "0.4-2.3" },
+    "clinicalSignificance": {
+      "increased": "急性感染、巨球蛋白血症",
+      "decreased": "免疫缺陷病、选择性IgM缺乏症"
+    },
+    "category": "免疫指标"
+  },
+  {
+    "name": "淀粉酶",
+    "aliases": ["AMY"],
+    "unit": "U/L",
+    "normalRange": { "all": "0-100" },
+    "clinicalSignificance": {
+      "increased": "急性胰腺炎、腮腺炎、胆道疾病",
+      "decreased": "胰腺功能不全"
+    },
+    "category": "其他常用"
+  },
+  {
+    "name": "乳酸脱氢酶",
+    "aliases": ["LDH"],
+    "unit": "U/L",
+    "normalRange": { "all": "120-250" },
+    "clinicalSignificance": {
+      "increased": "心肌梗死、肝炎、恶性肿瘤、溶血性贫血",
+      "decreased": "无特殊临床意义"
+    },
+    "category": "其他常用"
+  }
+]

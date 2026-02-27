@@ -1,0 +1,122 @@
+[
+  {
+    "code": "47.0",
+    "name": "阑尾切除术",
+    "aliases": ["appendectomy"],
+    "category": "消化系统手术",
+    "approach": "开放/腹腔镜",
+    "commonIndications": ["急性阑尾炎", "慢性阑尾炎"]
+  },
+  {
+    "code": "51.22",
+    "name": "腹腔镜胆囊切除术",
+    "aliases": ["laparoscopic cholecystectomy"],
+    "category": "消化系统手术",
+    "approach": "腹腔镜",
+    "commonIndications": ["胆囊结石", "胆囊炎"]
+  },
+  {
+    "code": "45.8",
+    "name": "全结肠切除术",
+    "aliases": ["total colectomy"],
+    "category": "消化系统手术",
+    "approach": "开放",
+    "commonIndications": ["溃疡性结肠炎", "家族性腺瘤性息肉病"]
+  },
+  {
+    "code": "81.54",
+    "name": "全膝关节置换术",
+    "aliases": ["TKA", "total knee arthroplasty"],
+    "category": "骨科手术",
+    "approach": "开放",
+    "commonIndications": ["膝关节骨性关节炎", "类风湿性关节炎"]
+  },
+  {
+    "code": "81.51",
+    "name": "全髋关节置换术",
+    "aliases": ["THA", "total hip arthroplasty"],
+    "category": "骨科手术",
+    "approach": "开放",
+    "commonIndications": ["股骨头坏死", "髋关节骨性关节炎"]
+  },
+  {
+    "code": "36.1",
+    "name": "冠状动脉旁路移植术",
+    "aliases": ["CABG", "cabbage"],
+    "category": "心胸外科手术",
+    "approach": "开放",
+    "commonIndications": ["冠心病", "心肌梗死"]
+  },
+  {
+    "code": "35.2",
+    "name": "主动脉瓣置换术",
+    "aliases": ["AVR"],
+    "category": "心胸外科手术",
+    "approach": "开放",
+    "commonIndications": ["主动脉瓣狭窄", "主动脉瓣关闭不全"]
+  },
+  {
+    "code": "55.5",
+    "name": "肾切除术",
+    "aliases": ["nephrectomy"],
+    "category": "泌尿外科手术",
+    "approach": "开放/腹腔镜",
+    "commonIndications": ["肾癌", "肾积水"]
+  },
+  {
+    "code": "60.2",
+    "name": "经尿道前列腺切除术",
+    "aliases": ["TURP"],
+    "category": "泌尿外科手术",
+    "approach": "经尿道",
+    "commonIndications": ["前列腺增生"]
+  },
+  {
+    "code": "01.59",
+    "name": "其他脑叶切除术",
+    "aliases": ["lobectomy"],
+    "category": "神经外科手术",
+    "approach": "开放",
+    "commonIndications": ["脑肿瘤", "癫痫"]
+  },
+  {
+    "code": "68.4",
+    "name": "子宫全切除术",
+    "aliases": ["total hysterectomy"],
+    "category": "妇产科手术",
+    "approach": "开放/腹腔镜/经阴道",
+    "commonIndications": ["子宫肌瘤", "子宫内膜癌"]
+  },
+  {
+    "code": "74.1",
+    "name": "剖宫产术",
+    "aliases": ["cesarean section"],
+    "category": "妇产科手术",
+    "approach": "开放",
+    "commonIndications": ["胎位异常", "前置胎盘"]
+  },
+  {
+    "code": "13.41",
+    "name": "白内障摘除伴人工晶状体植入术",
+    "aliases": ["phacoemulsification with IOL implantation"],
+    "category": "眼耳鼻喉科手术",
+    "approach": "微创",
+    "commonIndications": ["白内障"]
+  },
+  {
+    "code": "21.86",
+    "name": "功能性内窥镜鼻窦手术",
+    "aliases": ["FESS"],
+    "category": "眼耳鼻喉科手术",
+    "approach": "内窥镜",
+    "commonIndications": ["慢性鼻窦炎", "鼻息肉"]
+  },
+  {
+    "code": "86.22",
+    "name": "皮肤创伤清创术",
+    "aliases": ["debridement"],
+    "category": "其他手术",
+    "approach": "开放",
+    "commonIndications": ["开放性伤口", "烧伤"]
+  }
+]
