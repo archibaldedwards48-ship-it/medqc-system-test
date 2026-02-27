@@ -215,3 +215,58 @@ export const statistics = mysqlTable("statistics", {
 
 export type StatisticsRow = typeof statistics.$inferSelect;
 export type InsertStatistics = typeof statistics.$inferInsert;
+
+// ============================================================
+// Symptom Terms (D7)
+// ============================================================
+export const symptomTerms = mysqlTable("symptom_terms", {
+  id: int("id").autoincrement().primaryKey(),
+  name: varchar("name", { length: 100 }).notNull(), // 症状名称，如"胸痛"
+  aliases: text("aliases"), // 别名，JSON 数组，如["心前区痛","胸部疼痛"]
+  bodyPart: varchar("body_part", { length: 50 }), // 部位，如"胸部"
+  nature: varchar("nature", { length: 100 }), // 性质，如"压榨性/刺痛/钝痛"
+  durationRequired: boolean("duration_required").default(true), // 主诉中是否必须写持续时间
+  associatedSymptoms: text("associated_symptoms"), // 常见伴随症状，JSON 数组
+  relatedDiseases: text("related_diseases"), // 关联疾病，JSON 数组
+  category: varchar("category", { length: 50 }), // 分类：呼吸/循环/消化/神经等
+  createdAt: timestamp("created_at").defaultNow().notNull(),
+});
+
+export type SymptomTerm = typeof symptomTerms.$inferSelect;
+export type InsertSymptomTerm = typeof symptomTerms.$inferInsert;
+
+// ============================================================
+// Content Rules (D10)
+// ============================================================
+export const contentRules = mysqlTable("content_rules", {
+  id: int("id").autoincrement().primaryKey(),
+  documentType: varchar("document_type", { length: 50 }).notNull(),
+  // 文书类型：admission_record(入院记录) | discharge_record(出院记录) |
+  //           first_progress_note(首次病程) | daily_progress_note(日常病程) |
+  //           operation_record(手术记录) | critical_value_record(危急值记录)
+
+  section: varchar("section", { length: 50 }).notNull(),
+  // 对应 NLP 段落名：chief_complaint | present_illness | past_history 等
+
+  checkType: varchar("check_type", { length: 50 }).notNull(),
+  // 检查类型：required_field(必填字段) | forbidden_content(禁止内容) |
+  //           format_check(格式检查) | cross_reference(交叉引用)
+
+  condition: text("condition").notNull(),
+  // 检查条件（JSON），示例：
+  // {"type": "must_contain_entity", "entityType": "symptom", "minCount": 1}
+  // {"type": "must_contain_duration", "section": "chief_complaint"}
+  // {"type": "must_not_be_generic", "genericPhrases": ["向上级汇报", "密切观察"]}
+
+  errorMessage: varchar("error_message", { length: 200 }).notNull(),
+  // 错误提示，如"主诉缺少持续时间描述"
+
+  severity: varchar("severity", { length: 20 }).default("major"),
+  // critical | major | minor
+
+  isActive: boolean("is_active").default(true),
+  createdAt: timestamp("created_at").defaultNow().notNull(),
+});
+
+export type ContentRule = typeof contentRules.$inferSelect;
+export type InsertContentRule = typeof contentRules.$inferInsert;

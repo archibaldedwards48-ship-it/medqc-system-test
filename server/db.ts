@@ -18,6 +18,8 @@ import {
   drugKnowledgeBase,
   auditLogs,
   statistics,
+  symptomTerms,
+  contentRules,
   InsertUser,
   InsertMedicalRecord,
   InsertQcResult,
@@ -30,6 +32,8 @@ import {
   InsertDrugKnowledge,
   InsertAuditLog,
   InsertStatistics,
+  InsertSymptomTerm,
+  InsertContentRule,
 } from "../drizzle/schema";
 import { ENV } from "./_core/env";
 
@@ -214,6 +218,42 @@ export async function countMedicalRecords() {
   const d = await db();
   const result = await d.select({ count: sql<number>`count(*)` }).from(medicalRecords);
   return result[0]?.count ?? 0;
+}
+
+// ============================================================
+// Symptom Terms
+// ============================================================
+
+export async function getSymptomTerms(): Promise<string[]> {
+  const d = await getDb();
+  if (!d) {
+    // 如果数据库不可用，返回基本硬编码列表以保证系统运行
+    return ["疼痛", "发热", "咳嗽", "头晕", "乏力", "症状"];
+  }
+  const result = await d.select({ name: symptomTerms.name }).from(symptomTerms);
+  return result.map((row) => row.name);
+}
+
+export async function createSymptomTerms(terms: InsertSymptomTerm[]) {
+  const d = await db();
+  return d.insert(symptomTerms).values(terms);
+}
+
+// ============================================================
+// Content Rules
+// ============================================================
+
+export async function getContentRules(documentType: string) {
+  const d = await db();
+  return d
+    .select()
+    .from(contentRules)
+    .where(and(eq(contentRules.documentType, documentType), eq(contentRules.isActive, true)));
+}
+
+export async function createContentRules(rules: InsertContentRule[]) {
+  const d = await db();
+  return d.insert(contentRules).values(rules);
 }
 
 // ============================================================

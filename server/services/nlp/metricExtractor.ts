@@ -4,6 +4,7 @@
  */
 
 import { MetricExtractionResult, Entity, Indicator } from '../../types/nlp.types';
+import { getSymptomTerms } from '../../db';
 
 // 医学指标正则表达式
 const VITAL_SIGNS_PATTERNS = {
@@ -21,7 +22,7 @@ const ENTITY_KEYWORDS = {
   diagnosis: ['高血压', '糖尿病', '心脏病', '感染', '诊断', '疾病'],
   lab_result: ['血红蛋白', '白细胞', '血小板', '血糖', '尿酸', '肌酐'],
   procedure: ['手术', '穿刺', '切除', '置管', '操作', '程序'],
-  symptom: ['疼痛', '发热', '咳嗽', '头晕', '乏力', '症状'],
+  symptom: [], // 将由数据库动态填充
   vital_sign: ['血压', '心率', '体温', '呼吸', '血氧', '脉搏'],
 };
 
@@ -30,15 +31,30 @@ const ENTITY_KEYWORDS = {
  * 从医疗记录中提取医学指标和实体
  */
 export class MetricExtractor {
+  private symptomTerms: string[] = [];
+  private initialized = false;
+
+  /**
+   * 初始化提取器，加载数据库词表
+   */
+  async initialize() {
+    if (this.initialized) return;
+    this.symptomTerms = await getSymptomTerms();
+    this.initialized = true;
+  }
+
   /**
    * 执行指标提取
    * @param content 医疗记录内容
    * @returns 指标提取结果
    */
   async extract(content: string): Promise<MetricExtractionResult> {
+    // 确保已初始化
+    await this.initialize();
+
     const indicators: Indicator[] = [];
     const entities: Entity[] = [];
-    
+
     // 1. 提取生命体征
     const vitalSigns = this.extractVitalSigns(content);
     indicators.push(...vitalSigns);
@@ -189,24 +205,29 @@ export class MetricExtractor {
    */
   private extractEntities(content: string): Entity[] {
     const entities: Entity[] = [];
-    
+
     for (const [type, keywords] of Object.entries(ENTITY_KEYWORDS)) {
-      for (const keyword of keywords) {
-        const regex = new RegExp(`\\b${keyword}\\b`, 'g');
-        let match;
-        
-        while ((match = regex.exec(content)) !== null) {
+      // 如果是症状类型，使用动态加载的词表
+      const actualKeywords = type === "symptom" ? this.symptomTerms : (keywords as string[]);
+
+      for (const keyword of actualKeywords) {
+        if (!keyword) continue;
+        // 医疗文本中可能没有空格分隔，去掉 \b 约束，改用 includes 或全局正则
+        // 考虑到性能和匹配准确性，这里使用 indexOf 循环匹配
+        let pos = content.indexOf(keyword);
+        while (pos !== -1) {
           entities.push({
             text: keyword,
             type: type as any,
-            startIndex: match.index,
-            endIndex: match.index + keyword.length,
-            confidence: 0.8,
+            startIndex: pos,
+            endIndex: pos + keyword.length,
+            confidence: 0.85,
           });
+          pos = content.indexOf(keyword, pos + keyword.length);
         }
       }
     }
-    
+
     return entities;
   }
   
