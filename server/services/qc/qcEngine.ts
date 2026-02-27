@@ -13,6 +13,7 @@ import { logicChecker } from './checkers/logic';
 import { diagnosisChecker } from './checkers/diagnosis';
 import { medicationSafetyChecker } from './checkers/medicationSafety';
 import { contentRuleChecker } from './checkers/contentRule';
+import { crossDocumentChecker } from './checkers/crossDocument';
 
 /**
  * 质控引擎
@@ -27,6 +28,7 @@ export class QcEngineService {
     diagnosisChecker,
     medicationSafetyChecker,
     contentRuleChecker,
+    crossDocumentChecker,
   ];
   
   /**

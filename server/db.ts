@@ -234,6 +234,24 @@ export async function getSymptomTerms(): Promise<string[]> {
   return result.map((row) => row.name);
 }
 
+export async function getSymptomAliases(symptomName: string): Promise<string[]> {
+  const d = await getDb();
+  if (!d) return [];
+  const results = await d
+    .select({ aliases: symptomTerms.aliases })
+    .from(symptomTerms)
+    .where(eq(symptomTerms.name, symptomName))
+    .limit(1);
+  if (results.length === 0) return [];
+  try {
+    const aliases = results[0].aliases;
+    if (!aliases) return [];
+    return typeof aliases === "string" ? JSON.parse(aliases) : (aliases as string[]);
+  } catch {
+    return [];
+  }
+}
+
 export async function createSymptomTerms(terms: InsertSymptomTerm[]) {
   const d = await db();
   return d.insert(symptomTerms).values(terms);
