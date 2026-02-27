@@ -23,6 +23,13 @@ import {
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
+import { useState } from "react";
+import {
   ChartContainer,
   ChartTooltip,
   ChartTooltipContent,
@@ -66,6 +73,56 @@ const DEDUCTIONS: Record<string, number> = {
 };
 
 // ─── 工具函数 ─────────────────────────────────────────────────
+// 错别字 Mock 数据
+const MOCK_TYPOS: Record<string, { typo: string; suggestion: string }[]> = {
+  "1": [
+    { typo: "患者", suggestion: "患者" },
+    { typo: "诊断", suggestion: "诊断" },
+  ],
+};
+
+// 高亮错别字的函数
+function HighlightTypos({ text, typos }: { text: string; typos: Array<{ typo: string; suggestion: string }> }) {
+  if (!typos || typos.length === 0) return <span>{text}</span>;
+
+  let parts: (string | { typo: string; suggestion: string })[] = [text];
+
+  for (const typo of typos) {
+    const newParts: (string | { typo: string; suggestion: string })[] = [];
+    for (const part of parts) {
+      if (typeof part === "string") {
+        const regex = new RegExp(typo.typo, "g");
+        const split = part.split(regex);
+        split.forEach((s, i) => {
+          if (s) newParts.push(s);
+          if (i < split.length - 1) newParts.push(typo);
+        });
+      } else {
+        newParts.push(part);
+      }
+    }
+    parts = newParts;
+  }
+
+  return (
+    <TooltipProvider>
+      {parts.map((part, idx) => {
+        if (typeof part === "string") return <span key={idx}>{part}</span>;
+        return (
+          <Tooltip key={idx}>
+            <TooltipTrigger asChild>
+              <span className="underline decoration-red-500 decoration-wavy cursor-help">{part.typo}</span>
+            </TooltipTrigger>
+            <TooltipContent>
+              <p>建议修改为：<strong>{part.suggestion}</strong></p>
+            </TooltipContent>
+          </Tooltip>
+        );
+      })}
+    </TooltipProvider>
+  );
+}
+
 function calcCheckerScores(issues: Array<{ type: string; severity: string }>) {
   const deductionMap: Record<string, number> = {};
   for (const issue of issues) {
@@ -81,6 +138,9 @@ function calcCheckerScores(issues: Array<{ type: string; severity: string }>) {
 }
 
 // ─── 主组件 ───────────────────────────────────────────────────
+// TODO: 后端接口完成后，取消注释以下代码调用真实接口
+// const { data: typos } = trpc.qc.checkTypos.useQuery({ recordId: result.medicalRecordId ?? 0 });
+
 export default function QcDetail() {
   const { id } = useParams<{ id: string }>();
   const [, navigate] = useLocation();
@@ -324,7 +384,13 @@ export default function QcDetail() {
                       <div key={idx} className={`rounded-lg border p-3 text-sm ${SEVERITY_CONFIG[issue.severity as 'critical' | 'major' | 'minor']?.color ?? ""}`}>
                         <div className="flex items-start justify-between gap-2">
                           <div className="flex-1">
-                            <div className="font-medium mb-1">{issue.message}</div>
+                            <div className="font-medium mb-1">
+                              {/* 任务一：显示错别字标注 */}
+                              <HighlightTypos
+                                text={issue.message}
+                                typos={MOCK_TYPOS[result.id?.toString()] ?? []}
+                              />
+                            </div>
                             {issue.suggestion && (
                               <div className="text-xs opacity-75">💡 {issue.suggestion}</div>
                             )}

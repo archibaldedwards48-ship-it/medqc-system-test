@@ -60,8 +60,9 @@ const coreMenuItems = [
 const knowledgeMenuItems = [
   { icon: Pill, label: "药品知识库", path: "/drugs" },
   { icon: BookOpen, label: "医学术语库", path: "/terminology" },
-  { icon: FlaskConical, label: "检验参考范围", path: "/lab-references" },
+  { icon: FlaskConical, label: "棉验参考范围", path: "/lab-references" },
   { icon: Stethoscope, label: "临床指南", path: "/guidelines" },
+  { icon: FileText, label: "SOAP 模板", path: "/soap-templates" },
 ];
 
 const systemMenuItems = [

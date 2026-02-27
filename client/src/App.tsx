@@ -23,6 +23,7 @@ import LabReferences from "./pages/LabReferences";
 import Guidelines from "./pages/Guidelines";
 import QcDetail from "./pages/QcDetail";
 import FeedbackPanel from "./pages/FeedbackPanel";
+import SoapTemplates from "./pages/SoapTemplates";
 
 function Router() {
   return (
@@ -44,6 +45,7 @@ function Router() {
         <Route path="/ai-advisor" component={AiAdvisor} />
         <Route path="/lab-references" component={LabReferences} />
         <Route path="/guidelines" component={Guidelines} />
+        <Route path="/soap-templates" component={SoapTemplates} />
         <Route path="/404" component={NotFound} />
         <Route component={NotFound} />
       </Switch>
