@@ -1,9 +1,9 @@
-import { IQcChecker, MedicalRecord, QcIssue, QcRule } from '../../../types/qc.types';
+import { IQcChecker, IssueType, MedicalRecord, QcIssue, QcRule } from '../../../types/qc.types';
 import { NlpResult } from '../../../types/nlp.types';
 import { getContentRules } from '../../../db';
 
 export class ContentRuleChecker implements IQcChecker {
-  name = 'content_rule';
+  name = 'content_rule' as const;
 
   async check(
     record: MedicalRecord,
@@ -13,7 +13,7 @@ export class ContentRuleChecker implements IQcChecker {
     const issues: QcIssue[] = [];
     
     // 1. 从数据库加载对应文书类型的内涵规则
-    const contentRules = await getContentRules(record.recordType);
+    const contentRules = await getContentRules(record.recordType ?? 'admission_record');
     
     for (const rule of contentRules) {
       // 2. 获取对应段落的 NLP 结果
@@ -58,7 +58,7 @@ export class ContentRuleChecker implements IQcChecker {
 
     if (entities.length < (condition.minCount || 1)) {
         return {
-            type: this.name,
+            type: 'content_rule' as IssueType,
             severity: rule.severity as any,
             message: rule.errorMessage,
             suggestion: `请在${rule.section}中补充相关的${condition.entityType}描述`,
@@ -72,7 +72,7 @@ export class ContentRuleChecker implements IQcChecker {
     const durationRegex = /(\d+|半|[一二三四五六七八九十百]+)(秒|分钟|小时|天|周|月|年|余?日)/;
     if (!durationRegex.test(sectionContent.content)) {
         return {
-            type: this.name,
+            type: 'content_rule' as IssueType,
             severity: rule.severity as any,
             message: rule.errorMessage,
             suggestion: "请补充症状持续的时间描述，如'3天'、'1周'等",
@@ -86,7 +86,7 @@ export class ContentRuleChecker implements IQcChecker {
     for (const phrase of condition.genericPhrases || []) {
         if (sectionContent.content.includes(phrase)) {
             return {
-                type: this.name,
+                type: 'content_rule' as IssueType,
                 severity: rule.severity as any,
                 message: rule.errorMessage,
                 suggestion: `请避免使用'${phrase}'等空洞描述，应详细记录具体的诊疗行为`,

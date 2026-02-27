@@ -15,6 +15,13 @@
       "when": 1772106635446,
       "tag": "0001_closed_boomerang",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1772163380160,
+      "tag": "0002_majestic_molecule_man",
+      "breakpoints": true
     }
   ]
 }

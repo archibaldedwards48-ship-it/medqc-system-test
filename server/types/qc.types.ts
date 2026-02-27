@@ -19,7 +19,10 @@ export type IssueType =
   | 'formatting'
   | 'logic'
   | 'diagnosis'
-  | 'medication_safety';
+  | 'medication_safety'
+  | 'content_rule'
+  | 'cross_document'
+  | 'duplicate';
 
 // ============ 医疗记录 ============
 
