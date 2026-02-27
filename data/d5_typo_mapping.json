@@ -1,0 +1,277 @@
+[
+  {
+    "wrong": "心肌梗塞",
+    "correct": "心肌梗死",
+    "category": "疾病名称"
+  },
+  {
+    "wrong": "糖尿并",
+    "correct": "糖尿病",
+    "category": "疾病名称"
+  },
+  {
+    "wrong": "高血压病",
+    "correct": "高血压",
+    "category": "疾病名称"
+  },
+  {
+    "wrong": "冠心病",
+    "correct": "冠状动脉粥样硬化性心脏病",
+    "category": "疾病名称"
+  },
+  {
+    "wrong": "脑中风",
+    "correct": "脑卒中",
+    "category": "疾病名称"
+  },
+  {
+    "wrong": "胃溃疡",
+    "correct": "胃十二指肠溃疡",
+    "category": "疾病名称"
+  },
+  {
+    "wrong": "肝硬化",
+    "correct": "肝硬变",
+    "category": "疾病名称"
+  },
+  {
+    "wrong": "肾功能不全",
+    "correct": "慢性肾功能不全",
+    "category": "疾病名称"
+  },
+  {
+    "wrong": "肺炎",
+    "correct": "肺部感染",
+    "category": "疾病名称"
+  },
+  {
+    "wrong": "支气管炎",
+    "correct": "急性支气管炎",
+    "category": "疾病名称"
+  },
+  {
+    "wrong": "阿莫西林克拉维酸钾",
+    "correct": "阿莫西林克拉维酸钾片",
+    "category": "药品名称"
+  },
+  {
+    "wrong": "头孢",
+    "correct": "头孢菌素",
+    "category": "药品名称"
+  },
+  {
+    "wrong": "青霉素",
+    "correct": "苄星青霉素",
+    "category": "药品名称"
+  },
+  {
+    "wrong": "万古霉素",
+    "correct": "盐酸万古霉素",
+    "category": "药品名称"
+  },
+  {
+    "wrong": "甲硝唑",
+    "correct": "甲硝唑片",
+    "category": "药品名称"
+  },
+  {
+    "wrong": "奥美拉唑",
+    "correct": "奥美拉唑肠溶胶囊",
+    "category": "药品名称"
+  },
+  {
+    "wrong": "洛赛克",
+    "correct": "奥美拉唑肠溶胶囊",
+    "category": "药品名称"
+  },
+  {
+    "wrong": "二甲双胍",
+    "correct": "盐酸二甲双胍片",
+    "category": "药品名称"
+  },
+  {
+    "wrong": "格列本脲",
+    "correct": "格列本脲片",
+    "category": "药品名称"
+  },
+  {
+    "wrong": "阿司匹林",
+    "correct": "阿司匹林肠溶片",
+    "category": "药品名称"
+  },
+  {
+    "wrong": "氯吡格雷",
+    "correct": "硫酸氢氯吡格雷片",
+    "category": "药品名称"
+  },
+  {
+    "wrong": "华法林",
+    "correct": "华法林钠片",
+    "category": "药品名称"
+  },
+  {
+    "wrong": "肝脏",
+    "correct": "肝",
+    "category": "解剖部位"
+  },
+  {
+    "wrong": "肾脏",
+    "correct": "肾",
+    "category": "解剖部位"
+  },
+  {
+    "wrong": "心脏",
+    "correct": "心",
+    "category": "解剖部位"
+  },
+  {
+    "wrong": "肺脏",
+    "correct": "肺",
+    "category": "解剖部位"
+  },
+  {
+    "wrong": "胃部",
+    "correct": "胃",
+    "category": "解剖部位"
+  },
+  {
+    "wrong": "肠道",
+    "correct": "肠",
+    "category": "解剖部位"
+  },
+  {
+    "wrong": "脾脏",
+    "correct": "脾",
+    "category": "解剖部位"
+  },
+  {
+    "wrong": "胰脏",
+    "correct": "胰",
+    "category": "解剖部位"
+  },
+  {
+    "wrong": "胆囊",
+    "correct": "胆",
+    "category": "解剖部位"
+  },
+  {
+    "wrong": "甲状腺",
+    "correct": "甲状腺",
+    "category": "解剖部位"
+  },
+  {
+    "wrong": "脑部",
+    "correct": "脑",
+    "category": "解剖部位"
+  },
+  {
+    "wrong": "脊椎",
+    "correct": "脊柱",
+    "category": "解剖部位"
+  },
+  {
+    "wrong": "骨头",
+    "correct": "骨",
+    "category": "解剖部位"
+  },
+  {
+    "wrong": "肌肉",
+    "correct": "肌",
+    "category": "解剖部位"
+  },
+  {
+    "wrong": "皮肤",
+    "correct": "皮",
+    "category": "解剖部位"
+  },
+  {
+    "wrong": "血管",
+    "correct": "血管",
+    "category": "解剖部位"
+  },
+  {
+    "wrong": "神经",
+    "correct": "神经",
+    "category": "解剖部位"
+  },
+  {
+    "wrong": "淋巴",
+    "correct": "淋巴",
+    "category": "解剖部位"
+  },
+  {
+    "wrong": "血常规",
+    "correct": "血常规检查",
+    "category": "检查项目"
+  },
+  {
+    "wrong": "尿常规",
+    "correct": "尿液常规检查",
+    "category": "检查项目"
+  },
+  {
+    "wrong": "便常规",
+    "correct": "粪便常规检查",
+    "category": "检查项目"
+  },
+  {
+    "wrong": "肝功",
+    "correct": "肝功能检查",
+    "category": "检查项目"
+  },
+  {
+    "wrong": "肾功",
+    "correct": "肾功能检查",
+    "category": "检查项目"
+  },
+  {
+    "wrong": "心电图",
+    "correct": "心电图检查",
+    "category": "检查项目"
+  },
+  {
+    "wrong": "胸片",
+    "correct": "胸部X线片",
+    "category": "检查项目"
+  },
+  {
+    "wrong": "CT",
+    "correct": "电子计算机断层扫描",
+    "category": "检查项目"
+  },
+  {
+    "wrong": "MRI",
+    "correct": "磁共振成像",
+    "category": "检查项目"
+  },
+  {
+    "wrong": "B超",
+    "correct": "超声检查",
+    "category": "检查项目"
+  },
+  {
+    "wrong": "胃镜",
+    "correct": "胃镜检查",
+    "category": "检查项目"
+  },
+  {
+    "wrong": "肠镜",
+    "correct": "肠镜检查",
+    "category": "检查项目"
+  },
+  {
+    "wrong": "血糖",
+    "correct": "血糖测定",
+    "category": "检查项目"
+  },
+  {
+    "wrong": "血脂",
+    "correct": "血脂检查",
+    "category": "检查项目"
+  },
+  {
+    "wrong": "电解质",
+    "correct": "电解质检查",
+    "category": "检查项目"
+  }
+]
