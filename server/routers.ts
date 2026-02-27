@@ -17,6 +17,7 @@ import { reportRouter } from "./routers/reportRouter";
 import { authExtRouter } from './routers/authRouter';
 import { feedbackRouter } from './routers/feedbackRouter';
 import { templatesRouter } from './routers/templatesRouter';
+import { knowledgeRouter } from './routers/knowledgeRouter';
 
 export const appRouter = router({
   system: systemRouter,
@@ -66,6 +67,8 @@ export const appRouter = router({
   feedback: feedbackRouter,
   // SOAP Templates
   templates: templatesRouter,
+  // Medical Knowledge Base
+  knowledge: knowledgeRouter,
 });
 
 export type AppRouter = typeof appRouter;
