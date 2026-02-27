@@ -5,49 +5,49 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Skeleton } from "@/components/ui/skeleton";
-import { Search, BookOpen, AlertCircle } from "lucide-react";
+import { Search, BookOpen, AlertCircle, Filter } from "lucide-react";
 
-// 类型定义
 interface SoapTemplate {
-  id: string;
-  configKey: string;
-  configValue: string; // JSON string
-  description?: string;
-}
-
-interface ParsedSoap {
   disease: string;
   icdCode: string;
   subjective: string;
   objective: string;
   assessment: string;
   plan: string;
+  department?: string;
+}
+
+interface DepartmentInfo {
+  code: string;
+  name: string;
+  category: string;
 }
 
 export default function SoapTemplates() {
   const [search, setSearch] = useState("");
   const [selectedId, setSelectedId] = useState<string | null>(null);
+  const [selectedDept, setSelectedDept] = useState<string | null>(null);
 
-  // 获取模板列表
-  const { data: templates = [], isLoading: isLoadingList, error: listError } = trpc.templates.list.useQuery();
+  // 获取科室列表
+  const { data: departments = [] } = trpc.templates.departments.useQuery();
+
+  // 获取模板列表（按科室过滤）
+  const { data: templates = [], isLoading: isLoadingList, error: listError } = trpc.templates.listByDepartment.useQuery({
+    department: selectedDept || undefined,
+  });
 
   // 解析模板数据
   const parsedTemplates = useMemo(() => {
     return templates.map((t) => {
-      try {
-        const parsed = JSON.parse(t.configValue) as ParsedSoap;
-        return {
-          id: t.id,
-          configKey: t.configKey,
-          disease: parsed.disease,
-          icdCode: parsed.icdCode,
-          soap: parsed,
-        };
-      } catch {
-        console.error(`Failed to parse template ${t.id}:`, t.configValue);
-        return null;
-      }
-    }).filter((t): t is NonNullable<typeof t> => t !== null);
+      const template = t as SoapTemplate;
+      return {
+        id: `${template.disease}-${template.icdCode}`,
+        disease: template.disease,
+        icdCode: template.icdCode,
+        department: template.department || 'GEN',
+        soap: template,
+      };
+    });
   }, [templates]);
 
   // 搜索过滤
@@ -63,8 +63,17 @@ export default function SoapTemplates() {
     ? parsedTemplates.find((t) => t.id === selectedId)
     : filteredTemplates[0];
 
+  // 按科室分组统计
+  const deptStats = useMemo(() => {
+    const stats: Record<string, number> = {};
+    parsedTemplates.forEach((t) => {
+      stats[t.department] = (stats[t.department] || 0) + 1;
+    });
+    return stats;
+  }, [parsedTemplates]);
+
   // 加载状态
-  if (isLoadingList) {
+  if (isLoadingList && !selectedDept) {
     return (
       <div className="p-6 space-y-5">
         <div className="flex items-center gap-3">
@@ -76,9 +85,9 @@ export default function SoapTemplates() {
             </p>
           </div>
         </div>
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
           <Skeleton className="h-96" />
-          <Skeleton className="h-96 lg:col-span-2" />
+          <Skeleton className="h-96 lg:col-span-3" />
         </div>
       </div>
     );
@@ -138,14 +147,56 @@ export default function SoapTemplates() {
         <div>
           <h1 className="text-xl font-semibold">SOAP 模板库</h1>
           <p className="text-sm text-muted-foreground mt-0.5">
-            浏览和查看各类疾病的 SOAP 诊疗模板
+            浏览和查看各类疾病的 SOAP 诊疗模板 · 共 {parsedTemplates.length} 条
           </p>
         </div>
       </div>
 
-      {/* 主容器 - 两列布局 */}
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 h-[calc(100vh-200px)]">
-        {/* 左侧：疾病列表 */}
+      {/* 主容器 - 三列布局 */}
+      <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 h-[calc(100vh-200px)]">
+        {/* 左侧：科室导航 */}
+        <Card className="border-border/60 lg:col-span-1 flex flex-col">
+          <CardHeader className="pb-3">
+            <div className="flex items-center gap-2">
+              <Filter className="w-4 h-4" />
+              <CardTitle className="text-base">科室分类</CardTitle>
+            </div>
+          </CardHeader>
+          <CardContent className="flex-1 flex flex-col gap-2 overflow-hidden">
+            {/* 全部选项 */}
+            <Button
+              variant={!selectedDept ? "default" : "outline"}
+              className="w-full justify-start h-auto py-2 px-3 text-left"
+              onClick={() => setSelectedDept(null)}
+            >
+              <div className="flex-1">
+                <div className="font-medium text-sm">全部模板</div>
+                <div className="text-xs text-muted-foreground">{parsedTemplates.length} 条</div>
+              </div>
+            </Button>
+
+            {/* 科室列表 */}
+            <div className="flex-1 overflow-y-auto space-y-2">
+              {departments.map((dept) => (
+                <Button
+                  key={dept.code}
+                  variant={selectedDept === dept.code ? "default" : "outline"}
+                  className="w-full justify-start h-auto py-2 px-3 text-left"
+                  onClick={() => setSelectedDept(dept.code)}
+                >
+                  <div className="flex-1">
+                    <div className="font-medium text-sm">{dept.name}</div>
+                    <div className="text-xs text-muted-foreground">
+                      {deptStats[dept.code] || 0} 条
+                    </div>
+                  </div>
+                </Button>
+              ))}
+            </div>
+          </CardContent>
+        </Card>
+
+        {/* 中间：疾病列表 */}
         <Card className="border-border/60 lg:col-span-1 flex flex-col">
           <CardHeader className="pb-3">
             <CardTitle className="text-base">
@@ -160,7 +211,7 @@ export default function SoapTemplates() {
             <div className="relative">
               <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
               <Input
-                placeholder="搜索疾病名称..."
+                placeholder="搜索疾病..."
                 className="pl-9"
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
@@ -181,8 +232,8 @@ export default function SoapTemplates() {
                     className="w-full justify-start h-auto py-2 px-3 text-left"
                     onClick={() => setSelectedId(template.id)}
                   >
-                    <div className="flex-1">
-                      <div className="font-medium text-sm">{template.disease}</div>
+                    <div className="flex-1 min-w-0">
+                      <div className="font-medium text-sm truncate">{template.disease}</div>
                       <div className="text-xs text-muted-foreground">{template.icdCode}</div>
                     </div>
                   </Button>
