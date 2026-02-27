@@ -678,3 +678,16 @@ export async function countQcMessages(checkerType?: string) {
     .where(condition);
   return Number(result[0]?.count ?? 0);
 }
+
+// === 问题类型分布统计 ===
+export async function getIssueTypeDistribution() {
+  const d = await db();
+  const results = await d
+    .select({
+      type: qcIssues.type,
+      count: sql<number>`count(*)`.as('count'),
+    })
+    .from(qcIssues)
+    .groupBy(qcIssues.type);
+  return results;
+}

@@ -21,6 +21,8 @@ import Config from "./pages/Config";
 import AiAdvisor from "./pages/AiAdvisor";
 import LabReferences from "./pages/LabReferences";
 import Guidelines from "./pages/Guidelines";
+import QcDetail from "./pages/QcDetail";
+import FeedbackPanel from "./pages/FeedbackPanel";
 
 function Router() {
   return (
@@ -29,6 +31,8 @@ function Router() {
         <Route path="/" component={Dashboard} />
         <Route path="/records" component={Records} />
         <Route path="/qc" component={QcExecution} />
+        <Route path="/qc-results/:id" component={QcDetail} />
+        <Route path="/feedback" component={FeedbackPanel} />
         <Route path="/rules" component={Rules} />
         <Route path="/statistics" component={Statistics} />
         <Route path="/drugs" component={DrugKnowledge} />

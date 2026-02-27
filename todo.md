@@ -160,29 +160,29 @@
 ## Phase 8: 超额完成 - 质控闭环与前端增强
 
 ### 后端补强
-- [ ] qcRouter 新增 getIssues 路由（按 resultId 查询 issues，含 feedback 状态）
-- [ ] qcRouter.getResult 补充 issues 字段（一次请求返回结果+问题列表）
+- [x] qcRouter 新增 getIssues 路由（按 resultId 查询 issues，含 feedback 状态）
+- [x] qcRouter.getResult 补充 issues 字段（一次请求返回结果+问题列表）
 
 ### 前端 QC 详情页 /qc-results/:id
-- [ ] 雷达图展示各 checker 得分（completeness/format/duplicate/cross_document）
-- [ ] 问题列表（按 severity 分组，支持按 type 筛选）
-- [ ] 每条问题旁"标记假阳性"按钮，调用 trpc.feedback.submit
-- [ ] 返回质控列表按钮，面包屑导航
+- [x] 雷达图展示各 checker 得分（completeness/format/duplicate/cross_document）
+- [x] 问题列表（按 severity 分组，支持按 type 筛选）
+- [x] 每条问题旁“标记假阳性”按钮，调用 trpc.feedback.submit
+- [x] 返回质控列表按钮，面包屑导航
 
 ### 前端反馈管理面板 /feedback
-- [ ] 侧边栏"工具"区新增入口（仅 admin/qc_staff 可见）
-- [ ] 表格展示所有反馈，支持按 checkerType / feedbackType 筛选
-- [ ] 统计卡片（假阳性总数、已确认数、建议数）
+- [x] 侧边栏“工具”区新增入口（仅 admin/qc_staff 可见）
+- [x] 表格展示所有反馈，支持按 checkerType / feedbackType 筛选
+- [x] 统计卡片（假阳性总数、已确认数、建议数）
 
 ### 前端 Dashboard 增强
 - [ ] 替换占位图表为真实 Recharts 数据（质控趋势折线图）
 - [ ] 问题类型分布改为真实饼图
-- [ ] 最近质控记录列表点击跳转详情页
+- [x] 最近质控记录列表点击跳转详情页
 
 ### 前端 Records 页增强
 - [ ] 每条病历行增加质控状态徽章（已质控/未质控/不合格）
 - [ ] 质控结果列增加"查看详情"链接，跳转 /qc-results/:id
-- [ ] 执行质控后直接跳转详情页（替代弹窗展示）
+- [x] 执行质控后直接跳转详情页（替代弹窗展示）
 
 ## Phase 9: D7 症状体征术语库导入（数据专家 B）
 - [ ] 拉取 D7 数据文件 d7_symptom_terms.json

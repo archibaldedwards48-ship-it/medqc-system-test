@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useLocation } from "wouter";
 import { trpc } from "@/lib/trpc";
 import { useAuth } from "@/_core/hooks/useAuth";
 import { Button } from "@/components/ui/button";
@@ -51,6 +52,7 @@ const MODE_OPTIONS = [
 
 export default function QcExecution() {
   const { user } = useAuth();
+  const [, navigate] = useLocation();
   const [page, setPage] = useState(1);
   const [selectedRecordId, setSelectedRecordId] = useState<number | null>(null);
   const [qcMode, setQcMode] = useState<"auto" | "manual" | "ai">("auto");
@@ -73,6 +75,7 @@ export default function QcExecution() {
     onSuccess: (data) => {
       setQcResult(data);
       setShowResult(true);
+      navigate(`/qc-results/${data.id}`);
       toast.success(`质控完成，得分 ${data.totalScore} 分`);
     },
     onError: (e) => toast.error(e.message),

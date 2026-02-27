@@ -42,6 +42,7 @@ import {
   Settings,
   ShieldCheck,
   Stethoscope,
+  Flag,
 } from "lucide-react";
 import { CSSProperties, useEffect, useState } from "react";
 import { useLocation } from "wouter";
@@ -68,6 +69,7 @@ const systemMenuItems = [
   { icon: Search, label: "NLP 分析", path: "/nlp", adminOnly: false },
   { icon: ClipboardCheck, label: "抽查管理", path: "/spot-check", adminOnly: false },
   { icon: FileBarChart, label: "质控报告", path: "/reports", adminOnly: false },
+  { icon: Flag, label: "反馈管理", path: "/feedback", adminOnly: false },
   { icon: Settings, label: "系统配置", path: "/config", adminOnly: true },
 ];
 
