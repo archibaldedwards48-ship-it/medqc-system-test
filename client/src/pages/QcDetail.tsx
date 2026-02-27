@@ -73,29 +73,21 @@ const DEDUCTIONS: Record<string, number> = {
 };
 
 // ─── 工具函数 ─────────────────────────────────────────────────
-// 错别字 Mock 数据
-const MOCK_TYPOS: Record<string, { typo: string; suggestion: string }[]> = {
-  "1": [
-    { typo: "患者", suggestion: "患者" },
-    { typo: "诊断", suggestion: "诊断" },
-  ],
-};
-
 // 高亮错别字的函数
-function HighlightTypos({ text, typos }: { text: string; typos: Array<{ typo: string; suggestion: string }> }) {
+function HighlightTypos({ text, typos }: { text: string; typos: Array<{ wrong: string; correct: string; position?: number; category?: string }> }) {
   if (!typos || typos.length === 0) return <span>{text}</span>;
 
-  let parts: (string | { typo: string; suggestion: string })[] = [text];
+  let parts: (string | { wrong: string; correct: string })[] = [text];
 
   for (const typo of typos) {
-    const newParts: (string | { typo: string; suggestion: string })[] = [];
+    const newParts: (string | { wrong: string; correct: string })[] = [];
     for (const part of parts) {
       if (typeof part === "string") {
-        const regex = new RegExp(typo.typo, "g");
+        const regex = new RegExp(typo.wrong, "g");
         const split = part.split(regex);
         split.forEach((s, i) => {
           if (s) newParts.push(s);
-          if (i < split.length - 1) newParts.push(typo);
+          if (i < split.length - 1) newParts.push({ wrong: typo.wrong, correct: typo.correct });
         });
       } else {
         newParts.push(part);
@@ -111,10 +103,10 @@ function HighlightTypos({ text, typos }: { text: string; typos: Array<{ typo: st
         return (
           <Tooltip key={idx}>
             <TooltipTrigger asChild>
-              <span className="underline decoration-red-500 decoration-wavy cursor-help">{part.typo}</span>
+              <span className="underline decoration-red-500 decoration-wavy cursor-help">{part.wrong}</span>
             </TooltipTrigger>
             <TooltipContent>
-              <p>建议修改为：<strong>{part.suggestion}</strong></p>
+              <p>建议修改为：<strong>{part.correct}</strong></p>
             </TooltipContent>
           </Tooltip>
         );
@@ -138,9 +130,6 @@ function calcCheckerScores(issues: Array<{ type: string; severity: string }>) {
 }
 
 // ─── 主组件 ───────────────────────────────────────────────────
-// TODO: 后端接口完成后，取消注释以下代码调用真实接口
-// const { data: typos } = trpc.qc.checkTypos.useQuery({ recordId: result.medicalRecordId ?? 0 });
-
 export default function QcDetail() {
   const { id } = useParams<{ id: string }>();
   const [, navigate] = useLocation();
@@ -163,6 +152,12 @@ export default function QcDetail() {
   const { data: result, isLoading } = trpc.qc.getResult.useQuery(
     { id: resultId },
     { enabled: resultId > 0 }
+  );
+
+  // 获取错别字检测结果
+  const { data: typos = [] } = trpc.qc.checkTypos.useQuery(
+    { recordId: result?.medicalRecordId ?? 0 },
+    { enabled: !!result?.medicalRecordId }
   );
 
   // 提交反馈
@@ -385,10 +380,10 @@ export default function QcDetail() {
                         <div className="flex items-start justify-between gap-2">
                           <div className="flex-1">
                             <div className="font-medium mb-1">
-                              {/* 任务一：显示错别字标注 */}
+                              {/* 显示错别字标注 */}
                               <HighlightTypos
                                 text={issue.message}
-                                typos={MOCK_TYPOS[result.id?.toString()] ?? []}
+                                typos={typos ?? []}
                               />
                             </div>
                             {issue.suggestion && (
