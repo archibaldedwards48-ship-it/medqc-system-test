@@ -19,6 +19,7 @@ import {
 } from '../db';
 import { nlpPipeline } from '../services/nlp/pipeline';
 import { qcEngine } from '../services/qc/qcEngine';
+import { typoChecker } from '../services/qc/checkers/typoChecker';
 
 export const qcRouter = router({
   /**
@@ -239,5 +240,21 @@ export const qcRouter = router({
         passRate: results.length > 0 ? Math.round((passCount / results.length) * 100) : 0,
         averageScore: avgScore,
       };
+    }),
+
+  /**
+   * 错别字检查路由
+   * D5: 接收 recordId，返回错别字列表
+   */
+  checkTypos: protectedProcedure
+    .input(z.object({ recordId: z.number().int() }))
+    .query(async ({ input }) => {
+      const record = await getMedicalRecordById(input.recordId);
+      if (!record) {
+        throw new Error('病历不存在');
+      }
+
+      const typos = typoChecker.check(record.content);
+      return typos;
     }),
 });

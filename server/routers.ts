@@ -16,6 +16,7 @@ import { nlpRouter } from "./routers/nlpRouter";
 import { reportRouter } from "./routers/reportRouter";
 import { authExtRouter } from './routers/authRouter';
 import { feedbackRouter } from './routers/feedbackRouter';
+import { templatesRouter } from './routers/templatesRouter';
 
 export const appRouter = router({
   system: systemRouter,
@@ -63,6 +64,8 @@ export const appRouter = router({
   report: reportRouter,
   // QC Feedback (false-positive, confirmed, suggestion)
   feedback: feedbackRouter,
+  // SOAP Templates
+  templates: templatesRouter,
 });
 
 export type AppRouter = typeof appRouter;
