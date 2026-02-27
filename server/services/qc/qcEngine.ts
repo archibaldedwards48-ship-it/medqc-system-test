@@ -14,6 +14,7 @@ import { diagnosisChecker } from './checkers/diagnosis';
 import { medicationSafetyChecker } from './checkers/medicationSafety';
 import { contentRuleChecker } from './checkers/contentRule';
 import { crossDocumentChecker } from './checkers/crossDocument';
+import { duplicateChecker } from './checkers/duplicate';
 
 /**
  * 质控引擎
@@ -29,6 +30,7 @@ export class QcEngineService {
     medicationSafetyChecker,
     contentRuleChecker,
     crossDocumentChecker,
+    duplicateChecker,
   ];
   
   /**
