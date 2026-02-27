@@ -4,32 +4,53 @@ import NotFound from "@/pages/NotFound";
 import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
-import Home from "./pages/Home";
+import DashboardLayout from "./components/DashboardLayout";
+
+// Pages
+import Dashboard from "./pages/Dashboard";
+import Records from "./pages/Records";
+import QcExecution from "./pages/QcExecution";
+import Rules from "./pages/Rules";
+import Statistics from "./pages/Statistics";
+import DrugKnowledge from "./pages/DrugKnowledge";
+import Terminology from "./pages/Terminology";
+import SpotCheck from "./pages/SpotCheck";
+import NlpAnalysis from "./pages/NlpAnalysis";
+import Reports from "./pages/Reports";
+import Config from "./pages/Config";
+import AiAdvisor from "./pages/AiAdvisor";
+import LabReferences from "./pages/LabReferences";
+import Guidelines from "./pages/Guidelines";
 
 function Router() {
-  // make sure to consider if you need authentication for certain routes
   return (
-    <Switch>
-      <Route path={"/"} component={Home} />
-      <Route path={"/404"} component={NotFound} />
-      {/* Final fallback route */}
-      <Route component={NotFound} />
-    </Switch>
+    <DashboardLayout>
+      <Switch>
+        <Route path="/" component={Dashboard} />
+        <Route path="/records" component={Records} />
+        <Route path="/qc" component={QcExecution} />
+        <Route path="/rules" component={Rules} />
+        <Route path="/statistics" component={Statistics} />
+        <Route path="/drugs" component={DrugKnowledge} />
+        <Route path="/terminology" component={Terminology} />
+        <Route path="/spot-check" component={SpotCheck} />
+        <Route path="/nlp" component={NlpAnalysis} />
+        <Route path="/reports" component={Reports} />
+        <Route path="/config" component={Config} />
+        <Route path="/ai-advisor" component={AiAdvisor} />
+        <Route path="/lab-references" component={LabReferences} />
+        <Route path="/guidelines" component={Guidelines} />
+        <Route path="/404" component={NotFound} />
+        <Route component={NotFound} />
+      </Switch>
+    </DashboardLayout>
   );
 }
-
-// NOTE: About Theme
-// - First choose a default theme according to your design style (dark or light bg), than change color palette in index.css
-//   to keep consistent foreground/background color across components
-// - If you want to make theme switchable, pass `switchable` ThemeProvider and use `useTheme` hook
 
 function App() {
   return (
     <ErrorBoundary>
-      <ThemeProvider
-        defaultTheme="light"
-        // switchable
-      >
+      <ThemeProvider defaultTheme="light">
         <TooltipProvider>
           <Toaster />
           <Router />
