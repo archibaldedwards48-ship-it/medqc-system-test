@@ -117,6 +117,43 @@
     "category": "循环系统"
   },
   {
+    "name": "紫绀",
+    "aliases": [
+      "发绀",
+      "cyanosis"
+    ],
+    "bodyPart": "口唇/甲床",
+    "nature": "皮肤黏膜呈青紫色",
+    "durationRequired": false,
+    "associatedSymptoms": [
+      "呼吸困难"
+    ],
+    "relatedDiseases": [
+      "先天性心脏病",
+      "重症肺炎"
+    ],
+    "category": "循环系统"
+  },
+  {
+    "name": "胸闷",
+    "aliases": [
+      "胸口闷",
+      "chest tightness"
+    ],
+    "bodyPart": "胸部",
+    "nature": "压迫感/窒息感",
+    "durationRequired": false,
+    "associatedSymptoms": [
+      "心悸",
+      "呼吸困难"
+    ],
+    "relatedDiseases": [
+      "冠心病",
+      "焦虑症"
+    ],
+    "category": "循环系统"
+  },
+  {
     "name": "咳嗽",
     "aliases": [
       "咳",
@@ -203,6 +240,122 @@
       "支气管哮喘",
       "慢性阻塞性肺疾病急性加重",
       "心源性哮喘"
+    ],
+    "category": "呼吸系统"
+  },
+  {
+    "name": "鼻塞",
+    "aliases": [
+      "鼻子不通气",
+      "nasal congestion"
+    ],
+    "bodyPart": "鼻部",
+    "nature": "持续性/交替性",
+    "durationRequired": false,
+    "associatedSymptoms": [
+      "流涕",
+      "打喷嚏"
+    ],
+    "relatedDiseases": [
+      "感冒",
+      "过敏性鼻炎"
+    ],
+    "category": "呼吸系统"
+  },
+  {
+    "name": "流涕",
+    "aliases": [
+      "流鼻涕",
+      "rhinorrhea"
+    ],
+    "bodyPart": "鼻部",
+    "nature": "清涕/脓涕",
+    "durationRequired": false,
+    "associatedSymptoms": [
+      "鼻塞",
+      "打喷嚏"
+    ],
+    "relatedDiseases": [
+      "感冒",
+      "过敏性鼻炎"
+    ],
+    "category": "呼吸系统"
+  },
+  {
+    "name": "咽痛",
+    "aliases": [
+      "喉咙痛",
+      "sore throat"
+    ],
+    "bodyPart": "咽喉",
+    "nature": "刺痛/灼痛",
+    "durationRequired": false,
+    "associatedSymptoms": [
+      "吞咽困难",
+      "发热"
+    ],
+    "relatedDiseases": [
+      "急性咽炎",
+      "急性扁桃体炎"
+    ],
+    "category": "呼吸系统"
+  },
+  {
+    "name": "胸腔积液",
+    "aliases": [
+      "胸水",
+      "pleural effusion"
+    ],
+    "bodyPart": "胸部",
+    "nature": "胸膜腔内液体异常积聚",
+    "durationRequired": false,
+    "associatedSymptoms": [
+      "胸痛",
+      "呼吸困难",
+      "咳嗽"
+    ],
+    "relatedDiseases": [
+      "结核性胸膜炎",
+      "恶性胸腔积液",
+      "心力衰竭"
+    ],
+    "category": "呼吸系统"
+  },
+  {
+    "name": "呼吸暂停",
+    "aliases": [
+      "憋气",
+      "apnea"
+    ],
+    "bodyPart": "全身",
+    "nature": "呼吸暂时停止",
+    "durationRequired": true,
+    "associatedSymptoms": [
+      "发绀",
+      "嗜睡"
+    ],
+    "relatedDiseases": [
+      "睡眠呼吸暂停综合征",
+      "中枢性呼吸衰竭"
+    ],
+    "category": "呼吸系统"
+  },
+  {
+    "name": "非心源性胸痛",
+    "aliases": [
+      "胸壁痛",
+      "non-cardiac chest pain"
+    ],
+    "bodyPart": "胸部",
+    "nature": "非心脏原因引起的胸痛",
+    "durationRequired": true,
+    "associatedSymptoms": [
+      "压痛",
+      "活动受限"
+    ],
+    "relatedDiseases": [
+      "肋软骨炎",
+      "带状疱疹"
     ],
     "category": "呼吸系统"
   },
@@ -314,6 +467,158 @@
       "病毒性肝炎",
       "胆总管结石",
       "胰头癌"
+    ],
+    "category": "消化系统"
+  },
+  {
+    "name": "便秘",
+    "aliases": [
+      "大便干结",
+      "constipation"
+    ],
+    "bodyPart": "腹部",
+    "nature": "排便困难/排便次数减少",
+    "durationRequired": true,
+    "associatedSymptoms": [
+      "腹胀",
+      "肛门疼痛"
+    ],
+    "relatedDiseases": [
+      "功能性便秘",
+      "肠梗阻"
+    ],
+    "category": "消化系统"
+  },
+  {
+    "name": "反酸",
+    "aliases": [
+      "烧心",
+      "acid reflux",
+      "heartburn"
+    ],
+    "bodyPart": "胸骨后/上腹部",
+    "nature": "胸骨后烧灼感",
+    "durationRequired": false,
+    "associatedSymptoms": [
+      "嗳气",
+      "吞咽困难"
+    ],
+    "relatedDiseases": [
+      "胃食管反流病"
+    ],
+    "category": "消化系统"
+  },
+  {
+    "name": "吞咽困难",
+    "aliases": [
+      "咽东西困难",
+      "dysphagia"
+    ],
+    "bodyPart": "咽喉/食管",
+    "nature": "吞咽梗阻感/疼痛",
+    "durationRequired": false,
+    "associatedSymptoms": [
+      "体重下降",
+      "反流"
+    ],
+    "relatedDiseases": [
+      "食管癌",
+      "脑卒中后遗症"
+    ],
+    "category": "消化系统"
+  },
+  {
+    "name": "腹水",
+    "aliases": [
+      "肚子胀水",
+      "ascites"
+    ],
+    "bodyPart": "腹部",
+    "nature": "腹腔内液体异常积聚",
+    "durationRequired": false,
+    "associatedSymptoms": [
+      "腹胀",
+      "水肿"
+    ],
+    "relatedDiseases": [
+      "肝硬化",
+      "心力衰竭",
+      "腹膜炎"
+    ],
+    "category": "消化系统"
+  },
+  {
+    "name": "呕血",
+    "aliases": [
+      "吐血",
+      "hematemesis"
+    ],
+    "bodyPart": "上消化道",
+    "nature": "呕出血液",
+    "durationRequired": false,
+    "associatedSymptoms": [
+      "黑便",
+      "头晕"
+    ],
+    "relatedDiseases": [
+      "消化性溃疡",
+      "食管胃底静脉曲张破裂"
+    ],
+    "category": "消化系统"
+  },
+  {
+    "name": "黑便",
+    "aliases": [
+      "柏油样便",
+      "melena"
+    ],
+    "bodyPart": "下消化道",
+    "nature": "黑色粪便",
+    "durationRequired": false,
+    "associatedSymptoms": [
+      "呕血",
+      "乏力"
+    ],
+    "relatedDiseases": [
+      "上消化道出血"
+    ],
+    "category": "消化系统"
+  },
+  {
+    "name": "腹胀",
+    "aliases": [
+      "肚子胀",
+      "abdominal distension"
+    ],
+    "bodyPart": "腹部",
+    "nature": "腹部膨隆",
+    "durationRequired": false,
+    "associatedSymptoms": [
+      "便秘",
+      "食欲不振"
+    ],
+    "relatedDiseases": [
+      "肠梗阻",
+      "腹水"
+    ],
+    "category": "消化系统"
+  },
+  {
+    "name": "食欲不振",
+    "aliases": [
+      "没胃口",
+      "anorexia"
+    ],
+    "bodyPart": "全身",
+    "nature": "食欲减退",
+    "durationRequired": false,
+    "associatedSymptoms": [
+      "体重下降",
+      "乏力"
+    ],
+    "relatedDiseases": [
+      "胃炎",
+      "恶性肿瘤"
     ],
     "category": "消化系统"
   },
@@ -431,6 +736,138 @@
     "category": "神经系统"
   },
   {
+    "name": "意识障碍",
+    "aliases": [
+      "神志不清",
+      "disturbance of consciousness"
+    ],
+    "bodyPart": "头部",
+    "nature": "嗜睡/昏睡/昏迷",
+    "durationRequired": false,
+    "associatedSymptoms": [
+      "抽搐",
+      "头痛"
+    ],
+    "relatedDiseases": [
+      "脑出血",
+      "肝性脑病"
+    ],
+    "category": "神经系统"
+  },
+  {
+    "name": "言语不清",
+    "aliases": [
+      "说话不清楚",
+      "dysarthria"
+    ],
+    "bodyPart": "口",
+    "nature": "构音障碍",
+    "durationRequired": false,
+    "associatedSymptoms": [
+      "口角歪斜",
+      "肢体无力"
+    ],
+    "relatedDiseases": [
+      "脑卒中"
+    ],
+    "category": "神经系统"
+  },
+  {
+    "name": "失语",
+    "aliases": [
+      "不能说话",
+      "aphasia"
+    ],
+    "bodyPart": "头部",
+    "nature": "表达性/感受性/混合性失语",
+    "durationRequired": false,
+    "associatedSymptoms": [
+      "言语不清",
+      "肢体无力"
+    ],
+    "relatedDiseases": [
+      "脑卒中",
+      "脑肿瘤"
+    ],
+    "category": "神经系统"
+  },
+  {
+    "name": "共济失调",
+    "aliases": [
+      "走路不稳",
+      "ataxia"
+    ],
+    "bodyPart": "全身",
+    "nature": "运动不协调",
+    "durationRequired": false,
+    "associatedSymptoms": [
+      "头晕",
+      "肢体无力"
+    ],
+    "relatedDiseases": [
+      "小脑病变",
+      "脑卒中"
+    ],
+    "category": "神经系统"
+  },
+  {
+    "name": "视力模糊",
+    "aliases": [
+      "视物模糊",
+      "blurred vision"
+    ],
+    "bodyPart": "眼部",
+    "nature": "视物不清",
+    "durationRequired": false,
+    "associatedSymptoms": [
+      "头痛",
+      "眼胀"
+    ],
+    "relatedDiseases": [
+      "青光眼",
+      "糖尿病视网膜病变"
+    ],
+    "category": "神经系统"
+  },
+  {
+    "name": "复视",
+    "aliases": [
+      "看东西重影",
+      "diplopia"
+    ],
+    "bodyPart": "眼部",
+    "nature": "看一个物体出现两个影像",
+    "durationRequired": false,
+    "associatedSymptoms": [
+      "头晕",
+      "眼球运动障碍"
+    ],
+    "relatedDiseases": [
+      "动眼神经麻痹",
+      "重症肌无力"
+    ],
+    "category": "神经系统"
+  },
+  {
+    "name": "面瘫",
+    "aliases": [
+      "面部麻痹",
+      "facial paralysis"
+    ],
+    "bodyPart": "面部",
+    "nature": "面部肌肉瘫痪",
+    "durationRequired": false,
+    "associatedSymptoms": [
+      "口角歪斜",
+      "眼睑闭合不全"
+    ],
+    "relatedDiseases": [
+      "面神经炎",
+      "脑卒中"
+    ],
+    "category": "神经系统"
+  },
+  {
     "name": "尿频",
     "aliases": [
       "小便次数多",
@@ -506,6 +943,42 @@
       "泌尿系结石",
       "肾小球肾炎",
       "膀胱癌"
+    ],
+    "category": "泌尿系统"
+  },
+  {
+    "name": "排尿困难",
+    "aliases": [
+      "小便费力",
+      "difficulty urinating"
+    ],
+    "bodyPart": "泌尿道",
+    "nature": "排尿延迟/尿线变细",
+    "durationRequired": false,
+    "associatedSymptoms": [
+      "尿频",
+      "夜尿增多"
+    ],
+    "relatedDiseased": [
+      "前列腺增生"
+    ],
+    "category": "泌尿系统"
+  },
+  {
+    "name": "夜尿增多",
+    "aliases": [
+      "起夜多",
+      "nocturia"
+    ],
+    "bodyPart": "泌尿道",
+    "nature": "夜间排尿次数和尿量增加",
+    "durationRequired": false,
+    "associatedSymptoms": [
+      "排尿困难"
+    ],
+    "relatedDiseased": [
+      "前列腺增生",
+      "慢性肾功能不全"
     ],
     "category": "泌尿系统"
   },
@@ -590,6 +1063,45 @@
     "category": "内分泌系统"
   },
   {
+    "name": "怕热多汗",
+    "aliases": [
+      "怕热",
+      "多汗",
+      "heat intolerance"
+    ],
+    "bodyPart": "全身",
+    "nature": "不耐热，易出汗",
+    "durationRequired": false,
+    "associatedSymptoms": [
+      "心悸",
+      "多食",
+      "体重下降"
+    ],
+    "relatedDiseases": [
+      "甲状腺功能亢进症"
+    ],
+    "category": "内分泌系统"
+  },
+  {
+    "name": "怕冷",
+    "aliases": [
+      "畏寒",
+      "cold intolerance"
+    ],
+    "bodyPart": "全身",
+    "nature": "畏寒怕冷",
+    "durationRequired": false,
+    "associatedSymptoms": [
+      "乏力",
+      "水肿",
+      "反应迟钝"
+    ],
+    "relatedDiseases": [
+      "甲状腺功能减退症"
+    ],
+    "category": "内分泌系统"
+  },
+  {
     "name": "关节痛",
     "aliases": [
       "关节疼",
@@ -603,7 +1115,7 @@
       "晨僵",
       "活动受限"
     ],
-    "relatedDiseased": [
+    "relatedDiseases": [
       "类风湿关节炎",
       "骨关节炎",
       "痛风"
@@ -623,10 +1135,214 @@
       "下肢放射痛",
       "活动受限"
     ],
-    "relatedDiseased": [
+    "relatedDiseases": [
       "腰肌劳损",
       "腰椎间盘突出症",
       "肾结石"
+    ],
+    "category": "运动系统"
+  },
+  {
+    "name": "关节肿胀",
+    "aliases": [
+      "关节肿",
+      "joint swelling"
+    ],
+    "bodyPart": "关节",
+    "nature": "关节周围软组织肿大",
+    "durationRequired": false,
+    "associatedSymptoms": [
+      "关节痛",
+      "活动受限"
+    ],
+    "relatedDiseases": [
+      "类风湿关节炎",
+      "痛风性关节炎"
+    ],
+    "category": "运动系统"
+  },
+  {
+    "name": "晨僵",
+    "aliases": [
+      "早上关节发僵",
+      "morning stiffness"
+    ],
+    "bodyPart": "关节",
+    "nature": "晨起关节僵硬，活动后缓解",
+    "durationRequired": true,
+    "associatedSymptoms": [
+      "关节痛",
+      "关节肿胀"
+    ],
+    "relatedDiseases": [
+      "类风湿关节炎"
+    ],
+    "category": "运动系统"
+  },
+  {
+    "name": "肌肉萎缩",
+    "aliases": [
+      "肌肉变细",
+      "muscle atrophy"
+    ],
+    "bodyPart": "肢体",
+    "nature": "肌肉体积缩小",
+    "durationRequired": false,
+    "associatedSymptoms": [
+      "肢体无力"
+    ],
+    "relatedDiseases": [
+      "肌营养不良",
+      "脊髓灰质炎"
+    ],
+    "category": "运动系统"
+  },
+  {
+    "name": "骨折疼痛",
+    "aliases": [
+      "骨头痛",
+      "fracture pain"
+    ],
+    "bodyPart": "骨骼",
+    "nature": "剧烈疼痛，局部肿胀、畸形",
+    "durationRequired": true,
+    "associatedSymptoms": [
+      "活动受限",
+      "局部压痛"
+    ],
+    "relatedDiseases": [
+      "骨折"
+    ],
+    "category": "运动系统"
+  },
+  {
+    "name": "活动受限",
+    "aliases": [
+      "活动不便",
+      "limited mobility"
+    ],
+    "bodyPart": "关节/肢体",
+    "nature": "关节或肢体活动范围减小",
+    "durationRequired": false,
+    "associatedSymptoms": [
+      "疼痛",
+      "肿胀"
+    ],
+    "relatedDiseases": [
+      "骨关节炎",
+      "关节炎"
+    ],
+    "category": "运动系统"
+  },
+  {
+    "name": "腰背痛",
+    "aliases": [
+      "背痛",
+      "back pain"
+    ],
+    "bodyPart": "腰背部",
+    "nature": "酸痛/胀痛/放射痛",
+    "durationRequired": true,
+    "associatedSymptoms": [
+      "活动受限",
+      "下肢麻木"
+    ],
+    "relatedDiseases": [
+      "腰椎间盘突出",
+      "强直性脊柱炎"
+    ],
+    "category": "运动系统"
+  },
+  {
+    "name": "颈项强直",
+    "aliases": [
+      "脖子僵硬",
+      "nuchal rigidity"
+    ],
+    "bodyPart": "颈部",
+    "nature": "颈部肌肉僵硬，活动受限",
+    "durationRequired": false,
+    "associatedSymptoms": [
+      "头痛",
+      "发热"
+    ],
+    "relatedDiseases": [
+      "脑膜炎",
+      "颈椎病"
+    ],
+    "category": "运动系统"
+  },
+  {
+    "name": "痛风石",
+    "aliases": [
+      "痛风结节",
+      "tophi"
+    ],
+    "bodyPart": "关节/软组织",
+    "nature": "尿酸盐结晶沉积",
+    "durationRequired": false,
+    "associatedSymptoms": [
+      "关节肿胀",
+      "疼痛"
+    ],
+    "relatedDiseases": [
+      "痛风"
+    ],
+    "category": "运动系统"
+  },
+  {
+    "name": "肌无力",
+    "aliases": [
+      "肌肉无力",
+      "myasthenia"
+    ],
+    "bodyPart": "全身",
+    "nature": "肌肉力量减退",
+    "durationRequired": false,
+    "associatedSymptoms": [
+      "易疲劳",
+      "眼睑下垂"
+    ],
+    "relatedDiseases": [
+      "重症肌无力",
+      "多发性肌炎"
+    ],
+    "category": "运动系统"
+  },
+  {
+    "name": "骨质疏松",
+    "aliases": [
+      "骨头脆",
+      "osteoporosis"
+    ],
+    "bodyPart": "全身骨骼",
+    "nature": "骨密度下降",
+    "durationRequired": false,
+    "associatedSymptoms": [
+      "腰背痛",
+      "易骨折"
+    ],
+    "relatedDiseases": [
+      "骨质疏松症"
+    ],
+    "category": "运动系统"
+  },
+  {
+    "name": "关节畸形",
+    "aliases": [
+      "关节变形",
+      "joint deformity"
+    ],
+    "bodyPart": "关节",
+    "nature": "关节形态异常",
+    "durationRequired": false,
+    "associatedSymptoms": [
+      "活动受限",
+      "疼痛"
+    ],
+    "relatedDiseases": [
+      "类风湿关节炎",
+      "骨关节炎"
     ],
     "category": "运动系统"
   },
@@ -646,7 +1362,7 @@
       "头痛",
       "肌肉酸痛"
     ],
-    "relatedDiseased": [
+    "relatedDiseases": [
       "感染性疾病",
       "风湿免疫病",
       "肿瘤"
@@ -667,312 +1383,12 @@
       "嗜睡",
       "食欲不振"
     ],
-    "relatedDiseased": [
+    "relatedDiseases": [
       "贫血",
       "慢性疲劳综合征",
       "甲状腺功能减退症"
     ],
     "category": "其他"
-  },
-  {
-    "name": "紫绀",
-    "aliases": [
-      "发绀",
-      "cyanosis"
-    ],
-    "bodyPart": "口唇/甲床",
-    "nature": "皮肤黏膜呈青紫色",
-    "durationRequired": false,
-    "associatedSymptoms": [
-      "呼吸困难"
-    ],
-    "relatedDiseases": [
-      "先天性心脏病",
-      "重症肺炎"
-    ],
-    "category": "循环系统"
-  },
-  {
-    "name": "胸闷",
-    "aliases": [
-      "胸口闷",
-      "chest tightness"
-    ],
-    "bodyPart": "胸部",
-    "nature": "压迫感/窒息感",
-    "durationRequired": false,
-    "associatedSymptoms": [
-      "心悸",
-      "呼吸困难"
-    ],
-    "relatedDiseases": [
-      "冠心病",
-      "焦虑症"
-    ],
-    "category": "循环系统"
-  },
-  {
-    "name": "鼻塞",
-    "aliases": [
-      "鼻子不通气",
-      "nasal congestion"
-    ],
-    "bodyPart": "鼻部",
-    "nature": "持续性/交替性",
-    "durationRequired": false,
-    "associatedSymptoms": [
-      "流涕",
-      "打喷嚏"
-    ],
-    "relatedDiseases": [
-      "感冒",
-      "过敏性鼻炎"
-    ],
-    "category": "呼吸系统"
-  },
-  {
-    "name": "流涕",
-    "aliases": [
-      "流鼻涕",
-      "rhinorrhea"
-    ],
-    "bodyPart": "鼻部",
-    "nature": "清涕/脓涕",
-    "durationRequired": false,
-    "associatedSymptoms": [
-      "鼻塞",
-      "打喷嚏"
-    ],
-    "relatedDiseases": [
-      "感冒",
-      "过敏性鼻炎"
-    ],
-    "category": "呼吸系统"
-  },
-  {
-    "name": "咽痛",
-    "aliases": [
-      "喉咙痛",
-      "sore throat"
-    ],
-    "bodyPart": "咽喉",
-    "nature": "刺痛/灼痛",
-    "durationRequired": false,
-    "associatedSymptoms": [
-      "吞咽困难",
-      "发热"
-    ],
-    "relatedDiseases": [
-      "急性咽炎",
-      "急性扁桃体炎"
-    ],
-    "category": "呼吸系统"
-  },
-  {
-    "name": "便秘",
-    "aliases": [
-      "大便干结",
-      "constipation"
-    ],
-    "bodyPart": "腹部",
-    "nature": "排便困难/排便次数减少",
-    "durationRequired": true,
-    "associatedSymptoms": [
-      "腹胀",
-      "肛门疼痛"
-    ],
-    "relatedDiseases": [
-      "功能性便秘",
-      "肠梗阻"
-    ],
-    "category": "消化系统"
-  },
-  {
-    "name": "反酸",
-    "aliases": [
-      "烧心",
-      "acid reflux",
-      "heartburn"
-    ],
-    "bodyPart": "胸骨后/上腹部",
-    "nature": "胸骨后烧灼感",
-    "durationRequired": false,
-    "associatedSymptoms": [
-      "嗳气",
-      "吞咽困难"
-    ],
-    "relatedDiseases": [
-      "胃食管反流病"
-    ],
-    "category": "消化系统"
-  },
-  {
-    "name": "吞咽困难",
-    "aliases": [
-      "咽东西困难",
-      "dysphagia"
-    ],
-    "bodyPart": "咽喉/食管",
-    "nature": "吞咽梗阻感/疼痛",
-    "durationRequired": false,
-    "associatedSymptoms": [
-      "体重下降",
-      "反流"
-    ],
-    "relatedDiseases": [
-      "食管癌",
-      "脑卒中后遗症"
-    ],
-    "category": "消化系统"
-  },
-  {
-    "name": "意识障碍",
-    "aliases": [
-      "神志不清",
-      "disturbance of consciousness"
-    ],
-    "bodyPart": "头部",
-    "nature": "嗜睡/昏睡/昏迷",
-    "durationRequired": false,
-    "associatedSymptoms": [
-      "抽搐",
-      "头痛"
-    ],
-    "relatedDiseases": [
-      "脑出血",
-      "肝性脑病"
-    ],
-    "category": "神经系统"
-  },
-  {
-    "name": "言语不清",
-    "aliases": [
-      "说话不清楚",
-      "dysarthria"
-    ],
-    "bodyPart": "口",
-    "nature": "构音障碍",
-    "durationRequired": false,
-    "associatedSymptoms": [
-      "口角歪斜",
-      "肢体无力"
-    ],
-    "relatedDiseases": [
-      "脑卒中"
-    ],
-    "category": "神经系统"
-  },
-  {
-    "name": "排尿困难",
-    "aliases": [
-      "小便费力",
-      "difficulty urinating"
-    ],
-    "bodyPart": "泌尿道",
-    "nature": "排尿延迟/尿线变细",
-    "durationRequired": false,
-    "associatedSymptoms": [
-      "尿频",
-      "夜尿增多"
-    ],
-    "relatedDiseased": [
-      "前列腺增生"
-    ],
-    "category": "泌尿系统"
-  },
-  {
-    "name": "夜尿增多",
-    "aliases": [
-      "起夜多",
-      "nocturia"
-    ],
-    "bodyPart": "泌尿道",
-    "nature": "夜间排尿次数和尿量增加",
-    "durationRequired": false,
-    "associatedSymptoms": [
-      "排尿困难"
-    ],
-    "relatedDiseased": [
-      "前列腺增生",
-      "慢性肾功能不全"
-    ],
-    "category": "泌尿系统"
-  },
-  {
-    "name": "怕热多汗",
-    "aliases": [
-      "怕热",
-      "多汗",
-      "heat intolerance"
-    ],
-    "bodyPart": "全身",
-    "nature": "不耐热，易出汗",
-    "durationRequired": false,
-    "associatedSymptoms": [
-      "心悸",
-      "多食",
-      "体重下降"
-    ],
-    "relatedDiseased": [
-      "甲状腺功能亢进症"
-    ],
-    "category": "内分泌系统"
-  },
-  {
-    "name": "怕冷",
-    "aliases": [
-      "畏寒",
-      "cold intolerance"
-    ],
-    "bodyPart": "全身",
-    "nature": "畏寒怕冷",
-    "durationRequired": false,
-    "associatedSymptoms": [
-      "乏力",
-      "水肿",
-      "反应迟钝"
-    ],
-    "relatedDiseased": [
-      "甲状腺功能减退症"
-    ],
-    "category": "内分泌系统"
-  },
-  {
-    "name": "关节肿胀",
-    "aliases": [
-      "关节肿",
-      "joint swelling"
-    ],
-    "bodyPart": "关节",
-    "nature": "关节周围软组织肿大",
-    "durationRequired": false,
-    "associatedSymptoms": [
-      "关节痛",
-      "活动受限"
-    ],
-    "relatedDiseased": [
-      "类风湿关节炎",
-      "痛风性关节炎"
-    ],
-    "category": "运动系统"
-  },
-  {
-    "name": "晨僵",
-    "aliases": [
-      "早上关节发僵",
-      "morning stiffness"
-    ],
-    "bodyPart": "关节",
-    "nature": "晨起关节僵硬，活动后缓解",
-    "durationRequired": true,
-    "associatedSymptoms": [
-      "关节痛",
-      "关节肿胀"
-    ],
-    "relatedDiseased": [
-      "类风湿关节炎"
-    ],
-    "category": "运动系统"
   },
   {
     "name": "寒战",
@@ -986,7 +1402,7 @@
     "associatedSymptoms": [
       "高热"
     ],
-    "relatedDiseased": [
+    "relatedDiseases": [
       "急性感染",
       "疟疾"
     ],
@@ -1005,7 +1421,7 @@
       "低热",
       "体重下降"
     ],
-    "relatedDiseased": [
+    "relatedDiseases": [
       "肺结核",
       "淋巴瘤"
     ],
@@ -1025,9 +1441,164 @@
       "皮疹",
       "黄疸"
     ],
-    "relatedDiseased": [
+    "relatedDiseases": [
       "湿疹",
       "胆汁淤积"
+    ],
+    "category": "其他"
+  },
+  {
+    "name": "低热",
+    "aliases": [
+      "微热",
+      "low-grade fever"
+    ],
+    "bodyPart": "全身",
+    "nature": "体温37.3-38℃",
+    "durationRequired": true,
+    "associatedSymptoms": [
+      "乏力",
+      "盗汗"
+    ],
+    "relatedDiseases": [
+      "慢性感染",
+      "结核病"
+    ],
+    "category": "其他"
+  },
+  {
+    "name": "中热",
+    "aliases": [
+      "中度发热",
+      "moderate fever"
+    ],
+    "bodyPart": "全身",
+    "nature": "体温38.1-39℃",
+    "durationRequired": true,
+    "associatedSymptoms": [
+      "头痛",
+      "肌肉酸痛"
+    ],
+    "relatedDiseases": [
+      "流感",
+      "肺炎"
+    ],
+    "category": "其他"
+  },
+  {
+    "name": "高热",
+    "aliases": [
+      "高烧",
+      "high fever"
+    ],
+    "bodyPart": "全身",
+    "nature": "体温39.1-41℃",
+    "durationRequired": true,
+    "associatedSymptoms": [
+      "寒战",
+      "意识模糊"
+    ],
+    "relatedDiseases": [
+      "败血症",
+      "脑膜炎"
+    ],
+    "category": "其他"
+  },
+  {
+    "name": "消瘦",
+    "aliases": [
+      "体重减轻",
+      "emaciation"
+    ],
+    "bodyPart": "全身",
+    "nature": "体重明显低于正常范围",
+    "durationRequired": true,
+    "associatedSymptoms": [
+      "乏力",
+      "食欲不振"
+    ],
+    "relatedDiseases": [
+      "恶性肿瘤",
+      "甲状腺功能亢进症"
+    ],
+    "category": "其他"
+  },
+  {
+    "name": "嗜睡",
+    "aliases": [
+      "瞌睡",
+      "somnolence"
+    ],
+    "bodyPart": "全身",
+    "nature": "异常的睡眠增多",
+    "durationRequired": false,
+    "associatedSymptoms": [
+      "乏力",
+      "意识障碍"
+    ],
+    "relatedDiseases": [
+      "脑炎",
+      "肝性脑病"
+    ],
+    "category": "其他"
+  },
+  {
+    "name": "烦躁",
+    "aliases": [
+      "易怒",
+      "agitation"
+    ],
+    "bodyPart": "全身",
+    "nature": "情绪激动，坐立不安",
+    "durationRequired": false,
+    "associatedSymptoms": [
+      "失眠",
+      "心悸"
+    ],
+    "relatedDiseases": [
+      "焦虑症",
+      "甲状腺功能亢进症"
+    ],
+    "category": "其他"
+  },
+  {
+    "name": "脱水",
+    "aliases": [
+      "失水",
+      "dehydration"
+    ],
+    "bodyPart": "全身",
+    "nature": "体液丢失过多",
+    "durationRequired": false,
+    "associatedSymptoms": [
+      "口渴",
+      "尿少",
+      "皮肤弹性差"
+    ],
+    "relatedDiseases": [
+      "急性胃肠炎",
+      "糖尿病酮症酸中毒"
+    ],
+    "category": "其他"
+  },
+  {
+    "name": "休克",
+    "aliases": [
+      "虚脱",
+      "shock"
+    ],
+    "bodyPart": "全身",
+    "nature": "有效循环血量不足，组织灌注不足",
+    "durationRequired": false,
+    "associatedSymptoms": [
+      "面色苍白",
+      "四肢湿冷",
+      "意识模糊"
+    ],
+    "relatedDiseases": [
+      "感染性休克",
+      "心源性休克",
+      "失血性休克"
     ],
     "category": "其他"
   }
