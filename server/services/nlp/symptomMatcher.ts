@@ -31,9 +31,7 @@ export class SymptomMatcher {
       const dataPath = path.join(process.cwd(), 'data', 'd7_symptom_terms.json');
       if (fs.existsSync(dataPath)) {
         const rawData = fs.readFileSync(dataPath, 'utf-8');
-        const allTerms = JSON.parse(rawData) as SymptomTerm[];
-        // 加载前 50 条术语
-        this.terms = allTerms.slice(0, 50);
+        this.terms = JSON.parse(rawData) as SymptomTerm[];
         this.isLoaded = true;
       }
     } catch (error) {

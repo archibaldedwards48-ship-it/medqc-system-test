@@ -3,11 +3,12 @@
  * 编排 5 个阶段的处理流程
  */
 
-import { NlpResult, NlpProcessingOptions, NlpError, Indicator, Entity, Relationship, SectionInfo, SymptomMatch } from '../../types/nlp.types';
+import { NlpResult, NlpProcessingOptions, NlpError, Indicator, Entity, Relationship, SectionInfo, SymptomMatch, TypoDetectionResult } from '../../types/nlp.types';
 import { paragraphIndexer } from './paragraphIndexer';
 import { semanticCircuitBreaker } from './semanticBreaker';
 import { metricExtractor } from './metricExtractor';
 import { symptomMatcher } from './symptomMatcher';
+import { typoDetector } from './typoDetector';
 import { zeroAnchorProcessor } from './zeroAnchorProcessor';
 import { medicalValidator } from './medicalValidator';
 
@@ -30,6 +31,7 @@ export class NlpPipeline {
     try {
       // 默认执行所有阶段
       const stages = options?.stages || [
+        'typo_detection',
         'indexing',
         'semantic_circuit_breaker',
         'metric_extraction',
@@ -43,8 +45,18 @@ export class NlpPipeline {
       let entities: Entity[] = [];
       let relationships: Relationship[] = [];
       let symptomMatches: SymptomMatch[] = [];
+      let typos: TypoDetectionResult[] = [];
       let confidence = 1;
       
+      // Pre-processing Stage: 错别字检测
+      if (stages.includes('typo_detection')) {
+        try {
+          typos = typoDetector.detectTypos(content);
+        } catch (error) {
+          this.addError('typo_detection', error instanceof Error ? error.message : '错别字检测失败', 'warning');
+        }
+      }
+
       // Stage 1: 段落索引
       if (stages.includes('indexing')) {
         try {
@@ -122,6 +134,7 @@ export class NlpPipeline {
         entities,
         relationships,
         symptomMatches,
+        typos,
         confidence: Math.max(confidence, 0),
       };
     } catch (error) {

@@ -44,12 +44,21 @@ export type SymptomMatch = {
   position: number;
 };
 
+export type TypoDetectionResult = {
+  wrong: string;
+  correct: string;
+  position: number;
+  context: string;
+  category: string;
+};
+
 export type NlpResult = {
   sectionMap: Map<string, SectionInfo>;
   indicators: Indicator[];
   entities: Entity[];
   relationships: Relationship[];
   symptomMatches?: SymptomMatch[];
+  typos?: TypoDetectionResult[];
   confidence: number;
 };
 
