@@ -5,27 +5,62 @@
 
 import { ParagraphIndexingResult, MedicalRecordSection, SectionInfo } from '../../types/nlp.types';
 
-// 段落标记关键词映射
-const SECTION_KEYWORDS: Record<MedicalRecordSection, string[]> = {
-  chief_complaint: ['主诉', '主要症状', 'chief complaint', 'cc'],
-  present_illness: ['现病史', '现病情', 'present illness', 'hpi'],
-  past_history: ['既往史', '过去病史', 'past history', 'psh'],
-  family_history: ['家族史', '家庭史', 'family history', 'fh'],
-  social_history: ['社会史', '生活史', 'social history', 'sh'],
-  review_of_systems: ['系统回顾', '系统审查', 'review of systems', 'ros'],
-  physical_exam: ['体格检查', '物理检查', 'physical examination', 'pe'],
-  vital_signs: ['生命体征', '基本体征', 'vital signs', 'vs'],
-  lab_results: ['实验室结果', '检验结果', 'laboratory results', 'lab'],
-  imaging: ['影像学', '放射学', '影像检查', 'imaging', 'radiology'],
-  diagnosis: ['诊断', '初步诊断', 'diagnosis', 'dx'],
-  assessment: ['评估', '临床评估', 'assessment'],
-  plan: ['计划', '治疗计划', '处理计划', 'plan'],
-  treatment: ['治疗', '处理', 'treatment'],
-  medication: ['用药', '药物', '处方', 'medication', 'rx'],
-  procedures: ['操作', '程序', '手术', 'procedures', 'procedures'],
-  follow_up: ['随访', '复诊', 'follow-up', 'fu'],
-  other: ['其他', '备注', 'other', 'notes'],
+// 一级强锚点：带冒号/括号的标准标题（高置信度）
+const STRONG_ANCHORS: Record<MedicalRecordSection, string[]> = {
+  chief_complaint:    ['主诉：', '主诉:', '【主诉】', '主要症状：'],
+  present_illness:    ['现病史：', '现病史:', '【现病史】', '病史：', '现病情：'],
+  past_history:       ['既往史：', '既往史:', '【既往史】', '过去史：', '过去病史：'],
+  family_history:     ['家族史：', '家族史:', '【家族史】'],
+  social_history:     ['个人史：', '个人史:', '社会史：', '生活史：', '【个人史】'],
+  review_of_systems:  ['系统回顾：', '系统回顾:', '【系统回顾】'],
+  physical_exam:      ['体格检查：', '查体：', '体检：', '【查体】', '【体格检查】', '体格检查:'],
+  vital_signs:        ['生命体征：', '生命体征:', 'T:', 'T：', '体温：'],
+  lab_results:        ['辅助检查：', '实验室检查：', '检验结果：', '【辅助检查】', '化验：'],
+  imaging:            ['影像学检查：', '影像检查：', 'CT：', 'MRI：', 'B超：'],
+  diagnosis:          ['初步诊断：', '诊断：', '入院诊断：', '【诊断】', '印象：'],
+  assessment:         ['评估：', '临床评估：', '病情评估：'],
+  plan:               ['诊疗计划：', '处理：', '医嘱：', '治疗方案：', '【诊疗计划】'],
+  treatment:          ['治疗：', '处理意见：', '治疗经过：'],
+  medication:         ['用药情况：', '药物治疗：', '处方：', '目前用药：'],
+  procedures:         ['手术经过：', '操作记录：', '手术记录：'],
+  follow_up:          ['随访：', '复诊：', '出院医嘱：', '随访计划：'],
+  other:              ['备注：', '其他：', '注意事项：'],
 };
+
+// 二级弱锚点：无冒号的纯文字标题（需结合行长度判断）
+const WEAK_ANCHORS: Record<MedicalRecordSection, string[]> = {
+  chief_complaint:    ['主诉', '主要症状'],
+  present_illness:    ['现病史', '现病情'],
+  past_history:       ['既往史', '过去史'],
+  family_history:     ['家族史'],
+  social_history:     ['个人史', '社会史'],
+  review_of_systems:  ['系统回顾'],
+  physical_exam:      ['体格检查', '查体', '体检'],
+  vital_signs:        ['生命体征'],
+  lab_results:        ['辅助检查', '检验结果', '化验结果'],
+  imaging:            ['影像学', '影像检查'],
+  diagnosis:          ['初步诊断', '入院诊断', '诊断'],
+  assessment:         ['评估', '病情评估'],
+  plan:               ['诊疗计划', '处理意见', '治疗方案'],
+  treatment:          ['治疗', '处理'],
+  medication:         ['用药情况', '药物治疗'],
+  procedures:         ['手术经过', '操作记录'],
+  follow_up:          ['随访', '复诊'],
+  other:              ['备注', '其他'],
+};
+
+// 位置启发法：各段落在全文中的典型位置区间（0-1）
+const POSITION_HINTS: Array<{ section: MedicalRecordSection; start: number; end: number }> = [
+  { section: 'chief_complaint',   start: 0.00, end: 0.15 },
+  { section: 'present_illness',   start: 0.08, end: 0.45 },
+  { section: 'past_history',      start: 0.40, end: 0.65 },
+  { section: 'family_history',    start: 0.55, end: 0.72 },
+  { section: 'social_history',    start: 0.60, end: 0.75 },
+  { section: 'physical_exam',     start: 0.65, end: 0.85 },
+  { section: 'lab_results',       start: 0.75, end: 0.92 },
+  { section: 'diagnosis',         start: 0.85, end: 1.00 },
+  { section: 'plan',              start: 0.90, end: 1.00 },
+];
 
 /**
  * 段落索引处理器
@@ -42,31 +77,23 @@ export class ParagraphIndexer {
     const lines = content.split('\n');
     
     let currentSection: MedicalRecordSection | null = null;
-    let currentSectionStart = 0;
     let currentSectionContent = '';
     
     for (let i = 0; i < lines.length; i++) {
       const line = lines[i].trim();
-      
       if (!line) continue;
       
       // 尝试识别新的段落
-      const detectedSection = this.detectSection(line);
+      const detectedSection = this.detectSection(line, i, lines.length);
       
       if (detectedSection && detectedSection !== currentSection) {
         // 保存前一个段落
         if (currentSection) {
-          const startIndex = content.indexOf(currentSectionContent);
-          sections.set(currentSection, {
-            content: currentSectionContent.trim(),
-            startIndex,
-            endIndex: startIndex + currentSectionContent.length,
-          });
+          this.saveSection(sections, currentSection, currentSectionContent, content);
         }
         
         // 开始新段落
         currentSection = detectedSection;
-        currentSectionStart = i;
         currentSectionContent = line;
       } else if (currentSection) {
         // 继续添加到当前段落
@@ -76,52 +103,95 @@ export class ParagraphIndexer {
     
     // 保存最后一个段落
     if (currentSection && currentSectionContent) {
-      const startIndex = content.indexOf(currentSectionContent);
-      sections.set(currentSection, {
-        content: currentSectionContent.trim(),
-        startIndex,
-        endIndex: startIndex + currentSectionContent.length,
+      this.saveSection(sections, currentSection, currentSectionContent, content);
+    }
+
+    let usedFallback = false;
+    // === 策略三：位置启发法兜底 ===
+    // 当识别到的段落数 < 3 时（说明文书无标准标题），启用位置推断
+    if (sections.size < 3 && content.length > 200) {
+      usedFallback = true;
+      const paragraphs = content
+        .split(/\n{2,}/)  // 按空行切分段落块
+        .filter(p => p.trim().length > 20);
+
+      paragraphs.forEach((para, idx) => {
+        const position = idx / Math.max(paragraphs.length - 1, 1);
+        // 找到最匹配的位置区间
+        const hint = POSITION_HINTS.find(h => position >= h.start && position <= h.end);
+        if (hint && !sections.has(hint.section)) {
+          const trimmedPara = para.trim();
+          const startIndex = content.indexOf(trimmedPara);
+          sections.set(hint.section, {
+            content: trimmedPara,
+            startIndex,
+            endIndex: startIndex + trimmedPara.length,
+          });
+        }
       });
     }
     
     return {
       sections,
-      confidence: this.calculateConfidence(sections.size),
+      confidence: this.calculateConfidence(sections.size, usedFallback),
     };
+  }
+
+  private saveSection(sections: Map<string, SectionInfo>, section: string, contentStr: string, fullContent: string) {
+    const trimmed = contentStr.trim();
+    const startIndex = fullContent.indexOf(trimmed);
+    sections.set(section, {
+      content: trimmed,
+      startIndex,
+      endIndex: startIndex + trimmed.length,
+    });
   }
   
   /**
    * 检测行中的段落类型
    * @param line 文本行
+   * @param lineIndex 当前行号
+   * @param totalLines 总行数
    * @returns 检测到的段落类型，如果没有则返回 null
    */
-  private detectSection(line: string): MedicalRecordSection | null {
-    const lowerLine = line.toLowerCase();
-    
-    for (const [section, keywords] of Object.entries(SECTION_KEYWORDS)) {
-      for (const keyword of keywords) {
-        if (lowerLine.includes(keyword.toLowerCase())) {
-          // 检查是否是标题行（通常较短且以冒号或其他标记结尾）
-          if (line.length < 100 && (line.includes('：') || line.includes(':') || line.includes('—'))) {
+  private detectSection(line: string, lineIndex: number, totalLines: number): MedicalRecordSection | null {
+    const trimmed = line.trim();
+    if (!trimmed) return null;
+
+    // === 策略一：强锚点匹配（最高优先级）===
+    for (const [section, anchors] of Object.entries(STRONG_ANCHORS)) {
+      for (const anchor of anchors) {
+        if (trimmed.startsWith(anchor) || trimmed === anchor.replace(/：|:$/, '')) {
+          return section as MedicalRecordSection;
+        }
+      }
+    }
+
+    // === 策略二：弱锚点匹配（需满足"短行"条件）===
+    // 弱锚点只在行长度 < 15 字符时生效，避免把正文内容误判为标题
+    if (trimmed.length < 15) {
+      for (const [section, anchors] of Object.entries(WEAK_ANCHORS)) {
+        for (const anchor of anchors) {
+          if (trimmed === anchor || trimmed === anchor + '：' || trimmed === anchor + ':') {
             return section as MedicalRecordSection;
           }
         }
       }
     }
-    
-    return null;
+
+    return null;  // 正常行，不是标题
   }
   
   /**
    * 计算置信度
    * 基于识别到的段落数量
    * @param sectionCount 识别到的段落数
+   * @param usedFallback 是否使用了位置启发法兜底
    * @returns 置信度（0-1）
    */
-  private calculateConfidence(sectionCount: number): number {
-    // 识别到的段落越多，置信度越高
-    // 最多识别 18 个段落，所以最高置信度为 1
-    return Math.min(sectionCount / 18, 1);
+  private calculateConfidence(sectionCount: number, usedFallback: boolean): number {
+    const base = Math.min(sectionCount / 8, 1);  // 识别8个段落即满分
+    return usedFallback ? base * 0.6 : base;      // 使用兜底法时置信度打六折
   }
   
   /**
