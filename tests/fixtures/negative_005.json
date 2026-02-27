@@ -1,0 +1,22 @@
+{
+  "id": "fixture_negative_005",
+  "type": "admission",
+  "description": "缺陷病历 - 多项缺陷并存（主诉无时间+现病史套话）",
+  "expectedIssues": [
+    {
+      "type": "content_rule",
+      "section": "chief_complaint",
+      "keyword": "持续时间",
+      "severity": "major",
+      "message": "主诉缺少症状持续时间"
+    },
+    {
+      "type": "content_rule",
+      "section": "present_illness",
+      "keyword": "套话",
+      "severity": "minor",
+      "message": "现病史包含套话：'密切观察病情变化'"
+    }
+  ],
+  "content": "【主诉】\n腹痛\n\n【现病史】\n患者腹痛，为求进一步诊疗，来我院就诊。患者目前精神状态尚可，食欲正常，大小便正常。密切观察病情变化。\n\n【既往史】\n否认高血压。否认糖尿病。否认心脏病。否认手术史。\n\n【过敏史】\n否认药物过敏。\n\n【个人史】\n否认吸烟。否认饮酒。\n\n【家族史】\n父亲健康，母亲健康。\n\n【体格检查】\n体温36.8℃，脉搏80次/分，呼吸18次/分，血压125/80mmHg。\nBMI 23.5kg/m²。\n全身皮肤无黄染。\n头颈部：无异常。\n胸部：心率80次/分，律齐，无杂音。肺部清晰。\n腹部：腹软，无压痛。\n四肢：无水肿。\n神经系统：意识清楚，言语清晰。\n\n【初步诊断】\n1. 腹痛（待查）\n\n【拟进一步检查】\n血常规、生化全项、腹部超声"
+}
