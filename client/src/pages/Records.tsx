@@ -43,7 +43,6 @@ import { Textarea } from "@/components/ui/textarea";
 import { toast } from "sonner";
 import { FileText, Plus, Search, Trash2, Eye, ShieldCheck } from "lucide-react";
 import { useLocation } from "wouter";
-import { useState } from "react";
 
 const RECORD_TYPES = [
   { value: "inpatient", label: "住院病历" },

@@ -175,16 +175,19 @@
 - [x] 统计卡片（假阳性总数、已确认数、建议数）
 
 ### 前端 Dashboard 增强
-- [ ] 替换占位图表为真实 Recharts 数据（质控趋势折线图）
-- [ ] 问题类型分布改为真实饼图
+- [x] 替换占位图表为真实 Recharts 数据（质控趋势折线图）
+- [x] 问题类型分布改为真实饼图（F1: trpc.statistics.getIssueTypeDistribution）
 - [x] 最近质控记录列表点击跳转详情页
 
 ### 前端 Records 页增强
-- [ ] 每条病历行增加质控状态徽章（已质控/未质控/不合格）
-- [ ] 质控结果列增加"查看详情"链接，跳转 /qc-results/:id
+- [x] 每条病历行增加质控状态徽章（已质控/未质控/不合格）（F2: trpc.qc.list）
+- [x] 质控结果列增加"查看详情"链接，跳转 /qc-results/:id
 - [x] 执行质控后直接跳转详情页（替代弹窗展示）
 
 ## Phase 9: D7 症状体征术语库导入（数据专家 B）
 - [ ] 拉取 D7 数据文件 d7_symptom_terms.json
 - [ ] 编写导入脚本并入库
 - [ ] 验证导入数量
+
+## BUG: 前端 tRPC 类型推导失败
+- [x] 修复前端 trpc.qc 和 trpc.statistics 类型不存在的问题（原因：git remote 配置，已通过 GitHub 同步解决）

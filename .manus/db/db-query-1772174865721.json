@@ -1,0 +1,46 @@
+{
+  "query": "SELECT 'qc_rules' as tbl, COUNT(*) as cnt FROM qc_rules UNION ALL SELECT 'medical_terminology', COUNT(*) FROM medical_terminology UNION ALL SELECT 'drug_knowledge_base', COUNT(*) FROM drug_knowledge_base UNION ALL SELECT 'qc_configs', COUNT(*) FROM qc_configs UNION ALL SELECT 'content_rules', COUNT(*) FROM content_rules UNION ALL SELECT 'symptom_terms', COUNT(*) FROM symptom_terms UNION ALL SELECT 'medical_records', COUNT(*) FROM medical_records UNION ALL SELECT 'qc_results', COUNT(*) FROM qc_results UNION ALL SELECT 'qc_issues', COUNT(*) FROM qc_issues;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3evEXeQR2ZV2n9M.12b1529855c9 --database abpwBixLt4VY47oKNmgDNS --execute SELECT 'qc_rules' as tbl, COUNT(*) as cnt FROM qc_rules UNION ALL SELECT 'medical_terminology', COUNT(*) FROM medical_terminology UNION ALL SELECT 'drug_knowledge_base', COUNT(*) FROM drug_knowledge_base UNION ALL SELECT 'qc_configs', COUNT(*) FROM qc_configs UNION ALL SELECT 'content_rules', COUNT(*) FROM content_rules UNION ALL SELECT 'symptom_terms', COUNT(*) FROM symptom_terms UNION ALL SELECT 'medical_records', COUNT(*) FROM medical_records UNION ALL SELECT 'qc_results', COUNT(*) FROM qc_results UNION ALL SELECT 'qc_issues', COUNT(*) FROM qc_issues;",
+  "rows": [
+    {
+      "tbl": "qc_rules",
+      "cnt": "19"
+    },
+    {
+      "tbl": "drug_knowledge_base",
+      "cnt": "0"
+    },
+    {
+      "tbl": "qc_configs",
+      "cnt": "19"
+    },
+    {
+      "tbl": "medical_terminology",
+      "cnt": "0"
+    },
+    {
+      "tbl": "content_rules",
+      "cnt": "35"
+    },
+    {
+      "tbl": "symptom_terms",
+      "cnt": "50"
+    },
+    {
+      "tbl": "qc_issues",
+      "cnt": "9"
+    },
+    {
+      "tbl": "qc_results",
+      "cnt": "1"
+    },
+    {
+      "tbl": "medical_records",
+      "cnt": "19"
+    }
+  ],
+  "messages": [],
+  "stdout": "tbl\tcnt\nqc_rules\t19\ndrug_knowledge_base\t0\nqc_configs\t19\nmedical_terminology\t0\ncontent_rules\t35\nsymptom_terms\t50\nqc_issues\t9\nqc_results\t1\nmedical_records\t19\n",
+  "stderr": "",
+  "execution_time_ms": 141
+}

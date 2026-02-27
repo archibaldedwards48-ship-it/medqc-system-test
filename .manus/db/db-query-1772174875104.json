@@ -1,0 +1,14 @@
+{
+  "query": "SELECT 'qc_rules' as tbl, COUNT(*) as cnt FROM qc_rules",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3evEXeQR2ZV2n9M.12b1529855c9 --database abpwBixLt4VY47oKNmgDNS --execute SELECT 'qc_rules' as tbl, COUNT(*) as cnt FROM qc_rules",
+  "rows": [
+    {
+      "tbl": "qc_rules",
+      "cnt": "19"
+    }
+  ],
+  "messages": [],
+  "stdout": "tbl\tcnt\nqc_rules\t19\n",
+  "stderr": "",
+  "execution_time_ms": 60
+}

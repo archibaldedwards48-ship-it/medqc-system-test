@@ -28,7 +28,6 @@ import {
 } from "recharts";
 import { Activity, Download, TrendingUp } from "lucide-react";
 import { toast } from "sonner";
-import { useState, useMemo } from "react";
 
 // F1: Issue type distribution labels
 const ISSUE_TYPE_LABELS: Record<string, string> = {
