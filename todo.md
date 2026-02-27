@@ -191,3 +191,12 @@
 
 ## BUG: 前端 tRPC 类型推导失败
 - [x] 修复前端 trpc.qc 和 trpc.statistics 类型不存在的问题（原因：git remote 配置，已通过 GitHub 同步解决）
+
+## Phase 10: 数据导入与 TS 修复
+
+- [x] 修复 server/db.ts 中 qcMessages 的 3 个 TypeScript 错误（tsconfig.json include 加入 drizzle/**/*）
+- [x] 清理数据专家生成脚本（generate_d2_soap_templates.py、generate_d7_data.py）
+- [x] 导入 D10 扩充规则到数据库（45条）
+- [x] 导入 D5 错别字映射到数据库（55条，qc_configs typo_mapping）
+- [x] 导入 D2 SOAP 模板到数据库（30条，qcConfigs soap_template）
+- [x] 导入 D7 扩充症状术语到数据库（152条）
