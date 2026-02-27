@@ -545,3 +545,52 @@ describe("report router", () => {
     expect(result.count).toBe(0);
   });
 });
+
+// ============================================================
+// Feedback Router Tests
+// ============================================================
+describe("feedback router", () => {
+  it("feedback.list throws FORBIDDEN for doctor role", async () => {
+    const caller = appRouter.createCaller(doctorCtx);
+    await expect(
+      caller.feedback.list({})
+    ).rejects.toThrow();
+  });
+
+  it("feedback.list returns paginated results for admin", async () => {
+    const caller = appRouter.createCaller(adminCtx);
+    const result = await caller.feedback.list({ page: 1, pageSize: 10 });
+    expect(result.items).toBeInstanceOf(Array);
+    expect(result.total).toBeGreaterThanOrEqual(0);
+    expect(result.page).toBe(1);
+    expect(result.pageSize).toBe(10);
+  });
+
+  it("feedback.list supports checkerType filter", async () => {
+    const caller = appRouter.createCaller(adminCtx);
+    const result = await caller.feedback.list({ checkerType: "completeness" });
+    expect(result.items).toBeInstanceOf(Array);
+    result.items.forEach(item => {
+      expect(item.checkerType).toBe("completeness");
+    });
+  });
+
+  it("feedback.listByRecord returns empty array for non-existent record", async () => {
+    const caller = appRouter.createCaller(adminCtx);
+    const result = await caller.feedback.listByRecord({ recordId: 99999 });
+    expect(result).toBeInstanceOf(Array);
+    expect(result.length).toBe(0);
+  });
+
+  it("feedback.submit throws for invalid feedbackType", async () => {
+    const caller = appRouter.createCaller(adminCtx);
+    await expect(
+      caller.feedback.submit({
+        recordId: 1,
+        checkerType: "completeness",
+        issueId: "CHIEF_COMPLAINT_MISSING",
+        feedbackType: "invalid_type" as any,
+      })
+    ).rejects.toThrow();
+  });
+});

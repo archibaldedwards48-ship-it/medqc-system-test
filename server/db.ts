@@ -20,6 +20,7 @@ import {
   statistics,
   symptomTerms,
   contentRules,
+  qcMessages,
   InsertUser,
   InsertMedicalRecord,
   InsertQcResult,
@@ -34,6 +35,8 @@ import {
   InsertStatistics,
   InsertSymptomTerm,
   InsertContentRule,
+  InsertQcMessage,
+  QcMessage,
 } from "../drizzle/schema";
 import { ENV } from "./_core/env";
 
@@ -632,4 +635,46 @@ export async function createStatistics(data: Omit<InsertStatistics, "id" | "crea
   const d = await db();
   const result = await d.insert(statistics).values(data);
   return result[0].insertId;
+}
+
+// ============================================================
+// QC Messages (False-positive Feedback)
+// ============================================================
+export async function createQcMessage(data: Omit<InsertQcMessage, "id" | "createdAt">) {
+  const d = await db();
+  const result = await d.insert(qcMessages).values(data);
+  return result[0].insertId as number;
+}
+
+export async function getQcMessagesByRecord(recordId: number) {
+  const d = await db();
+  return d.select().from(qcMessages)
+    .where(eq(qcMessages.recordId, recordId))
+    .orderBy(desc(qcMessages.createdAt));
+}
+
+export async function getQcMessages(options: {
+  checkerType?: string;
+  feedbackType?: QcMessage['feedbackType'];
+  limit?: number;
+  offset?: number;
+}) {
+  const d = await db();
+  const conditions = [];
+  if (options.checkerType) conditions.push(eq(qcMessages.checkerType, options.checkerType));
+  if (options.feedbackType) conditions.push(eq(qcMessages.feedbackType, options.feedbackType));
+  return d.select().from(qcMessages)
+    .where(conditions.length > 0 ? and(...conditions) : undefined)
+    .orderBy(desc(qcMessages.createdAt))
+    .limit(options.limit ?? 50)
+    .offset(options.offset ?? 0);
+}
+
+export async function countQcMessages(checkerType?: string) {
+  const d = await db();
+  const condition = checkerType ? eq(qcMessages.checkerType, checkerType) : undefined;
+  const result = await d.select({ count: sql<number>`count(*)` })
+    .from(qcMessages)
+    .where(condition);
+  return Number(result[0]?.count ?? 0);
 }

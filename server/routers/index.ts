@@ -14,3 +14,4 @@ export { spotCheckRouter } from './spotCheckRouter';
 export { nlpRouter } from './nlpRouter';
 export { reportRouter } from './reportRouter';
 export { authExtRouter } from './authRouter';
+export { feedbackRouter } from './feedbackRouter';

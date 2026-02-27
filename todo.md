@@ -143,3 +143,14 @@
 - [ ] 数据质量 SQL 审计（7个数据集）
 - [ ] 性能基准测试（5个场景）
 - [ ] 测试覆盖率达到 85%+
+
+---
+
+## Phase 7: 后端反馈表 qc_messages（后端工程师执行）
+
+- [x] drizzle/schema.ts 新增 qc_messages 表（id/record_id/checker_type/issue_id/feedback_type/created_by/created_at/note）
+- [x] pnpm db:push 迁移
+- [x] server/db.ts 新增 createQcMessage / getQcMessages / getQcMessagesByRecord CRUD helper
+- [x] server/routers/feedbackRouter.ts 新增 feedback.submit / feedback.list / feedback.listByRecord 三个 tRPC 路由
+- [x] 修复 DuplicateChecker type: 'formatting' → 'duplicate'
+- [x] 写 vitest 测试覆盖 feedback 路由（5个测试，含权限边界）

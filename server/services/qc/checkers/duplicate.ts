@@ -25,7 +25,8 @@ export class DuplicateChecker implements IQcChecker {
 
         if (similarity > 0.7) {
           issues.push({
-            type: 'duplicate' as IssueType,
+            type: 'duplicate' as IssueType, // 查重独立分类，便于前端精确过滤和报告展示
+
             severity: similarity > 0.9 ? 'major' : 'minor',
             message: `段落"${this.getSectionDisplayName(name1)}"与"${this.getSectionDisplayName(name2)}"内容高度重复（相似度: ${Math.round(similarity * 100)}%）`,
             suggestion: '请检查是否存在复制粘贴行为，确保各章节内容描述的针对性和准确性',

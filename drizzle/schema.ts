@@ -270,3 +270,27 @@ export const contentRules = mysqlTable("content_rules", {
 
 export type ContentRule = typeof contentRules.$inferSelect;
 export type InsertContentRule = typeof contentRules.$inferInsert;
+
+// ============================================================
+// QC Messages (False-positive Feedback)
+// ============================================================
+export const qcMessages = mysqlTable("qc_messages", {
+  id: int("id").autoincrement().primaryKey(),
+  recordId: int("record_id").notNull().references(() => medicalRecords.id),
+  // 触发反馈的检查器名称：completeness | timeliness | consistency |
+  // medicationSafety | criticalValue | formatting | diagnosis |
+  // contentRule | crossDocument | duplicate
+  checkerType: varchar("checker_type", { length: 64 }).notNull(),
+  // 对应的 QcIssue ruleId，如 'CHIEF_COMPLAINT_MISSING_DURATION'
+  issueId: varchar("issue_id", { length: 128 }).notNull(),
+  // 反馈类型：false_positive(误报) | confirmed(确认问题) | suggestion(建议)
+  feedbackType: mysqlEnum("feedback_type", ["false_positive", "confirmed", "suggestion"]).notNull(),
+  // 提交反馈的用户 ID
+  createdBy: int("created_by").notNull().references(() => users.id),
+  createdAt: timestamp("created_at").defaultNow().notNull(),
+  // 可选的补充说明
+  note: text("note"),
+});
+
+export type QcMessage = typeof qcMessages.$inferSelect;
+export type InsertQcMessage = typeof qcMessages.$inferInsert;

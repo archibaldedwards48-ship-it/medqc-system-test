@@ -14,7 +14,8 @@ import { statisticsRouter } from "./routers/statisticsRouter";
 import { spotCheckRouter } from "./routers/spotCheckRouter";
 import { nlpRouter } from "./routers/nlpRouter";
 import { reportRouter } from "./routers/reportRouter";
-import { authExtRouter } from "./routers/authRouter";
+import { authExtRouter } from './routers/authRouter';
+import { feedbackRouter } from './routers/feedbackRouter';
 
 export const appRouter = router({
   system: systemRouter,
@@ -60,6 +61,8 @@ export const appRouter = router({
 
   // Reports
   report: reportRouter,
+  // QC Feedback (false-positive, confirmed, suggestion)
+  feedback: feedbackRouter,
 });
 
 export type AppRouter = typeof appRouter;
