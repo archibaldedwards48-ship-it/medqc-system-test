@@ -43,6 +43,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { toast } from "sonner";
 import { FileText, Plus, Search, Trash2, Eye, ShieldCheck } from "lucide-react";
 import { useLocation } from "wouter";
+import { useState } from "react";
 
 const RECORD_TYPES = [
   { value: "inpatient", label: "住院病历" },
@@ -78,6 +79,10 @@ export default function Records() {
         pageSize: 20,
         recordType: typeFilter === "all" ? undefined : typeFilter,
       });
+
+  // F2: Fetch QC results
+  const { data: qcListData } = trpc.qc.list.useQuery({ page: 1, pageSize: 100 });
+  const qcResults = (qcListData as any)?.results ?? [];
 
   const createMutation = trpc.records.create.useMutation({
     onSuccess: () => {
@@ -173,6 +178,7 @@ export default function Records() {
                 <TableHead>入院日期</TableHead>
                 <TableHead>出院日期</TableHead>
                 <TableHead>创建时间</TableHead>
+                <TableHead>质控状态</TableHead>
                 <TableHead className="text-right">操作</TableHead>
               </TableRow>
             </TableHeader>
@@ -180,7 +186,7 @@ export default function Records() {
               {isLoading ? (
                 Array.from({ length: 8 }).map((_, i) => (
                   <TableRow key={i}>
-                    {Array.from({ length: 7 }).map((_, j) => (
+                    {Array.from({ length: 8 }).map((_, j) => (
                       <TableCell key={j}>
                         <Skeleton className="h-4 w-full" />
                       </TableCell>
@@ -189,7 +195,7 @@ export default function Records() {
                 ))
               ) : records.length === 0 ? (
                 <TableRow>
-                  <TableCell colSpan={7} className="text-center py-12 text-muted-foreground">
+                  <TableCell colSpan={8} className="text-center py-12 text-muted-foreground">
                     <FileText className="w-8 h-8 mx-auto mb-2 opacity-30" />
                     暂无病历数据
                   </TableCell>
@@ -218,6 +224,19 @@ export default function Records() {
                     </TableCell>
                     <TableCell className="text-sm text-muted-foreground">
                       {new Date(record.createdAt).toLocaleDateString("zh-CN")}
+                    </TableCell>
+                    <TableCell>
+                      {(() => {
+                        const qcResult = qcResults.find((r: any) => r.medicalRecordId === record.id);
+                        if (!qcResult) {
+                          return <Badge variant="secondary" className="text-xs">待质控</Badge>;
+                        }
+                        return qcResult.isQualified ? (
+                          <Badge className="bg-green-100 text-green-800 text-xs">合格</Badge>
+                        ) : (
+                          <Badge className="bg-red-100 text-red-800 text-xs">不合格</Badge>
+                        );
+                      })()}
                     </TableCell>
                     <TableCell className="text-right">
                       <div className="flex items-center justify-end gap-1 opacity-0 group-hover:opacity-100 transition-opacity">

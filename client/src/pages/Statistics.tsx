@@ -16,6 +16,9 @@ import {
   Bar,
   LineChart,
   Line,
+  PieChart,
+  Pie,
+  Cell,
   XAxis,
   YAxis,
   CartesianGrid,
@@ -25,6 +28,86 @@ import {
 } from "recharts";
 import { Activity, Download, TrendingUp } from "lucide-react";
 import { toast } from "sonner";
+import { useState, useMemo } from "react";
+
+// F1: Issue type distribution labels
+const ISSUE_TYPE_LABELS: Record<string, string> = {
+  completeness: "完整性",
+  timeliness: "时限性",
+  consistency: "一致性",
+  formatting: "格式规范",
+  logic: "逻辑性",
+  duplicate: "重复检查",
+  cross_document: "跨文书",
+};
+
+const CHART_COLORS = [
+  "#3b82f6", // blue
+  "#10b981", // green
+  "#f59e0b", // amber
+  "#ef4444", // red
+  "#8b5cf6", // purple
+  "#ec4899", // pink
+  "#14b8a6", // teal
+];
+
+// F1: Issue Distribution Chart Component
+function IssueDistributionChart() {
+  const { data: issueDistribution, isLoading } =
+    trpc.statistics.getIssueTypeDistribution.useQuery();
+
+  const chartData = useMemo(() => {
+    if (!issueDistribution) return [];
+    return issueDistribution.map((item: any) => ({
+      name: ISSUE_TYPE_LABELS[item.type] || item.type,
+      value: item.count,
+    }));
+  }, [issueDistribution]);
+
+  return (
+    <Card className="border-border/60">
+      <CardHeader className="pb-2">
+        <CardTitle className="text-sm font-medium">问题类型分布</CardTitle>
+      </CardHeader>
+      <CardContent>
+        {isLoading ? (
+          <Skeleton className="h-64 w-full" />
+        ) : chartData.length > 0 ? (
+          <ResponsiveContainer width="100%" height={280}>
+            <PieChart>
+              <Pie
+                data={chartData}
+                cx="50%"
+                cy="50%"
+                labelLine={false}
+                label={({ name, value }) => `${name} ${value}`}
+                outerRadius={80}
+                fill="#8884d8"
+                dataKey="value"
+              >
+                {chartData.map((entry: any, index: number) => (
+                  <Cell key={`cell-${index}`} fill={CHART_COLORS[index % CHART_COLORS.length]} />
+                ))}
+              </Pie>
+              <Tooltip
+                contentStyle={{
+                  background: "var(--card)",
+                  border: "1px solid var(--border)",
+                  borderRadius: "6px",
+                  fontSize: "12px",
+                }}
+              />
+            </PieChart>
+          </ResponsiveContainer>
+        ) : (
+          <div className="h-64 flex items-center justify-center text-muted-foreground text-sm">
+            暂无数据
+          </div>
+        )}
+      </CardContent>
+    </Card>
+  );
+}
 
 export default function Statistics() {
   const [groupBy, setGroupBy] = useState<"day" | "week" | "month">("day");
@@ -254,6 +337,9 @@ export default function Statistics() {
           )}
         </CardContent>
       </Card>
+
+      {/* F1: Issue Type Distribution Pie Chart */}
+      <IssueDistributionChart />
 
       {/* Trend data table */}
       {trendChartData.length > 0 && (
