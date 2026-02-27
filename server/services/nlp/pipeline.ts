@@ -3,10 +3,11 @@
  * 编排 5 个阶段的处理流程
  */
 
-import { NlpResult, NlpProcessingOptions, NlpError, Indicator, Entity, Relationship, SectionInfo } from '../../types/nlp.types';
+import { NlpResult, NlpProcessingOptions, NlpError, Indicator, Entity, Relationship, SectionInfo, SymptomMatch } from '../../types/nlp.types';
 import { paragraphIndexer } from './paragraphIndexer';
 import { semanticCircuitBreaker } from './semanticBreaker';
 import { metricExtractor } from './metricExtractor';
+import { symptomMatcher } from './symptomMatcher';
 import { zeroAnchorProcessor } from './zeroAnchorProcessor';
 import { medicalValidator } from './medicalValidator';
 
@@ -32,6 +33,7 @@ export class NlpPipeline {
         'indexing',
         'semantic_circuit_breaker',
         'metric_extraction',
+        'symptom_matching',
         'zero_anchor',
         'validation',
       ];
@@ -40,6 +42,7 @@ export class NlpPipeline {
       let indicators: Indicator[] = [];
       let entities: Entity[] = [];
       let relationships: Relationship[] = [];
+      let symptomMatches: SymptomMatch[] = [];
       let confidence = 1;
       
       // Stage 1: 段落索引
@@ -73,6 +76,15 @@ export class NlpPipeline {
           confidence *= extractResult.confidence;
         } catch (error) {
           this.addError('metric_extraction', error instanceof Error ? error.message : '指标提取失败', 'warning');
+        }
+      }
+
+      // 新增可选 Stage: symptom_matching
+      if (stages.includes('symptom_matching')) {
+        try {
+          symptomMatches = symptomMatcher.matchSymptoms(content);
+        } catch (error) {
+          this.addError('symptom_matching', error instanceof Error ? error.message : '症状匹配失败', 'warning');
         }
       }
       
@@ -109,6 +121,7 @@ export class NlpPipeline {
         indicators,
         entities,
         relationships,
+        symptomMatches,
         confidence: Math.max(confidence, 0),
       };
     } catch (error) {

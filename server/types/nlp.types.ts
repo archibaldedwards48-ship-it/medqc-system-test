@@ -36,11 +36,20 @@ export type Indicator = {
 
 // ============ NLP 处理结果 ============
 
+export type SymptomMatch = {
+  name: string;
+  bodyPart: string;
+  category: string;
+  matchedAlias: string;
+  position: number;
+};
+
 export type NlpResult = {
   sectionMap: Map<string, SectionInfo>;
   indicators: Indicator[];
   entities: Entity[];
   relationships: Relationship[];
+  symptomMatches?: SymptomMatch[];
   confidence: number;
 };
 
