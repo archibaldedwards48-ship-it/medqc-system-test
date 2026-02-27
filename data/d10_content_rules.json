@@ -123,5 +123,134 @@
     },
     "errorMessage": "日常病程记录缺少生命体征监测数据",
     "severity": "major"
+  },
+  {
+    "documentType": "admission_record",
+    "section": "physical_examination",
+    "checkType": "must_contain_vital_signs",
+    "condition": {
+      "type": "must_contain_all",
+      "keywords": [
+        "体温",
+        "脉搏",
+        "呼吸",
+        "血压"
+      ]
+    },
+    "errorMessage": "体格检查必须包含完整的生命体征（体温、脉搏、呼吸、血压）",
+    "severity": "critical"
+  },
+  {
+    "documentType": "admission_record",
+    "section": "physical_examination",
+    "checkType": "must_contain_specialist_signs",
+    "condition": {
+      "type": "not_empty"
+    },
+    "errorMessage": "体格检查缺少专科体征描述",
+    "severity": "major"
+  },
+  {
+    "documentType": "admission_record",
+    "section": "auxiliary_examination",
+    "checkType": "must_contain_numerical_values",
+    "condition": {
+      "type": "regex_match",
+      "pattern": "\\d+(\\.\\d+)?"
+    },
+    "errorMessage": "辅助检查结果必须包含具体数值，禁止仅写“检查结果异常”",
+    "severity": "major"
+  },
+  {
+    "documentType": "admission_record",
+    "section": "auxiliary_examination",
+    "checkType": "must_contain_exam_date",
+    "condition": {
+      "type": "must_contain_date"
+    },
+    "errorMessage": "辅助检查未记录检查日期",
+    "severity": "minor"
+  },
+  {
+    "documentType": "admission_record",
+    "section": "diagnosis_basis",
+    "checkType": "must_echo_chief_complaint",
+    "condition": {
+      "type": "logic_check",
+      "rule": "match_chief_complaint"
+    },
+    "errorMessage": "诊断依据必须与主诉的主要症状相呼应",
+    "severity": "major"
+  },
+  {
+    "documentType": "admission_record",
+    "section": "diagnosis_basis",
+    "checkType": "must_echo_exam_results",
+    "condition": {
+      "type": "logic_check",
+      "rule": "match_exam_results"
+    },
+    "errorMessage": "诊断依据必须与辅助检查结果相呼应",
+    "severity": "major"
+  },
+  {
+    "documentType": "admission_record",
+    "section": "present_illness",
+    "checkType": "must_contain_medical_history",
+    "condition": {
+      "type": "must_contain_keywords",
+      "keywords": [
+        "就诊",
+        "医院",
+        "诊断",
+        "治疗"
+      ]
+    },
+    "errorMessage": "现病史必须包含就诊经过描述（如：在何处看过病、诊断为何）",
+    "severity": "major"
+  },
+  {
+    "documentType": "admission_record",
+    "section": "present_illness",
+    "checkType": "must_contain_medication_details",
+    "condition": {
+      "type": "must_contain_keywords",
+      "keywords": [
+        "药",
+        "剂量",
+        "用法"
+      ]
+    },
+    "errorMessage": "现病史必须包含用药经过描述（如：药物名称、剂量、用法）",
+    "severity": "major"
+  },
+  {
+    "documentType": "admission_record",
+    "section": "past_history",
+    "checkType": "must_mention_infectious_diseases",
+    "condition": {
+      "type": "must_contain_all",
+      "keywords": [
+        "肝炎",
+        "结核"
+      ]
+    },
+    "errorMessage": "既往史必须明确记录传染病史（如：肝炎、结核等，无则写“否认”）",
+    "severity": "major"
+  },
+  {
+    "documentType": "admission_record",
+    "section": "past_history",
+    "checkType": "must_mention_hiv_syphilis",
+    "condition": {
+      "type": "must_contain_any",
+      "keywords": [
+        "艾滋",
+        "梅毒",
+        "否认"
+      ]
+    },
+    "errorMessage": "既往史必须明确记录艾滋病、梅毒等传染病史",
+    "severity": "major"
   }
 ]
