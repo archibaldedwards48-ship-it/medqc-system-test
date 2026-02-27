@@ -329,7 +329,7 @@
     ],
     "bodyPart": "全身",
     "nature": "呼吸暂时停止",
-    "durationRequired": true,
+    "durationRequired": false,
     "associatedSymptoms": [
       "发绀",
       "嗜睡"
@@ -1055,7 +1055,7 @@
       "乏力",
       "发热"
     ],
-    "relatedDiseased": [
+    "relatedDiseases": [
       "糖尿病",
       "甲状腺功能亢进症",
       "恶性肿瘤"
@@ -1601,5 +1601,1355 @@
       "失血性休克"
     ],
     "category": "其他"
+  },
+  {
+    "name": "皮疹",
+    "aliases": [
+      "出疹",
+      "rash"
+    ],
+    "bodyPart": "皮肤",
+    "nature": "皮肤表面出现的病变",
+    "durationRequired": false,
+    "associatedSymptoms": [
+      "瘙痒",
+      "发热"
+    ],
+    "relatedDiseases": [
+      "荨麻疹",
+      "湿疹",
+      "麻疹"
+    ],
+    "category": "皮肤科"
+  },
+  {
+    "name": "水疱",
+    "aliases": [
+      "大疱",
+      "blister",
+      "vesicle"
+    ],
+    "bodyPart": "皮肤",
+    "nature": "皮肤内或皮肤下充满液体的囊",
+    "durationRequired": false,
+    "associatedSymptoms": [
+      "瘙痒",
+      "疼痛"
+    ],
+    "relatedDiseases": [
+      "带状疱疹",
+      "天疱疮"
+    ],
+    "category": "皮肤科"
+  },
+  {
+    "name": "脱屑",
+    "aliases": [
+      "掉皮",
+      "scaling"
+    ],
+    "bodyPart": "皮肤",
+    "nature": "皮肤表面角质层脱落",
+    "durationRequired": false,
+    "associatedSymptoms": [
+      "瘙痒",
+      "红斑"
+    ],
+    "relatedDiseases": [
+      "银屑病",
+      "脂溢性皮炎"
+    ],
+    "category": "皮肤科"
+  },
+  {
+    "name": "黄染",
+    "aliases": [
+      "皮肤黄",
+      "jaundice"
+    ],
+    "bodyPart": "皮肤/巩膜",
+    "nature": "皮肤、黏膜和巩膜呈黄色",
+    "durationRequired": false,
+    "associatedSymptoms": [
+      "尿黄",
+      "乏力"
+    ],
+    "relatedDiseases": [
+      "肝炎",
+      "胆道梗阻"
+    ],
+    "category": "皮肤科"
+  },
+  {
+    "name": "荨麻疹",
+    "aliases": [
+      "风团",
+      "urticaria"
+    ],
+    "bodyPart": "皮肤",
+    "nature": "皮肤出现红色或苍白色风团",
+    "durationRequired": false,
+    "associatedSymptoms": [
+      "瘙痒"
+    ],
+    "relatedDiseases": [
+      "过敏"
+    ],
+    "category": "皮肤科"
+  },
+  {
+    "name": "红斑",
+    "aliases": [
+      "红点",
+      "erythema"
+    ],
+    "bodyPart": "皮肤",
+    "nature": "皮肤局部发红",
+    "durationRequired": false,
+    "associatedSymptoms": [
+      "瘙痒",
+      "皮疹"
+    ],
+    "relatedDiseases": [
+      "湿疹",
+      "药疹"
+    ],
+    "category": "皮肤科"
+  },
+  {
+    "name": "丘疹",
+    "aliases": [
+      "小疙瘩",
+      "papule"
+    ],
+    "bodyPart": "皮肤",
+    "nature": "高出皮肤表面的实性小隆起",
+    "durationRequired": false,
+    "associatedSymptoms": [
+      "瘙痒"
+    ],
+    "relatedDiseases": [
+      "痤疮",
+      "湿疹"
+    ],
+    "category": "皮肤科"
+  },
+  {
+    "name": "结节",
+    "aliases": [
+      "硬块",
+      "nodule"
+    ],
+    "bodyPart": "皮肤",
+    "nature": "皮肤深层或皮下组织实性隆起",
+    "durationRequired": false,
+    "associatedSymptoms": [
+      "疼痛"
+    ],
+    "relatedDiseases": [
+      "结节性红斑",
+      "脂肪瘤"
+    ],
+    "category": "皮肤科"
+  },
+  {
+    "name": "溃疡",
+    "aliases": [
+      "烂肉",
+      "ulcer"
+    ],
+    "bodyPart": "皮肤/黏膜",
+    "nature": "皮肤或黏膜组织缺损",
+    "durationRequired": false,
+    "associatedSymptoms": [
+      "疼痛",
+      "分泌物"
+    ],
+    "relatedDiseases": [
+      "糖尿病足",
+      "褥疮"
+    ],
+    "category": "皮肤科"
+  },
+  {
+    "name": "瘙痒",
+    "aliases": [
+      "痒",
+      "itch"
+    ],
+    "bodyPart": "皮肤",
+    "nature": "皮肤不适感，引起搔抓欲望",
+    "durationRequired": false,
+    "associatedSymptoms": [
+      "皮疹",
+      "红斑"
+    ],
+    "relatedDiseases": [
+      "湿疹",
+      "荨麻疹"
+    ],
+    "category": "皮肤科"
+  },
+  {
+    "name": "斑丘疹",
+    "aliases": [
+      "maculopapular rash"
+    ],
+    "bodyPart": "皮肤",
+    "nature": "皮肤同时出现斑疹和丘疹",
+    "durationRequired": false,
+    "associatedSymptoms": [
+      "发热",
+      "瘙痒"
+    ],
+    "relatedDiseases": [
+      "病毒疹",
+      "药疹"
+    ],
+    "category": "皮肤科"
+  },
+  {
+    "name": "脓疱",
+    "aliases": [
+      "pustule"
+    ],
+    "bodyPart": "皮肤",
+    "nature": "皮肤表面含有脓液的隆起",
+    "durationRequired": false,
+    "associatedSymptoms": [
+      "疼痛",
+      "发热"
+    ],
+    "relatedDiseases": [
+      "脓疱疮",
+      "痤疮"
+    ],
+    "category": "皮肤科"
+  },
+  {
+    "name": "糜烂",
+    "aliases": [
+      "erosion"
+    ],
+    "bodyPart": "皮肤/黏膜",
+    "nature": "表皮或黏膜浅层组织缺损",
+    "durationRequired": false,
+    "associatedSymptoms": [
+      "渗液",
+      "疼痛"
+    ],
+    "relatedDiseases": [
+      "湿疹",
+      "接触性皮炎"
+    ],
+    "category": "皮肤科"
+  },
+  {
+    "name": "色素沉着",
+    "aliases": [
+      "皮肤变黑",
+      "hyperpigmentation"
+    ],
+    "bodyPart": "皮肤",
+    "nature": "皮肤颜色加深",
+    "durationRequired": false,
+    "associatedSymptoms": [
+      "无"
+    ],
+    "relatedDiseases": [
+      "黄褐斑",
+      "炎症后色素沉着"
+    ],
+    "category": "皮肤科"
+  },
+  {
+    "name": "白斑",
+    "aliases": [
+      "皮肤变白",
+      "vitiligo"
+    ],
+    "bodyPart": "皮肤",
+    "nature": "皮肤色素脱失",
+    "durationRequired": false,
+    "associatedSymptoms": [
+      "无"
+    ],
+    "relatedDiseases": [
+      "白癜风",
+      "贫血痣"
+    ],
+    "category": "皮肤科"
+  },
+  {
+    "name": "耳鸣",
+    "aliases": [
+      "耳朵响",
+      "tinnitus"
+    ],
+    "bodyPart": "耳部",
+    "nature": "耳内或颅内有声音感觉",
+    "durationRequired": false,
+    "associatedSymptoms": [
+      "听力下降",
+      "头晕"
+    ],
+    "relatedDiseases": [
+      "突发性耳聋",
+      "梅尼埃病"
+    ],
+    "category": "五官科"
+  },
+  {
+    "name": "听力下降",
+    "aliases": [
+      "耳背",
+      "hearing loss"
+    ],
+    "bodyPart": "耳部",
+    "nature": "听觉功能减退",
+    "durationRequired": false,
+    "associatedSymptoms": [
+      "耳鸣"
+    ],
+    "relatedDiseases": [
+      "老年性耳聋",
+      "中耳炎"
+    ],
+    "category": "五官科"
+  },
+  {
+    "name": "视力下降",
+    "aliases": [
+      "看不清",
+      "vision loss"
+    ],
+    "bodyPart": "眼部",
+    "nature": "视力减退",
+    "durationRequired": false,
+    "associatedSymptoms": [
+      "眼痛",
+      "头痛"
+    ],
+    "relatedDiseases": [
+      "近视",
+      "白内障",
+      "青光眼"
+    ],
+    "category": "五官科"
+  },
+  {
+    "name": "眼痛",
+    "aliases": [
+      "眼睛疼",
+      "eye pain"
+    ],
+    "bodyPart": "眼部",
+    "nature": "眼部胀痛/刺痛",
+    "durationRequired": false,
+    "associatedSymptoms": [
+      "视力模糊",
+      "畏光"
+    ],
+    "relatedDiseases": [
+      "结膜炎",
+      "角膜炎",
+      "青光眼"
+    ],
+    "category": "五官科"
+  },
+  {
+    "name": "鼻出血",
+    "aliases": [
+      "流鼻血",
+      "epistaxis"
+    ],
+    "bodyPart": "鼻部",
+    "nature": "鼻腔出血",
+    "durationRequired": false,
+    "associatedSymptoms": [
+      "鼻塞"
+    ],
+    "relatedDiseases": [
+      "鼻炎",
+      "高血压"
+    ],
+    "category": "五官科"
+  },
+  {
+    "name": "牙痛",
+    "aliases": [
+      "牙疼",
+      "toothache"
+    ],
+    "bodyPart": "口腔",
+    "nature": "牙齿疼痛",
+    "durationRequired": true,
+    "associatedSymptoms": [
+      "面部肿胀"
+    ],
+    "relatedDiseases": [
+      "龋齿",
+      "牙髓炎"
+    ],
+    "category": "五官科"
+  },
+  {
+    "name": "口干",
+    "aliases": [
+      "口渴",
+      "dry mouth"
+    ],
+    "bodyPart": "口腔",
+    "nature": "口腔干燥",
+    "durationRequired": false,
+    "associatedSymptoms": [
+      "多饮",
+      "吞咽困难"
+    ],
+    "relatedDiseases": [
+      "干燥综合征",
+      "糖尿病"
+    ],
+    "category": "五官科"
+  },
+  {
+    "name": "复视",
+    "aliases": [
+      "看东西重影",
+      "diplopia"
+    ],
+    "bodyPart": "眼部",
+    "nature": "看一个物体出现两个影像",
+    "durationRequired": false,
+    "associatedSymptoms": [
+      "头晕",
+      "眼球运动障碍"
+    ],
+    "relatedDiseases": [
+      "动眼神经麻痹",
+      "重症肌无力"
+    ],
+    "category": "五官科"
+  },
+  {
+    "name": "耳聋",
+    "aliases": [
+      "听不见",
+      "deafness"
+    ],
+    "bodyPart": "耳部",
+    "nature": "听力完全丧失",
+    "durationRequired": false,
+    "associatedSymptoms": [
+      "耳鸣"
+    ],
+    "relatedDiseases": [
+      "药物性耳聋",
+      "噪声性耳聋"
+    ],
+    "category": "五官科"
+  },
+  {
+    "name": "鼻塞",
+    "aliases": [
+      "鼻子不通气",
+      "nasal congestion"
+    ],
+    "bodyPart": "鼻部",
+    "nature": "持续性/交替性",
+    "durationRequired": false,
+    "associatedSymptoms": [
+      "流涕",
+      "打喷嚏"
+    ],
+    "relatedDiseases": [
+      "感冒",
+      "过敏性鼻炎"
+    ],
+    "category": "五官科"
+  },
+  {
+    "name": "咽部异物感",
+    "aliases": [
+      "喉咙有东西",
+      "globus sensation"
+    ],
+    "bodyPart": "咽喉",
+    "nature": "咽部有阻塞感或异物感",
+    "durationRequired": false,
+    "associatedSymptoms": [
+      "吞咽困难",
+      "咳嗽"
+    ],
+    "relatedDiseases": [
+      "咽炎",
+      "食管癌"
+    ],
+    "category": "五官科"
+  },
+  {
+    "name": "流泪",
+    "aliases": [
+      "迎风流泪",
+      "epiphora"
+    ],
+    "bodyPart": "眼部",
+    "nature": "泪液分泌过多或排出障碍",
+    "durationRequired": false,
+    "associatedSymptoms": [
+      "眼痒",
+      "眼红"
+    ],
+    "relatedDiseases": [
+      "结膜炎",
+      "泪道阻塞"
+    ],
+    "category": "五官科"
+  },
+  {
+    "name": "眼红",
+    "aliases": [
+      "眼睛红",
+      "red eye"
+    ],
+    "bodyPart": "眼部",
+    "nature": "眼结膜充血",
+    "durationRequired": false,
+    "associatedSymptoms": [
+      "眼痛",
+      "分泌物"
+    ],
+    "relatedDiseases": [
+      "结膜炎",
+      "角膜炎"
+    ],
+    "category": "五官科"
+  },
+  {
+    "name": "口臭",
+    "aliases": [
+      "口气重",
+      "halitosis"
+    ],
+    "bodyPart": "口腔",
+    "nature": "口腔发出难闻气味",
+    "durationRequired": false,
+    "associatedSymptoms": [
+      "牙痛",
+      "口干"
+    ],
+    "relatedDiseases": [
+      "牙周炎",
+      "胃炎"
+    ],
+    "category": "五官科"
+  },
+  {
+    "name": "声音嘶哑",
+    "aliases": [
+      "嗓子哑",
+      "hoarseness"
+    ],
+    "bodyPart": "喉部",
+    "nature": "发声困难，声音粗糙",
+    "durationRequired": false,
+    "associatedSymptoms": [
+      "咽痛",
+      "咳嗽"
+    ],
+    "relatedDiseases": [
+      "喉炎",
+      "声带息肉"
+    ],
+    "category": "五官科"
+  },
+  {
+    "name": "失眠",
+    "aliases": [
+      "睡不着",
+      "insomnia"
+    ],
+    "bodyPart": "全身",
+    "nature": "入睡困难/睡眠维持困难/早醒",
+    "durationRequired": true,
+    "associatedSymptoms": [
+      "焦虑",
+      "疲劳"
+    ],
+    "relatedDiseases": [
+      "抑郁症",
+      "焦虑症"
+    ],
+    "category": "精神科"
+  },
+  {
+    "name": "焦虑",
+    "aliases": [
+      "紧张",
+      "anxiety"
+    ],
+    "bodyPart": "全身",
+    "nature": "内心不安、担忧",
+    "durationRequired": false,
+    "associatedSymptoms": [
+      "心悸",
+      "出汗"
+    ],
+    "relatedDiseases": [
+      "焦虑症",
+      "抑郁症"
+    ],
+    "category": "精神科"
+  },
+  {
+    "name": "幻觉",
+    "aliases": [
+      "幻听",
+      "幻视",
+      "hallucination"
+    ],
+    "bodyPart": "精神",
+    "nature": "无客观刺激下的知觉体验",
+    "durationRequired": false,
+    "associatedSymptoms": [
+      "妄想",
+      "行为异常"
+    ],
+    "relatedDiseases": [
+      "精神分裂症",
+      "谵妄"
+    ],
+    "category": "精神科"
+  },
+  {
+    "name": "谵妄",
+    "aliases": [
+      "神志错乱",
+      "delirium"
+    ],
+    "bodyPart": "精神",
+    "nature": "急性意识障碍，伴有注意力、认知功能障碍",
+    "durationRequired": false,
+    "associatedSymptoms": [
+      "幻觉",
+      "行为紊乱"
+    ],
+    "relatedDiseases": [
+      "感染",
+      "药物中毒"
+    ],
+    "category": "精神科"
+  },
+  {
+    "name": "情绪低落",
+    "aliases": [
+      "不开心",
+      "depressed mood"
+    ],
+    "bodyPart": "精神",
+    "nature": "持续性的悲伤、沮丧",
+    "durationRequired": true,
+    "associatedSymptoms": [
+      "失眠",
+      "食欲不振"
+    ],
+    "relatedDiseases": [
+      "抑郁症"
+    ],
+    "category": "精神科"
+  },
+  {
+    "name": "妄想",
+    "aliases": [
+      "胡思乱想",
+      "delusion"
+    ],
+    "bodyPart": "精神",
+    "nature": "病态的、与事实不符的信念",
+    "durationRequired": false,
+    "associatedSymptoms": [
+      "幻觉",
+      "行为异常"
+    ],
+    "relatedDiseases": [
+      "精神分裂症",
+      "偏执性精神障碍"
+    ],
+    "category": "精神科"
+  },
+  {
+    "name": "行为异常",
+    "aliases": [
+      "行为怪异",
+      "abnormal behavior"
+    ],
+    "bodyPart": "精神",
+    "nature": "与社会规范不符的行为",
+    "durationRequired": false,
+    "associatedSymptoms": [
+      "幻觉",
+      "妄想"
+    ],
+    "relatedDiseases": [
+      "精神分裂症",
+      "躁狂症"
+    ],
+    "category": "精神科"
+  },
+  {
+    "name": "记忆力下降",
+    "aliases": [
+      "健忘",
+      "memory loss"
+    ],
+    "bodyPart": "精神",
+    "nature": "记忆功能减退",
+    "durationRequired": false,
+    "associatedSymptoms": [
+      "认知障碍"
+    ],
+    "relatedDiseases": [
+      "阿尔茨海默病",
+      "血管性痴呆"
+    ],
+    "category": "精神科"
+  },
+  {
+    "name": "易激惹",
+    "aliases": [
+      "脾气大",
+      "irritability"
+    ],
+    "bodyPart": "精神",
+    "nature": "容易发怒或烦躁",
+    "durationRequired": false,
+    "associatedSymptoms": [
+      "焦虑",
+      "失眠"
+    ],
+    "relatedDiseases": [
+      "抑郁症",
+      "躁狂症"
+    ],
+    "category": "精神科"
+  },
+  {
+    "name": "注意力不集中",
+    "aliases": [
+      "分心",
+      "inattention"
+    ],
+    "bodyPart": "精神",
+    "nature": "难以长时间集中注意力",
+    "durationRequired": false,
+    "associatedSymptoms": [
+      "学习困难",
+      "多动"
+    ],
+    "relatedDiseases": [
+      "注意缺陷多动障碍",
+      "抑郁症"
+    ],
+    "category": "精神科"
+  },
+  {
+    "name": "强迫症",
+    "aliases": [
+      "强迫行为",
+      "obsessive-compulsive disorder"
+    ],
+    "bodyPart": "精神",
+    "nature": "反复出现强迫观念和强迫行为",
+    "durationRequired": false,
+    "associatedSymptoms": [
+      "焦虑"
+    ],
+    "relatedDiseases": [
+      "强迫症"
+    ],
+    "category": "精神科"
+  },
+  {
+    "name": "自杀意念",
+    "aliases": [
+      "想死",
+      "suicidal ideation"
+    ],
+    "bodyPart": "精神",
+    "nature": "产生结束自己生命的念头",
+    "durationRequired": false,
+    "associatedSymptoms": [
+      "情绪低落",
+      "绝望"
+    ],
+    "relatedDiseases": [
+      "抑郁症"
+    ],
+    "category": "精神科"
+  },
+  {
+    "name": "社交退缩",
+    "aliases": [
+      "不爱与人交往",
+      "social withdrawal"
+    ],
+    "bodyPart": "精神",
+    "nature": "回避社交活动，减少与人接触",
+    "durationRequired": false,
+    "associatedSymptoms": [
+      "情绪低落",
+      "焦虑"
+    ],
+    "relatedDiseases": [
+      "抑郁症",
+      "精神分裂症"
+    ],
+    "category": "精神科"
+  },
+  {
+    "name": "出血倾向",
+    "aliases": [
+      "容易出血",
+      "bleeding tendency"
+    ],
+    "bodyPart": "全身",
+    "nature": "皮肤黏膜出血/内脏出血",
+    "durationRequired": false,
+    "associatedSymptoms": [
+      "瘀斑",
+      "贫血"
+    ],
+    "relatedDiseases": [
+      "血友病",
+      "血小板减少症"
+    ],
+    "category": "血液科"
+  },
+  {
+    "name": "瘀斑",
+    "aliases": [
+      "青一块紫一块",
+      "ecchymosis"
+    ],
+    "bodyPart": "皮肤",
+    "nature": "皮下出血，形成青紫色斑块",
+    "durationRequired": false,
+    "associatedSymptoms": [
+      "出血倾向"
+    ],
+    "relatedDiseases": [
+      "血小板减少症",
+      "凝血功能障碍"
+    ],
+    "category": "血液科"
+  },
+  {
+    "name": "淋巴结肿大",
+    "aliases": [
+      "淋巴结肿",
+      "lymphadenopathy"
+    ],
+    "bodyPart": "颈部/腋窝/腹股沟",
+    "nature": "淋巴结体积增大",
+    "durationRequired": false,
+    "associatedSymptoms": [
+      "发热",
+      "体重下降"
+    ],
+    "relatedDiseases": [
+      "淋巴瘤",
+      "感染"
+    ],
+    "category": "血液科"
+  },
+  {
+    "name": "贫血",
+    "aliases": [
+      "脸色苍白",
+      "anemia"
+    ],
+    "bodyPart": "全身",
+    "nature": "血红蛋白低于正常范围",
+    "durationRequired": false,
+    "associatedSymptoms": [
+      "乏力",
+      "头晕"
+    ],
+    "relatedDiseases": [
+      "缺铁性贫血",
+      "再生障碍性贫血"
+    ],
+    "category": "血液科"
+  },
+  {
+    "name": "紫癜",
+    "aliases": [
+      "出血点",
+      "purpura"
+    ],
+    "bodyPart": "皮肤",
+    "nature": "皮肤黏膜出现紫红色斑点或斑块",
+    "durationRequired": false,
+    "associatedSymptoms": [
+      "出血倾向"
+    ],
+    "relatedDiseases": [
+      "过敏性紫癜",
+      "血小板减少性紫癜"
+    ],
+    "category": "血液科"
+  },
+  {
+    "name": "白血病",
+    "aliases": [
+      "血癌",
+      "leukemia"
+    ],
+    "bodyPart": "全身",
+    "nature": "白细胞异常增生",
+    "durationRequired": false,
+    "associatedSymptoms": [
+      "发热",
+      "贫血",
+      "出血"
+    ],
+    "relatedDiseases": [
+      "急性白血病",
+      "慢性白血病"
+    ],
+    "category": "血液科"
+  },
+  {
+    "name": "脾大",
+    "aliases": [
+      "脾脏肿大",
+      "splenomegaly"
+    ],
+    "bodyPart": "左上腹",
+    "nature": "脾脏体积增大",
+    "durationRequired": false,
+    "associatedSymptoms": [
+      "腹胀",
+      "贫血"
+    ],
+    "relatedDiseases": [
+      "肝硬化",
+      "白血病"
+    ],
+    "category": "血液科"
+  },
+  {
+    "name": "肝大",
+    "aliases": [
+      "肝脏肿大",
+      "hepatomegaly"
+    ],
+    "bodyPart": "右上腹",
+    "nature": "肝脏体积增大",
+    "durationRequired": false,
+    "associatedSymptoms": [
+      "黄疸",
+      "乏力"
+    ],
+    "relatedDiseases": [
+      "肝炎",
+      "肝癌"
+    ],
+    "category": "血液科"
+  },
+  {
+    "name": "全血细胞减少",
+    "aliases": [
+      "三系减少",
+      "pancytopenia"
+    ],
+    "bodyPart": "全身",
+    "nature": "红细胞、白细胞、血小板均减少",
+    "durationRequired": false,
+    "associatedSymptoms": [
+      "贫血",
+      "出血",
+      "感染"
+    ],
+    "relatedDiseases": [
+      "再生障碍性贫血",
+      "骨髓增生异常综合征"
+    ],
+    "category": "血液科"
+  },
+  {
+    "name": "惊厥",
+    "aliases": [
+      "抽风",
+      "convulsion"
+    ],
+    "bodyPart": "全身",
+    "nature": "全身或局部肌肉不自主抽动",
+    "durationRequired": true,
+    "associatedSymptoms": [
+      "发热",
+      "意识障碍"
+    ],
+    "relatedDiseases": [
+      "高热惊厥",
+      "癫痫"
+    ],
+    "category": "儿科常见"
+  },
+  {
+    "name": "喂养困难",
+    "aliases": [
+      "吃奶困难",
+      "feeding difficulty"
+    ],
+    "bodyPart": "口腔/消化道",
+    "nature": "婴儿吸吮、吞咽困难",
+    "durationRequired": false,
+    "associatedSymptoms": [
+      "体重不增",
+      "呕吐"
+    ],
+    "relatedDiseases": [
+      "早产",
+      "先天性心脏病"
+    ],
+    "category": "儿科常见"
+  },
+  {
+    "name": "发育迟缓",
+    "aliases": [
+      "生长发育落后",
+      "developmental delay"
+    ],
+    "bodyPart": "全身",
+    "nature": "体格或智力发育落后于同龄儿",
+    "durationRequired": false,
+    "associatedSymptoms": [
+      "运动障碍",
+      "语言障碍"
+    ],
+    "relatedDiseases": [
+      "脑瘫",
+      "唐氏综合征"
+    ],
+    "category": "儿科常见"
+  },
+  {
+    "name": "哭闹不安",
+    "aliases": [
+      "烦躁",
+      "irritability"
+    ],
+    "bodyPart": "全身",
+    "nature": "婴儿持续性哭闹，不易安抚",
+    "durationRequired": false,
+    "associatedSymptoms": [
+      "发热",
+      "拒食"
+    ],
+    "relatedDiseases": [
+      "肠绞痛",
+      "中耳炎"
+    ],
+    "category": "儿科常见"
+  },
+  {
+    "name": "腹泻 (儿科)",
+    "aliases": [
+      "拉肚子 (儿科)",
+      "infant diarrhea"
+    ],
+    "bodyPart": "腹部",
+    "nature": "大便次数增多，性状改变",
+    "durationRequired": true,
+    "associatedSymptoms": [
+      "呕吐",
+      "发热"
+    ],
+    "relatedDiseases": [
+      "轮状病毒肠炎",
+      "细菌性痢疾"
+    ],
+    "category": "儿科常见"
+  },
+  {
+    "name": "黄疸 (新生儿)",
+    "aliases": [
+      "新生儿黄疸",
+      "neonatal jaundice"
+    ],
+    "bodyPart": "皮肤/巩膜",
+    "nature": "新生儿皮肤、巩膜黄染",
+    "durationRequired": false,
+    "associatedSymptoms": [
+      "嗜睡",
+      "吸吮困难"
+    ],
+    "relatedDiseases": [
+      "生理性黄疸",
+      "病理性黄疸"
+    ],
+    "category": "儿科常见"
+  },
+  {
+    "name": "呕吐 (儿科)",
+    "aliases": [
+      "吐奶",
+      "infant vomiting"
+    ],
+    "bodyPart": "上腹部",
+    "nature": "婴儿呕吐",
+    "durationRequired": false,
+    "associatedSymptoms": [
+      "腹泻",
+      "发热"
+    ],
+    "relatedDiseases": [
+      "胃食管反流",
+      "幽门狭窄"
+    ],
+    "category": "儿科常见"
+  },
+  {
+    "name": "厌食",
+    "aliases": [
+      "不爱吃饭",
+      "anorexia (pediatric)"
+    ],
+    "bodyPart": "全身",
+    "nature": "儿童食欲减退或消失",
+    "durationRequired": false,
+    "associatedSymptoms": [
+      "体重不增",
+      "乏力"
+    ],
+    "relatedDiseases": [
+      "缺锌",
+      "消化不良"
+    ],
+    "category": "儿科常见"
+  },
+  {
+    "name": "遗尿",
+    "aliases": [
+      "尿床",
+      "enuresis"
+    ],
+    "bodyPart": "泌尿道",
+    "nature": "儿童夜间不自主排尿",
+    "durationRequired": false,
+    "associatedSymptoms": [
+      "尿频"
+    ],
+    "relatedDiseases": [
+      "遗尿症",
+      "尿路感染"
+    ],
+    "category": "儿科常见"
+  },
+  {
+    "name": "多动",
+    "aliases": [
+      "好动",
+      "hyperactivity"
+    ],
+    "bodyPart": "精神",
+    "nature": "活动量过多，注意力不集中",
+    "durationRequired": false,
+    "associatedSymptoms": [
+      "冲动",
+      "学习困难"
+    ],
+    "relatedDiseases": [
+      "注意缺陷多动障碍"
+    ],
+    "category": "儿科常见"
+  },
+  {
+    "name": "腹胀 (儿科)",
+    "aliases": [
+      "肚子胀 (儿科)",
+      "infant abdominal distension"
+    ],
+    "bodyPart": "腹部",
+    "nature": "婴儿腹部膨隆",
+    "durationRequired": false,
+    "associatedSymptoms": [
+      "哭闹不安",
+      "呕吐"
+    ],
+    "relatedDiseases": [
+      "肠绞痛",
+      "巨结肠"
+    ],
+    "category": "儿科常见"
+  },
+  {
+    "name": "便秘 (儿科)",
+    "aliases": [
+      "大便干 (儿科)",
+      "infant constipation"
+    ],
+    "bodyPart": "腹部",
+    "nature": "婴儿排便困难或次数减少",
+    "durationRequired": true,
+    "associatedSymptoms": [
+      "腹胀",
+      "哭闹不安"
+    ],
+    "relatedDiseases": [
+      "功能性便秘",
+      "巨结肠"
+    ],
+    "category": "儿科常见"
+  },
+  {
+    "name": "惊跳",
+    "aliases": [
+      "受惊",
+      "Moro reflex"
+    ],
+    "bodyPart": "全身",
+    "nature": "婴儿受到刺激后全身抖动",
+    "durationRequired": false,
+    "associatedSymptoms": [
+      "哭闹"
+    ],
+    "relatedDiseases": [
+      "新生儿惊跳反射"
+    ],
+    "category": "儿科常见"
+  },
+  {
+    "name": "嗜睡 (儿科)",
+    "aliases": [
+      "睡得多 (儿科)",
+      "infant somnolence"
+    ],
+    "bodyPart": "全身",
+    "nature": "婴儿异常的睡眠增多",
+    "durationRequired": false,
+    "associatedSymptoms": [
+      "喂养困难",
+      "反应迟钝"
+    ],
+    "relatedDiseases": [
+      "新生儿黄疸",
+      "感染"
+    ],
+    "category": "儿科常见"
+  },
+  {
+    "name": "发绀 (儿科)",
+    "aliases": [
+      "嘴唇发紫 (儿科)",
+      "infant cyanosis"
+    ],
+    "bodyPart": "口唇/甲床",
+    "nature": "婴儿皮肤黏膜呈青紫色",
+    "durationRequired": false,
+    "associatedSymptoms": [
+      "呼吸困难",
+      "喂养困难"
+    ],
+    "relatedDiseases": [
+      "先天性心脏病",
+      "新生儿肺炎"
+    ],
+    "category": "儿科常见"
+  },
+  {
+    "name": "咳嗽 (儿科)",
+    "aliases": [
+      "宝宝咳嗽",
+      "infant cough"
+    ],
+    "bodyPart": "喉/胸部",
+    "nature": "婴儿咳嗽",
+    "durationRequired": true,
+    "associatedSymptoms": [
+      "流涕",
+      "发热"
+    ],
+    "relatedDiseases": [
+      "感冒",
+      "支气管炎"
+    ],
+    "category": "儿科常见"
+  },
+  {
+    "name": "喘息 (儿科)",
+    "aliases": [
+      "宝宝喘",
+      "infant wheezing"
+    ],
+    "bodyPart": "胸部",
+    "nature": "婴儿呼吸时有哮鸣音",
+    "durationRequired": false,
+    "associatedSymptoms": [
+      "呼吸困难",
+      "咳嗽"
+    ],
+    "relatedDiseases": [
+      "毛细支气管炎",
+      "哮喘"
+    ],
+    "category": "儿科常见"
+  },
+  {
+    "name": "皮疹 (儿科)",
+    "aliases": [
+      "宝宝出疹",
+      "infant rash"
+    ],
+    "bodyPart": "皮肤",
+    "nature": "婴儿皮肤表面出现的病变",
+    "durationRequired": false,
+    "associatedSymptoms": [
+      "瘙痒",
+      "发热"
+    ],
+    "relatedDiseases": [
+      "湿疹",
+      "尿布疹"
+    ],
+    "category": "儿科常见"
+  },
+  {
+    "name": "发热 (儿科)",
+    "aliases": [
+      "宝宝发烧",
+      "infant fever"
+    ],
+    "bodyPart": "全身",
+    "nature": "婴儿体温升高",
+    "durationRequired": true,
+    "associatedSymptoms": [
+      "哭闹",
+      "食欲不振"
+    ],
+    "relatedDiseases": [
+      "感冒",
+      "肺炎"
+    ],
+    "category": "儿科常见"
+  },
+  {
+    "name": "抽动",
+    "aliases": [
+      "眨眼",
+      "清嗓子",
+      "tic"
+    ],
+    "bodyPart": "全身",
+    "nature": "不自主、快速、重复、无目的的动作或发声",
+    "durationRequired": false,
+    "associatedSymptoms": [
+      "焦虑"
+    ],
+    "relatedDiseases": [
+      "抽动障碍"
+    ],
+    "category": "儿科常见"
   }
 ]

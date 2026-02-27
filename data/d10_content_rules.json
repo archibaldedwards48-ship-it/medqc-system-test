@@ -446,5 +446,114 @@
     },
     "errorMessage": "日常病程记录中缺少上级医师查房记录",
     "severity": "major"
+  },
+  {
+    "documentType": "discharge_record",
+    "section": "discharge_diagnosis",
+    "checkType": "must_contain_main_and_secondary_diagnosis",
+    "condition": {
+      "type": "must_contain_all",
+      "keywords": [
+        "主要诊断",
+        "次要诊断"
+      ]
+    },
+    "errorMessage": "出院诊断必须包含主要诊断和次要诊断",
+    "severity": "major"
+  },
+  {
+    "documentType": "discharge_record",
+    "section": "discharge_condition",
+    "checkType": "must_describe_patient_condition",
+    "condition": {
+      "type": "not_empty"
+    },
+    "errorMessage": "出院情况描述缺失",
+    "severity": "major"
+  },
+  {
+    "documentType": "discharge_record",
+    "section": "discharge_advice",
+    "checkType": "must_contain_follow_up_advice",
+    "condition": {
+      "type": "must_contain_keywords",
+      "keywords": [
+        "复诊",
+        "随访"
+      ]
+    },
+    "errorMessage": "出院医嘱中缺少复诊或随访建议",
+    "severity": "major"
+  },
+  {
+    "documentType": "first_progress_note",
+    "section": "preliminary_diagnosis",
+    "checkType": "must_contain_main_diagnosis",
+    "condition": {
+      "type": "not_empty"
+    },
+    "errorMessage": "首次病程记录初步诊断缺失",
+    "severity": "major"
+  },
+  {
+    "documentType": "first_progress_note",
+    "section": "differential_diagnosis",
+    "checkType": "must_list_at_least_two",
+    "condition": {
+      "type": "min_items",
+      "value": 2
+    },
+    "errorMessage": "鉴别诊断至少需要列出 2 个",
+    "severity": "minor"
+  },
+  {
+    "documentType": "operation_record",
+    "section": "operation_name",
+    "checkType": "must_be_recorded",
+    "condition": {
+      "type": "not_empty"
+    },
+    "errorMessage": "手术记录中手术名称缺失",
+    "severity": "critical"
+  },
+  {
+    "documentType": "operation_record",
+    "section": "anesthesia_method",
+    "checkType": "must_be_recorded",
+    "condition": {
+      "type": "not_empty"
+    },
+    "errorMessage": "手术记录中麻醉方法缺失",
+    "severity": "major"
+  },
+  {
+    "documentType": "operation_record",
+    "section": "incision_type",
+    "checkType": "must_be_recorded",
+    "condition": {
+      "type": "not_empty"
+    },
+    "errorMessage": "手术记录中切口类型缺失",
+    "severity": "major"
+  },
+  {
+    "documentType": "critical_value_record",
+    "section": "critical_value_item",
+    "checkType": "must_be_recorded",
+    "condition": {
+      "type": "not_empty"
+    },
+    "errorMessage": "危急值记录中危急项目缺失",
+    "severity": "critical"
+  },
+  {
+    "documentType": "critical_value_record",
+    "section": "notification_time",
+    "checkType": "must_be_recorded",
+    "condition": {
+      "type": "not_empty"
+    },
+    "errorMessage": "危急值记录中通知时间缺失",
+    "severity": "critical"
   }
 ]
