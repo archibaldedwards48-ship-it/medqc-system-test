@@ -9,6 +9,7 @@ import {
   getAllQcResults,
   getAllMedicalRecords,
   getRecentStatistics,
+  getIssueTypeDistribution,
 } from '../db';
 
 export const statisticsRouter = router({
@@ -170,5 +171,15 @@ export const statisticsRouter = router({
     .query(async ({ input }) => {
       const stats = await getRecentStatistics(input.days);
       return stats;
+    }),
+
+  /**
+   * 获取问题类型分布统计
+   * B3: 按 issue type 分组统计数量
+   */
+  getIssueTypeDistribution: protectedProcedure
+    .query(async () => {
+      const distribution = await getIssueTypeDistribution();
+      return distribution;
     }),
 });
