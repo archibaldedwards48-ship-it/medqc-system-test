@@ -3,7 +3,9 @@
     "documentType": "admission_record",
     "section": "chief_complaint",
     "checkType": "must_contain_duration",
-    "condition": {"type": "must_contain_duration"},
+    "condition": {
+      "type": "must_contain_duration"
+    },
     "errorMessage": "主诉缺少持续时间描述（如：X天/X月/X年）",
     "severity": "major"
   },
@@ -11,7 +13,9 @@
     "documentType": "admission_record",
     "section": "chief_complaint",
     "checkType": "must_contain_main_symptom",
-    "condition": {"type": "must_contain_main_symptom"},
+    "condition": {
+      "type": "must_contain_main_symptom"
+    },
     "errorMessage": "主诉缺少主要症状描述",
     "severity": "major"
   },
@@ -19,7 +23,10 @@
     "documentType": "admission_record",
     "section": "history_of_present_illness",
     "checkType": "must_be_detailed",
-    "condition": {"type": "length_min", "value": 100},
+    "condition": {
+      "type": "length_min",
+      "value": 100
+    },
     "errorMessage": "现病史描述过于简略，需包含起病、演变、诊疗经过等",
     "severity": "major"
   },
@@ -27,7 +34,16 @@
     "documentType": "admission_record",
     "section": "past_medical_history",
     "checkType": "must_be_complete",
-    "condition": {"type": "keywords_present", "keywords": ["高血压", "糖尿病", "冠心病", "手术史", "过敏史"]},
+    "condition": {
+      "type": "keywords_present",
+      "keywords": [
+        "高血压",
+        "糖尿病",
+        "冠心病",
+        "手术史",
+        "过敏史"
+      ]
+    },
     "errorMessage": "既往史不完整，需包含常见慢性病、手术史、过敏史等",
     "severity": "minor"
   },
@@ -35,8 +51,77 @@
     "documentType": "admission_record",
     "section": "physical_examination",
     "checkType": "must_be_recorded",
-    "condition": {"type": "not_empty"},
+    "condition": {
+      "type": "not_empty"
+    },
     "errorMessage": "体格检查未记录",
     "severity": "critical"
+  },
+  {
+    "documentType": "discharge_record",
+    "section": "discharge_diagnosis",
+    "checkType": "must_contain_icd_code",
+    "condition": {
+      "type": "must_contain_icd_code"
+    },
+    "errorMessage": "出院诊断缺少 ICD 编码",
+    "severity": "major"
+  },
+  {
+    "documentType": "discharge_record",
+    "section": "discharge_summary",
+    "checkType": "must_contain_treatment_result",
+    "condition": {
+      "type": "must_contain_treatment_result"
+    },
+    "errorMessage": "出院小结缺少治疗结果（治愈/好转/未愈等）描述",
+    "severity": "major"
+  },
+  {
+    "documentType": "first_progress_note",
+    "section": "diagnostic_basis",
+    "checkType": "must_be_detailed",
+    "condition": {
+      "type": "length_min",
+      "value": 50
+    },
+    "errorMessage": "首次病程记录诊断依据过于简略",
+    "severity": "major"
+  },
+  {
+    "documentType": "first_progress_note",
+    "section": "differential_diagnosis",
+    "checkType": "must_contain_key_diseases",
+    "condition": {
+      "type": "must_contain_at_least_one"
+    },
+    "errorMessage": "鉴别诊断缺少必要病种对比描述",
+    "severity": "major"
+  },
+  {
+    "documentType": "operation_record",
+    "section": "operation_procedure",
+    "checkType": "must_be_complete",
+    "condition": {
+      "type": "not_empty"
+    },
+    "errorMessage": "手术记录中手术经过描述缺失",
+    "severity": "critical"
+  },
+  {
+    "documentType": "daily_progress_note",
+    "section": "vital_signs",
+    "checkType": "must_be_recorded",
+    "condition": {
+      "type": "must_contain_keywords",
+      "keywords": [
+        "体温",
+        "脉搏",
+        "呼吸",
+        "血压"
+      ]
+    },
+    "errorMessage": "日常病程记录缺少生命体征监测数据",
+    "severity": "major"
   }
 ]
