@@ -15,6 +15,7 @@ import {
   getAllQcRules,
   getQcRulesByCategory,
   createQcIssues,
+  getQcIssuesByResultId,
 } from '../db';
 import { nlpPipeline } from '../services/nlp/pipeline';
 import { qcEngine } from '../services/qc/qcEngine';
@@ -119,12 +120,18 @@ export const qcRouter = router({
     .input(z.object({ id: z.number().int() }))
     .query(async ({ input }) => {
       const result = await getQcResultById(input.id);
+      if (!result) throw new Error('质控结果不存在');
+      const issues = await getQcIssuesByResultId(input.id);
+      return { ...result, issues };
+    }),
 
-      if (!result) {
-        throw new Error('质控结果不存在');
-      }
-
-      return result;
+  /**
+   * 获取质控结果的所有问题列表
+   */
+  getIssues: protectedProcedure
+    .input(z.object({ resultId: z.number().int() }))
+    .query(async ({ input }) => {
+      return getQcIssuesByResultId(input.resultId);
     }),
 
   /**
